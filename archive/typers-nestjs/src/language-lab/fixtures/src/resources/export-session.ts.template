@@ -1,0 +1,86 @@
+import { mkdtemp, open, rename, rm } from 'node:fs/promises';
+import type { FileHandle } from 'node:fs/promises';
+import { join } from 'node:path';
+export const heldLocks = new Set<string>();
+export const activeSessions = new Set<string>();
+export class ExportLock implements Disposable {
+  constructor(
+    readonly id: string,
+    private readonly trace: string[],
+  ) {
+    if (!/^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$/.test(id))
+      throw new Error('Invalid export identifier');
+    if (heldLocks.has(id)) throw new Error('Export is already in progress');
+    heldLocks.add(id);
+    trace.push(`lock:${id}`);
+  }
+  [Symbol.dispose](): void {
+    heldLocks.delete(this.id);
+    this.trace.push(`unlock:${this.id}`);
+  }
+}
+export class ExportSession implements AsyncDisposable {
+  #closed = false;
+  private constructor(
+    private readonly directory: string,
+    private readonly handle: FileHandle,
+    private readonly trace: string[],
+  ) {
+    activeSessions.add(directory);
+    trace.push('session:open');
+  }
+  static async open(parent: string, trace: string[]): Promise<ExportSession> {
+    const directory = await mkdtemp(join(parent, '.export-'));
+    try {
+      return new ExportSession(
+        directory,
+        await open(join(directory, 'draft.txt'), 'wx'),
+        trace,
+      );
+    } catch (error) {
+      await rm(directory, { recursive: true, force: true });
+      throw error;
+    }
+  }
+  async write(report: string): Promise<void> {
+    if (this.#closed || !report.trim())
+      throw new Error('An open session and nonempty report are required');
+    await this.handle.writeFile(report, 'utf8');
+    this.trace.push('session:write');
+  }
+  async commit(target: string): Promise<void> {
+    if (this.#closed) throw new Error('Session is closed');
+    await this.handle.sync();
+    await this.handle.close();
+    this.#closed = true;
+    await rename(join(this.directory, 'draft.txt'), target);
+    this.trace.push('session:commit');
+  }
+  async [Symbol.asyncDispose](): Promise<void> {
+    try {
+      if (!this.#closed) {
+        await this.handle.close();
+        this.#closed = true;
+      }
+    } finally {
+      await rm(this.directory, { recursive: true, force: true });
+      activeSessions.delete(this.directory);
+      this.trace.push('session:closed');
+    }
+  }
+}
+export async function exportInvoice(
+  parent: string,
+  id: string,
+  report: string,
+  cancel: boolean,
+  trace: string[],
+): Promise<string> {
+  using _lock = new ExportLock(id, trace);
+  await using session = await ExportSession.open(parent, trace);
+  await session.write(report);
+  if (cancel) throw new Error('Invoice export cancelled');
+  const target = join(parent, `${id}.txt`);
+  await session.commit(target);
+  return target;
+}

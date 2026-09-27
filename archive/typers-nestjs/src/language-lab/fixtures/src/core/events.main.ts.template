@@ -1,0 +1,37 @@
+import { EventBus, isRecord } from './events.js';
+import type { BusinessEvents } from './events.js';
+import { registerBillingEvents } from './billing-events.js';
+
+const bus = new EventBus();
+bus.register(
+  'quote.opened',
+  (value): value is BusinessEvents['quote.opened'] =>
+    isRecord(value) &&
+    typeof value.quoteId === 'string' &&
+    typeof value.totalMinor === 'string',
+);
+const invoice = {
+  invoiceId: 'inv-1',
+  quoteId: 'q-1',
+  totalMinor: '71978',
+} as const;
+const errors: string[] = [];
+try {
+  bus.emit('invoice.issued', invoice);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+registerBillingEvents(bus);
+const invoices: BusinessEvents['invoice.issued'][] = [];
+const unsubscribe = bus.on('invoice.issued', (event) => {
+  invoices.push(event);
+});
+const listeners = bus.emit('invoice.issued', invoice);
+try {
+  bus.emitUnknown('invoice.issued', { ...invoice, totalMinor: -1 });
+} catch (error) {
+  errors.push((error as Error).message);
+}
+unsubscribe();
+const afterUnsubscribe = bus.emit('invoice.issued', invoice);
+console.log(JSON.stringify({ invoices, listeners, afterUnsubscribe, errors }));

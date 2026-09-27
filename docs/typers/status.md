@@ -1,5 +1,13 @@
 # Registro de implementación y evidencia
 
+## Estado actual — 27 de septiembre de 2026
+
+Typers está en pausa por decisión del titular. Se consolida el prototipo de `typers-main` como `main` y se conserva la antigua rama upstream en `archive/upstream-main-2026-09-27`, sin mezclar avances upstream ajenos a la base fijada. Las ramas de implementación #1–#4 ya estaban integradas.
+
+El laboratorio NestJS se conserva íntegro en [archive/](../../archive/README.md), con manifiesto de hashes. Los cambios locales de instrucciones y validación se incorporan, señalando que el laboratorio deja de ser trabajo activo. Orion es el framework distribuido como librería que continuará evolucionando; Typers conserva su compilador, runtime y adaptador propios.
+
+Los resultados del 15 de septiembre de abajo son evidencia histórica. Las verificaciones de esta consolidación se registran en [consolidación](consolidation.md). No se implementan `match`, `?`, `while let`, `let else`, ownership ni soporte de editor por este cambio.
+
 ## 2026-09-15 — Fundación
 
 ### Completado y verificado

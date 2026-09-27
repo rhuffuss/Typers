@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@language/report"
+  },
+  "include": ["src/**/*.type-test.ts", "src/**/*.type-test.tsx"]
+}

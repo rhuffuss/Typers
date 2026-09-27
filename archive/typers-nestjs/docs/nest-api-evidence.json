@@ -1,0 +1,2378 @@
+{
+  "schemaVersion": 1,
+  "note": "Solo casos manuales con contrato observable, versión fijada, ejemplo y test exacto. Importar/usar una API no verifica todas sus opciones.",
+  "cases": [
+    {
+      "id": "providers-async-and-alias",
+      "status": "verified-case",
+      "contract": "El contenedor espera la fábrica async y la configuración dinámica, y useExisting conserva la identidad del proveedor.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Module"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Inject"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "ConfigurableModuleBuilder",
+          "members": [
+            {
+              "name": "setClassMethodName",
+              "side": "instance"
+            },
+            {
+              "name": "build",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/fundamentals.module.ts",
+        "src/fundamentals/fundamentals.service.ts",
+        "src/fundamentals/demo-settings.module.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "awaits factories and dynamic configuration, and aliases the same provider",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) awaits factories and dynamic configuration, and aliases the same provider",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Solo useValue, useClass, useFactory async y useExisting presentes en este módulo; no todas las variantes de Provider ni extras del builder."
+      ]
+    },
+    {
+      "id": "provider-forward-reference",
+      "status": "verified-case",
+      "contract": "Las dos direcciones del ciclo aislado resuelven las mismas instancias mediante tokens seguros para ESM.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "forwardRef"
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/circular-demo.module.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "resolves both directions of the isolated forwardRef provider cycle",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) resolves both directions of the isolated forwardRef provider cycle",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Ciclo de proveedores controlado; no ciclos arbitrarios de módulos ni dependencia del orden de construcción."
+      ]
+    },
+    {
+      "id": "scope-context-resolution",
+      "status": "verified-case",
+      "contract": "Singletons, request y transient conservan o separan identidad según consumidor/contexto; ModuleRef crea una clase e inyecta una request manual.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "ModuleRef",
+          "members": [
+            {
+              "name": "get",
+              "side": "instance"
+            },
+            {
+              "name": "resolve",
+              "side": "instance"
+            },
+            {
+              "name": "create",
+              "side": "instance"
+            },
+            {
+              "name": "registerRequestByContextId",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "ContextIdFactory",
+          "members": [
+            {
+              "name": "create",
+              "side": "static"
+            },
+            {
+              "name": "getByRequest",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "REQUEST"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Scope",
+          "members": [
+            {
+              "name": "REQUEST",
+              "side": "value"
+            },
+            {
+              "name": "TRANSIENT",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Injectable"
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/scope-probes.ts",
+        "src/fundamentals/fundamentals.service.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "shares singletons, isolates requests and consumers, and reuses explicit contexts",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) shares singletons, isolates requests and consumers, and reuses explicit contexts",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Singleton es el scope por defecto, sin una referencia artificial a Scope.DEFAULT. ModuleRef.introspect permanece sin caso."
+      ]
+    },
+    {
+      "id": "lazy-module-cache",
+      "status": "verified-case",
+      "contract": "Dos peticiones reutilizan el proveedor cargado con LazyModuleLoader y no ejecutan su hook onModuleInit.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "LazyModuleLoader",
+          "members": [
+            {
+              "name": "load",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/fundamentals.service.ts",
+        "src/fundamentals/lazy-report.module.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "caches a lazy module and leaves its documented lifecycle hook uncalled",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) caches a lazy module and leaves its documented lifecycle hook uncalled",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Un módulo lazy sin controlador nuevo; no arranque automático de hooks ni todas las restricciones de importación lazy."
+      ]
+    },
+    {
+      "id": "discovery-decorator",
+      "status": "verified-case",
+      "contract": "DiscoveryService encuentra metadata del decorador del proveedor y los dos controladores registrados.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "DiscoveryService",
+          "members": [
+            {
+              "name": "getProviders",
+              "side": "instance"
+            },
+            {
+              "name": "getControllers",
+              "side": "instance"
+            },
+            {
+              "name": "getMetadataByDecorator",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "DiscoveryService",
+          "members": [
+            {
+              "name": "createDecorator",
+              "side": "static"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/fundamentals.service.ts",
+        "src/fundamentals/demo-feature.decorator.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "discovers a decorated provider and both registered controllers",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) discovers a decorated provider and both registered controllers",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Búsqueda del corpus local; no escaneo de todos los wrappers, aliases o contenedores externos."
+      ]
+    },
+    {
+      "id": "reflector-http-context",
+      "status": "verified-case",
+      "contract": "La metadata de método precede a la de clase; el guard rechaza sin cabecera y el interceptor añade contexto real HTTP.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "Reflector",
+          "members": [
+            {
+              "name": "createDecorator",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "Reflector",
+          "members": [
+            {
+              "name": "getAllAndOverride",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "ExecutionContext",
+          "members": [
+            {
+              "name": "getClass",
+              "side": "instance"
+            },
+            {
+              "name": "getHandler",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "ArgumentsHost",
+          "members": [
+            {
+              "name": "getType",
+              "side": "instance"
+            },
+            {
+              "name": "switchToHttp",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "CanActivate",
+          "members": [
+            {
+              "name": "canActivate",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "NestInterceptor",
+          "members": [
+            {
+              "name": "intercept",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "CallHandler",
+          "members": [
+            {
+              "name": "handle",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/demo-context.ts",
+        "src/fundamentals/fundamentals.controller.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "applies method metadata before class metadata in the guard and interceptor",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) applies method metadata before class metadata in the guard and interceptor",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "getAllAndMerge/getAll/get no están verificados por este caso; el contexto es HTTP."
+      ]
+    },
+    {
+      "id": "testing-provider-override",
+      "status": "verified-case",
+      "contract": "overrideProvider sustituye el token y el dependiente async recibe el valor de prueba conservando el alias.",
+      "apis": [
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "Test",
+          "members": [
+            {
+              "name": "createTestingModule",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "TestingModuleBuilder",
+          "members": [
+            {
+              "name": "overrideProvider",
+              "side": "instance"
+            },
+            {
+              "name": "compile",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": ["test/fundamentals.e2e-spec.ts"],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "supports overriding a token while its async dependent is still resolved by Nest",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) supports overriding a token while its async dependent is still resolved by Nest",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "No verifica overrideGuard/Interceptor/Filter/Pipe/Module ni todos los tipos de sustitución."
+      ]
+    },
+    {
+      "id": "lifecycle-explicit-close",
+      "status": "verified-case",
+      "contract": "app.init y app.close ejecutan una vez los cinco hooks en el orden observado.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "OnModuleInit",
+          "members": [
+            {
+              "name": "onModuleInit",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "OnApplicationBootstrap",
+          "members": [
+            {
+              "name": "onApplicationBootstrap",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "OnModuleDestroy",
+          "members": [
+            {
+              "name": "onModuleDestroy",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "BeforeApplicationShutdown",
+          "members": [
+            {
+              "name": "beforeApplicationShutdown",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "OnApplicationShutdown",
+          "members": [
+            {
+              "name": "onApplicationShutdown",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "INestApplicationContext",
+          "members": [
+            {
+              "name": "init",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "INestApplication",
+          "members": [
+            {
+              "name": "close",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals/lifecycle-probe.service.ts",
+        "test/fundamentals.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals.e2e-spec.ts",
+          "title": "runs startup and shutdown lifecycle hooks through app.init and app.close",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Fundamentals (real Nest application) runs startup and shutdown lifecycle hooks through app.init and app.close",
+              "ancestorTitles": ["Fundamentals (real Nest application)"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Cierre explícito dentro del proceso; no señales del SO, Windows ni errores de todos los hooks."
+      ]
+    },
+    {
+      "id": "inquirer-transient-consumer",
+      "status": "verified-case",
+      "contract": "Cada consumidor real obtiene un audit transient que identifica la clase que lo solicitó.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "INQUIRER"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Scope",
+          "members": [
+            {
+              "name": "TRANSIENT",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Inject"
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals-advanced/business.providers.ts",
+        "test/fundamentals-advanced.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "injects each real INQUIRER consumer into its own transient audit provider",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: consumer and optional dependencies injects each real INQUIRER consumer into its own transient audit provider",
+              "ancestorTitles": [
+                "Advanced DI: consumer and optional dependencies"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Dos consumidores locales; no interpretación de INQUIRER como identidad autenticada ni prueba de todos los scopes."
+      ]
+    },
+    {
+      "id": "durable-tenant-context",
+      "status": "verified-case",
+      "contract": "Un contexto durable comparte tarifas por tenant y mantiene fresca la identidad de cada petición; concurrencia y evicción LRU aíslan tenants.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "ContextIdFactory",
+          "members": [
+            {
+              "name": "apply",
+              "side": "static"
+            },
+            {
+              "name": "create",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "ContextIdStrategy",
+          "members": [
+            {
+              "name": "attach",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "HostComponentInfo",
+          "members": [
+            {
+              "name": "isTreeDurable",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "REQUEST"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Injectable"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Scope",
+          "members": [
+            {
+              "name": "REQUEST",
+              "side": "value"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals-advanced/tenant-context.ts",
+        "src/fundamentals-advanced/harness.ts",
+        "src/fundamentals-advanced/business.providers.ts",
+        "src/fundamentals-advanced/fundamentals-advanced.module.ts",
+        "test/fundamentals-advanced.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "shares a durable price book within one tenant while request identity stays fresh",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: durable tenant contexts over real HTTP shares a durable price book within one tenant while request identity stays fresh",
+              "ancestorTitles": [
+                "Advanced DI: durable tenant contexts over real HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "isolates two tenants and converges simultaneous requests onto the correct durable instances",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: durable tenant contexts over real HTTP isolates two tenants and converges simultaneous requests onto the correct durable instances",
+              "ancestorTitles": [
+                "Advanced DI: durable tenant contexts over real HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "bounds the LRU cache and recreates an evicted tenant without inheriting another tenant price",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: durable tenant contexts over real HTTP bounds the LRU cache and recreates an evicted tenant without inheriting another tenant price",
+              "ancestorTitles": [
+                "Advanced DI: durable tenant contexts over real HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "clears context identities on close and resets the public context strategy",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: durable tenant contexts over real HTTP clears context identities on close and resets the public context strategy",
+              "ancestorTitles": [
+                "Advanced DI: durable tenant contexts over real HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Allowlist local de tres tenants y caché de dos contextos; sin autenticación JWT multitenant, GC inmediato, persistencia distribuida ni aislamiento entre workers. ContextIdFactory.apply es global al proceso."
+      ]
+    },
+    {
+      "id": "optional-constructor-property-factory",
+      "status": "verified-case",
+      "contract": "Dependencias opcionales ausentes usan fallbacks, las presentes cambian el recibo y una propiedad heredada obligatoria sigue siendo requerida.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Optional"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Inject"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Provider"
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals-advanced/business.providers.ts",
+        "src/fundamentals-advanced/fundamentals-advanced.module.ts",
+        "test/fundamentals-advanced.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "uses constructor/property/factory fallbacks and injects a required inherited property",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: consumer and optional dependencies uses constructor/property/factory fallbacks and injects a required inherited property",
+              "ancestorTitles": [
+                "Advanced DI: consumer and optional dependencies"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "uses supplied optional constructor/property/factory dependencies in the business result",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: consumer and optional dependencies uses supplied optional constructor/property/factory dependencies in the business result",
+              "ancestorTitles": [
+                "Advanced DI: consumer and optional dependencies"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "fails to build when a required property dependency is absent",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: consumer and optional dependencies fails to build when a required property dependency is absent",
+              "ancestorTitles": [
+                "Advanced DI: consumer and optional dependencies"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Provider es un contrato de tipos utilizado por este módulo; no todas las ramas de su unión. La fábrica usa inject con token optional explícito."
+      ]
+    },
+    {
+      "id": "nest12-optional-inheritance",
+      "status": "verified-case",
+      "contract": "Una dependencia requerida de un constructor derivado no hereda la opcionalidad del constructor base en Nest 12.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Optional"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Inject"
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals-advanced/business.providers.ts",
+        "test/fundamentals-advanced.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "does not inherit constructor Optional metadata into a required derived dependency in Nest 12",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: consumer and optional dependencies does not inherit constructor Optional metadata into a required derived dependency in Nest 12",
+              "ancestorTitles": [
+                "Advanced DI: consumer and optional dependencies"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Solo versión instalada; no se ejecutó una comparación con Nest 11 ni con Typers."
+      ]
+    },
+    {
+      "id": "testing-missing-adapter-mocker",
+      "status": "verified-case",
+      "contract": "useMocker suministra únicamente el adaptador de crédito ausente y se ejecuta el servicio real de autorización.",
+      "apis": [
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "Test",
+          "members": [
+            {
+              "name": "createTestingModule",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "TestingModuleBuilder",
+          "members": [
+            {
+              "name": "useMocker",
+              "side": "instance"
+            },
+            {
+              "name": "compile",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/fundamentals-advanced/business.providers.ts",
+        "test/fundamentals-advanced.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "auto-mocks only the missing credit adapter and executes the real authorization service",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: Nest Testing useMocker and factory failures auto-mocks only the missing credit adapter and executes the real authorization service",
+              "ancestorTitles": [
+                "Advanced DI: Nest Testing useMocker and factory failures"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "No mocks automáticos de REQUEST/INQUIRER, miembros privados ni todos los tokens."
+      ]
+    },
+    {
+      "id": "async-factory-bootstrap-failure",
+      "status": "verified-case",
+      "contract": "Una fábrica requerida rechazada hace fallar compile sin devolver un módulo utilizable.",
+      "apis": [
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "Test",
+          "members": [
+            {
+              "name": "createTestingModule",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/testing",
+          "version": "12.0.2",
+          "export": "TestingModuleBuilder",
+          "members": [
+            {
+              "name": "compile",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": ["test/fundamentals-advanced.e2e-spec.ts"],
+      "tests": [
+        {
+          "file": "test/fundamentals-advanced.e2e-spec.ts",
+          "title": "propagates a required asynchronous factory failure without creating a usable module",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/fundamentals-advanced.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Advanced DI: Nest Testing useMocker and factory failures propagates a required asynchronous factory failure without creating a usable module",
+              "ancestorTitles": [
+                "Advanced DI: Nest Testing useMocker and factory failures"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "El caso demuestra propagación de un rechazo controlado; no estrategia general de reintentos o rollback de recursos."
+      ]
+    },
+    {
+      "id": "configuration-namespaced-provider",
+      "status": "verified-case",
+      "contract": "registerAs produce configuración tipada que se inyecta mediante asProvider y un módulo forRootAsync; datos inválidos rechazan bootstrap.",
+      "apis": [
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "registerAs"
+        },
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "ConfigType"
+        },
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "ConfigFactoryKeyHost",
+          "members": [
+            {
+              "name": "KEY",
+              "side": "instance"
+            },
+            {
+              "name": "asProvider",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "ConfigModule",
+          "members": [
+            {
+              "name": "forFeature",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "ConfigurableModuleBuilder",
+          "members": [
+            {
+              "name": "setClassMethodName",
+              "side": "instance"
+            },
+            {
+              "name": "build",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/operations.config.ts",
+        "src/operations-lab/operations-lab.module.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "injects a namespaced ConfigType through asProvider and rejects inventory oversubscription",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts injects a namespaced ConfigType through asProvider and rejects inventory oversubscription",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "fails bootstrap for an invalid namespaced configuration instead of using a silent default",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts fails bootstrap for an invalid namespaced configuration instead of using a silent default",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Un namespace y factory validadora; no todas las opciones de carga, factories de clase o schemas. ConfigType es evidencia de tipos más comportamiento del valor, sin reflexión de tipos en runtime."
+      ]
+    },
+    {
+      "id": "configuration-env-precedence",
+      "status": "verified-case",
+      "contract": "Dos dotenv respetan prioridad del primer fichero y del shell; validate construye claves anidadas y getOrThrow rechaza la clave ausente.",
+      "apis": [
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "ConfigModule",
+          "members": [
+            {
+              "name": "forRoot",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/config",
+          "version": "12.0.0",
+          "export": "ConfigService",
+          "members": [
+            {
+              "name": "get",
+              "side": "instance"
+            },
+            {
+              "name": "getOrThrow",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": ["test/operations-lab.e2e-spec.ts"],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "merges two env files with first-file and shell precedence, validates and infers nested keys",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts merges two env files with first-file and shell precedence, validates and infers nested keys",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Se configura cache:true y se prueba precedencia/lectura, sin medir rendimiento ni todos los estados de caché; archivos temporales y claves de entorno aisladas."
+      ]
+    },
+    {
+      "id": "scheduler-dynamic-timeouts",
+      "status": "verified-case",
+      "contract": "Un timeout registrado expira la reserva y una confirmación elimina su timeout conservando inventario confirmado.",
+      "apis": [
+        {
+          "package": "@nestjs/schedule",
+          "version": "12.0.2",
+          "export": "SchedulerRegistry",
+          "members": [
+            {
+              "name": "addTimeout",
+              "side": "instance"
+            },
+            {
+              "name": "getTimeout",
+              "side": "instance"
+            },
+            {
+              "name": "getTimeouts",
+              "side": "instance"
+            },
+            {
+              "name": "deleteTimeout",
+              "side": "instance"
+            },
+            {
+              "name": "doesExist",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/reservation-engine.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "expires holds through registered timeouts and cancels the timeout when inventory is confirmed",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts expires holds through registered timeouts and cancels the timeout when inventory is confirmed",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Timers reales de proceso; sin garantía de ejecución durante suspensión ni persistencia tras reinicio."
+      ]
+    },
+    {
+      "id": "scheduler-dynamic-cron",
+      "status": "verified-case",
+      "contract": "Un cron dinámico real recupera una reserva cuyo timeout se eliminó; reprogramación válida y parada/borrado respetan el registro.",
+      "apis": [
+        {
+          "package": "@nestjs/schedule",
+          "version": "12.0.2",
+          "export": "SchedulerRegistry",
+          "members": [
+            {
+              "name": "addCronJob",
+              "side": "instance"
+            },
+            {
+              "name": "getCronJob",
+              "side": "instance"
+            },
+            {
+              "name": "getCronJobs",
+              "side": "instance"
+            },
+            {
+              "name": "deleteCronJob",
+              "side": "instance"
+            },
+            {
+              "name": "doesExist",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/schedule",
+          "version": "12.0.2",
+          "export": "CronExpression",
+          "members": [
+            {
+              "name": "EVERY_SECOND",
+              "side": "value"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/reservation-engine.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "recovers an expired hold with a real dynamic cron, reschedules and rejects duplicate jobs",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts recovers an expired hold with a real dynamic cron, reschedules and rejects duplicate jobs",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "CronJob.start/stop/setTime pertenecen a cron, fuera del inventario @nestjs. No todas las expresiones, zonas horarias o opciones del scheduler."
+      ]
+    },
+    {
+      "id": "scheduler-dynamic-interval-cleanup",
+      "status": "verified-case",
+      "contract": "Un intervalo toma ocho muestras acotadas; app.close elimina intervalos, timeouts y cron y detiene los efectos.",
+      "apis": [
+        {
+          "package": "@nestjs/schedule",
+          "version": "12.0.2",
+          "export": "SchedulerRegistry",
+          "members": [
+            {
+              "name": "addInterval",
+              "side": "instance"
+            },
+            {
+              "name": "getInterval",
+              "side": "instance"
+            },
+            {
+              "name": "getIntervals",
+              "side": "instance"
+            },
+            {
+              "name": "deleteInterval",
+              "side": "instance"
+            },
+            {
+              "name": "getCronJobs",
+              "side": "instance"
+            },
+            {
+              "name": "getTimeouts",
+              "side": "instance"
+            },
+            {
+              "name": "doesExist",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/schedule",
+          "version": "12.0.2",
+          "export": "ScheduleModule",
+          "members": [
+            {
+              "name": "forRoot",
+              "side": "static"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/reservation-engine.ts",
+        "src/operations-lab/operations-lab.module.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "samples bounded inventory history with a dynamic interval and removes all timers on application close",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts samples bounded inventory history with a dynamic interval and removes all timers on application close",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "13 métodos públicos declarados de SchedulerRegistry enlazados entre tres casos; eso no verifica todos sus overloads, errores ni combinaciones."
+      ]
+    },
+    {
+      "id": "uri-version-neutral-default-middleware",
+      "status": "verified-case",
+      "contract": "Versiones URI 1/2, ruta VERSION_NEUTRAL y versión por defecto resuelven contratos distintos; middleware solo aparece en GET v2.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "Version"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "VERSION_NEUTRAL"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "VersioningType",
+          "members": [
+            {
+              "name": "URI",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "RequestMethod",
+          "members": [
+            {
+              "name": "GET",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "INestApplication",
+          "members": [
+            {
+              "name": "enableVersioning",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "MiddlewareConsumer",
+          "members": [
+            {
+              "name": "apply",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/operations.controller.ts",
+        "src/operations-lab/operations-lab.module.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "serves URI-neutral, multiple-version and default-version routes with version-specific middleware",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts serves URI-neutral, multiple-version and default-version routes with version-specific middleware",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "No cubre todos los métodos HTTP, exclusiones de middleware, controladores versionados ni adaptadores."
+      ]
+    },
+    {
+      "id": "header-version-neutral",
+      "status": "verified-case",
+      "contract": "La ruta neutral acepta cabecera ausente/desconocida; una ruta versionada rechaza una versión sin soporte.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "VERSION_NEUTRAL"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "VersioningType",
+          "members": [
+            {
+              "name": "HEADER",
+              "side": "value"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/operations-lab/operations.controller.ts",
+        "test/operations-lab.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "serves header-neutral routes with or without an unknown version and rejects an unsupported policy version",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts serves header-neutral routes with or without an unknown version and rejects an unsupported policy version",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Cabecera x-api-version y versiones de este controlador; no aliases de cabeceras ni negociación genérica."
+      ]
+    },
+    {
+      "id": "fastify-custom-highest-version",
+      "status": "verified-case",
+      "contract": "Fastify elige la mayor versión soportada de preferencias ordenadas y devuelve 404 si ninguna coincide.",
+      "apis": [
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "VersioningType",
+          "members": [
+            {
+              "name": "CUSTOM",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/platform-fastify",
+          "version": "12.0.2",
+          "export": "FastifyAdapter"
+        },
+        {
+          "package": "@nestjs/platform-fastify",
+          "version": "12.0.2",
+          "export": "NestFastifyApplication",
+          "members": [
+            {
+              "name": "inject",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": ["test/operations-lab.e2e-spec.ts"],
+      "tests": [
+        {
+          "file": "test/operations-lab.e2e-spec.ts",
+          "title": "selects the highest supported custom version on Fastify from an ordered client preference list",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/operations-lab.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Operations: typed configuration, dynamic scheduling and version contracts selects the highest supported custom version on Fastify from an ordered client preference list",
+              "ancestorTitles": [
+                "Operations: typed configuration, dynamic scheduling and version contracts"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Extractor local validado para una lista de enteros; no todas las diferencias entre Express y Fastify."
+      ]
+    },
+    {
+      "id": "microservice-request-event-hooks",
+      "status": "verified-case",
+      "contract": "TCP real y transporte HTTP RPC propio ejecutan request-response, eventos y hooks en orden con aislamiento AsyncLocalStorage.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "NestFactory",
+          "members": [
+            {
+              "name": "createMicroservice",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "ClientProxyFactory",
+          "members": [
+            {
+              "name": "create",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "ClientProxy",
+          "members": [
+            {
+              "name": "send",
+              "side": "instance"
+            },
+            {
+              "name": "emit",
+              "side": "instance"
+            },
+            {
+              "name": "connect",
+              "side": "instance"
+            },
+            {
+              "name": "close",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "MessagePattern"
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "EventPattern"
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "INestMicroservice",
+          "members": [
+            {
+              "name": "registerPreRequestHook",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "Transport",
+          "members": [
+            {
+              "name": "TCP",
+              "side": "value"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/messaging.harness.ts",
+        "src/messaging/messaging.controller.ts",
+        "src/messaging/rpc-context.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "executes request-response through hooks, guard, interceptor, pipe and handler",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Microservice TCP executes request-response through hooks, guard, interceptor, pipe and handler",
+              "ancestorTitles": ["Microservice TCP"],
+              "status": "passed"
+            },
+            {
+              "fullName": "Microservice custom HTTP/NDJSON executes request-response through hooks, guard, interceptor, pipe and handler",
+              "ancestorTitles": ["Microservice custom HTTP/NDJSON"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "isolates AsyncLocalStorage correlations for concurrent messages",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Microservice TCP isolates AsyncLocalStorage correlations for concurrent messages",
+              "ancestorTitles": ["Microservice TCP"],
+              "status": "passed"
+            },
+            {
+              "fullName": "Microservice custom HTTP/NDJSON isolates AsyncLocalStorage correlations for concurrent messages",
+              "ancestorTitles": ["Microservice custom HTTP/NDJSON"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "delivers events to the actual controller",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Microservice TCP delivers events to the actual controller",
+              "ancestorTitles": ["Microservice TCP"],
+              "status": "passed"
+            },
+            {
+              "fullName": "Microservice custom HTTP/NDJSON delivers events to the actual controller",
+              "ancestorTitles": ["Microservice custom HTTP/NDJSON"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Dos variantes parametrizadas TCP/custom HTTP RPC; no todos los brokers, reintentos, garantías de entrega ni opciones de cada ClientProxy."
+      ]
+    },
+    {
+      "id": "microservice-filter-and-stream",
+      "status": "verified-case",
+      "contract": "Filtros transforman errores de DTO/guard; el cliente recibe varias respuestas y limita una petición sin respuesta.",
+      "apis": [
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "RpcException",
+          "members": [
+            {
+              "name": "getError",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "RpcExceptionFilter",
+          "members": [
+            {
+              "name": "catch",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "ValidationPipe",
+          "members": [
+            {
+              "name": "transform",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/rpc-context.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "returns filter errors for invalid DTOs and denied access",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Microservice TCP returns filter errors for invalid DTOs and denied access",
+              "ancestorTitles": ["Microservice TCP"],
+              "status": "passed"
+            },
+            {
+              "fullName": "Microservice custom HTTP/NDJSON returns filter errors for invalid DTOs and denied access",
+              "ancestorTitles": ["Microservice custom HTTP/NDJSON"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "streams multiple replies and bounds an unanswered request with timeout",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Microservice TCP streams multiple replies and bounds an unanswered request with timeout",
+              "ancestorTitles": ["Microservice TCP"],
+              "status": "passed"
+            },
+            {
+              "fullName": "Microservice custom HTTP/NDJSON streams multiple replies and bounds an unanswered request with timeout",
+              "ancestorTitles": ["Microservice custom HTTP/NDJSON"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "El timeout es operador de RxJS, fuera del inventario Nest; la validación cubre DTOs concretos y ambas variantes TCP/custom."
+      ]
+    },
+    {
+      "id": "hybrid-shared-container",
+      "status": "verified-case",
+      "contract": "Los listeners HTTP y microservicio comparten el proveedor del log mediante connectMicroservice y startAllMicroservices.",
+      "apis": [
+        {
+          "package": "@nestjs/core",
+          "version": "12.0.2",
+          "export": "NestFactory",
+          "members": [
+            {
+              "name": "create",
+              "side": "value"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/common",
+          "version": "12.0.2",
+          "export": "INestApplication",
+          "members": [
+            {
+              "name": "connectMicroservice",
+              "side": "instance"
+            },
+            {
+              "name": "startAllMicroservices",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/messaging.harness.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "shares the provider container across HTTP and microservice listeners",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Hybrid HTTP and TCP application shares the provider container across HTTP and microservice listeners",
+              "ancestorTitles": ["Hybrid HTTP and TCP application"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Aplicación híbrida con TCP y herencia de configuración; no todas las políticas globales ni clustering."
+      ]
+    },
+    {
+      "id": "grpc-four-call-modes",
+      "status": "verified-case",
+      "contract": "gRPC real ejecuta unary y streaming de servidor, cliente y bidireccional usando el asset protobuf.",
+      "apis": [
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "GrpcMethod"
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "GrpcStreamMethod"
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "ClientGrpc",
+          "members": [
+            {
+              "name": "getService",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/microservices",
+          "version": "12.0.2",
+          "export": "Transport",
+          "members": [
+            {
+              "name": "GRPC",
+              "side": "value"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/messaging.controller.ts",
+        "src/messaging/messaging.harness.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "calls a unary method and consumes a server stream",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "gRPC with a real protobuf service calls a unary method and consumes a server stream",
+              "ancestorTitles": ["gRPC with a real protobuf service"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "sends a client stream and exchanges a bidirectional stream",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "gRPC with a real protobuf service sends a client stream and exchanges a bidirectional stream",
+              "ancestorTitles": ["gRPC with a real protobuf service"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Un servicio Calculator local; no metadata avanzada, cancelación, TLS ni todas las variantes de decoradores gRPC."
+      ]
+    },
+    {
+      "id": "socketio-ack-broadcast-lifecycle",
+      "status": "verified-case",
+      "contract": "Socket.IO devuelve ack implícito/explicito, broadcast y respuestas Observable, y ejecuta lifecycle del gateway.",
+      "apis": [
+        {
+          "package": "@nestjs/platform-socket.io",
+          "version": "12.0.2",
+          "export": "IoAdapter"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "WebSocketGateway"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "SubscribeMessage"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "MessageBody"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "Ack"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "WebSocketServer"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "OnGatewayInit",
+          "members": [
+            {
+              "name": "afterInit",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "OnGatewayConnection",
+          "members": [
+            {
+              "name": "handleConnection",
+              "side": "instance"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "OnGatewayDisconnect",
+          "members": [
+            {
+              "name": "handleDisconnect",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/messaging.harness.ts",
+        "src/messaging/socket-gateways.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "acknowledges implicitly and explicitly and runs gateway lifecycle",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Socket.IO gateway and adapter acknowledges implicitly and explicitly and runs gateway lifecycle",
+              "ancestorTitles": ["Socket.IO gateway and adapter"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "broadcasts to another client and emits Observable responses",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Socket.IO gateway and adapter broadcasts to another client and emits Observable responses",
+              "ancestorTitles": ["Socket.IO gateway and adapter"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Clientes reales locales con websocket; sin fallback long-polling, rooms distribuidas, adaptador Redis o todas las firmas de gateway."
+      ]
+    },
+    {
+      "id": "raw-websocket-filter",
+      "status": "verified-case",
+      "contract": "El adaptador ws procesa paquetes event/data y broadcast; guard/ValidationPipe producen errores por el filtro del gateway.",
+      "apis": [
+        {
+          "package": "@nestjs/platform-ws",
+          "version": "12.0.2",
+          "export": "WsAdapter"
+        },
+        {
+          "package": "@nestjs/websockets",
+          "version": "12.0.2",
+          "export": "WsException",
+          "members": [
+            {
+              "name": "getError",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/messaging/messaging.harness.ts",
+        "src/messaging/socket-gateways.ts",
+        "src/messaging/socket-support.ts",
+        "test/messaging.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "uses event/data packets, broadcasts and runs the interceptor",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "ws gateway and adapter uses event/data packets, broadcasts and runs the interceptor",
+              "ancestorTitles": ["ws gateway and adapter"],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/messaging.e2e-spec.ts",
+          "title": "filters validation and guard exceptions over the raw WebSocket",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/messaging.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "ws gateway and adapter filters validation and guard exceptions over the raw WebSocket",
+              "ancestorTitles": ["ws gateway and adapter"],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Raw ws y Socket.IO son harness separados; no equivalencia universal de protocolo ni reconexión."
+      ]
+    },
+    {
+      "id": "openapi-module-selection-and-ui",
+      "status": "verified-case",
+      "contract": "createDocument selecciona módulos, deepScanRoutes incluye imports propios y setup sirve dos especificaciones e interfaces con selector.",
+      "apis": [
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "SwaggerModule",
+          "members": [
+            {
+              "name": "createDocument",
+              "side": "static"
+            },
+            {
+              "name": "setup",
+              "side": "static"
+            }
+          ]
+        },
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "DocumentBuilder",
+          "members": [
+            {
+              "name": "setTitle",
+              "side": "instance"
+            },
+            {
+              "name": "setVersion",
+              "side": "instance"
+            },
+            {
+              "name": "build",
+              "side": "instance"
+            }
+          ]
+        }
+      ],
+      "sourcePaths": [
+        "src/openapi-lab/multiple-documents.ts",
+        "test/openapi-documents.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/openapi-documents.e2e-spec.ts",
+          "title": "includes only each selected module and its own schemas",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/openapi-documents.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Selective OpenAPI documents over real Nest HTTP includes only each selected module and its own schemas",
+              "ancestorTitles": [
+                "Selective OpenAPI documents over real Nest HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/openapi-documents.e2e-spec.ts",
+          "title": "deepScanRoutes includes the imported revision module without including sibling members",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/openapi-documents.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Selective OpenAPI documents over real Nest HTTP deepScanRoutes includes the imported revision module without including sibling members",
+              "ancestorTitles": [
+                "Selective OpenAPI documents over real Nest HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/openapi-documents.e2e-spec.ts",
+          "title": "serves separate Swagger interfaces and a selector pointing at the served JSON documents",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/openapi-documents.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Selective OpenAPI documents over real Nest HTTP serves separate Swagger interfaces and a selector pointing at the served JSON documents",
+              "ancestorTitles": [
+                "Selective OpenAPI documents over real Nest HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "Documentos locales con Express; no todas las opciones de SwaggerModule/DocumentBuilder ni plugins subpath del CLI."
+      ]
+    },
+    {
+      "id": "openapi-generic-schema-and-links",
+      "status": "verified-case",
+      "contract": "Un DTO genérico define items con schema explícito; links por operationId/operationRef se resuelven y siguen la respuesta HTTP real.",
+      "apis": [
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "ApiExtraModels"
+        },
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "ApiOkResponse"
+        },
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "ApiProperty"
+        },
+        {
+          "package": "@nestjs/swagger",
+          "version": "12.0.1",
+          "export": "getSchemaPath"
+        }
+      ],
+      "sourcePaths": [
+        "src/openapi-lab/multiple-documents.ts",
+        "test/openapi-documents.e2e-spec.ts"
+      ],
+      "tests": [
+        {
+          "file": "test/openapi-documents.e2e-spec.ts",
+          "title": "combines a generic page and explicit item schema, matching the actual response",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/openapi-documents.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Selective OpenAPI documents over real Nest HTTP combines a generic page and explicit item schema, matching the actual response",
+              "ancestorTitles": [
+                "Selective OpenAPI documents over real Nest HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "file": "test/openapi-documents.e2e-spec.ts",
+          "title": "resolves operationId and relative operationRef links and follows their response parameter",
+          "command": "pnpm exec vitest run --config vitest.config.e2e.ts test/openapi-documents.e2e-spec.ts",
+          "verifiedInstances": [
+            {
+              "fullName": "Selective OpenAPI documents over real Nest HTTP resolves operationId and relative operationRef links and follows their response parameter",
+              "ancestorTitles": [
+                "Selective OpenAPI documents over real Nest HTTP"
+              ],
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "date": "2026-09-15",
+        "result": "passed",
+        "basis": "Ejecución global real: 131 casos e2e pasados en 19 archivos. Las instancias exactas del informe se conservan por prueba; no se requiere el informe temporal para reproducir el inventario.",
+        "reportArtifact": "reports/e2e.json",
+        "reportStartedAt": "2026-09-15T17:14:56.625Z"
+      },
+      "limits": [
+        "No reflexión automática del parámetro T ni validador exhaustivo de todas las especificaciones OpenAPI."
+      ]
+    }
+  ]
+}

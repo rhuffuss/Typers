@@ -1,0 +1,34 @@
+import { ApprovalDecision, entityName } from './approval.js';
+const approver = new ApprovalDecision({
+  id: 'approver-1',
+  roles: ['approver'],
+});
+const reader = new ApprovalDecision({ id: 'reader-1', roles: ['reader'] });
+const errors: string[] = [];
+try {
+  reader.approve(100);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+try {
+  approver.limitMinor = 0;
+} catch (error) {
+  errors.push((error as Error).message);
+}
+try {
+  approver.approve(50001);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+// oxlint-disable-next-line typescript/unbound-method -- @Bound installs this bound method; the emitted-JS test exercises a detached call.
+const detached = approver.approve;
+console.log(
+  JSON.stringify({
+    entity: entityName(ApprovalDecision),
+    receipt: detached(25000),
+    limitMinor: approver.limitMinor,
+    approved: approver.approved,
+    readerApproved: reader.approved,
+    errors,
+  }),
+);

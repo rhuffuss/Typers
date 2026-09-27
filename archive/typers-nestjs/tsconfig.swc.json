@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist-tooling-swc",
+    "tsBuildInfoFile": "./dist-tooling-swc/tsconfig.tsbuildinfo"
+  },
+  "include": ["src/tooling-lab/swc-only/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-tooling-swc",
+    "test",
+    "**/*.spec.ts"
+  ]
+}

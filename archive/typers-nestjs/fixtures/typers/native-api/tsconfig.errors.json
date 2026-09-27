@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "files": ["src/budget.ts", "src/invalid-budget.ts"]
+}

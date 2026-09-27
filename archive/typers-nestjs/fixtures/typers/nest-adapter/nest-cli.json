@@ -1,0 +1,26 @@
+{
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "builder": "typers",
+    "tsConfigPath": "tsconfig.json",
+    "deleteOutDir": true,
+    "assets": [
+      "policies/*.json",
+      { "include": "templates", "exclude": "templates/private/**" },
+      { "include": "downloads/*", "outDir": "public-assets" }
+    ]
+  },
+  "projects": {
+    "review.api": {
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "builder": {
+          "type": "tsc",
+          "options": { "configPath": "tsconfig.json" }
+        },
+        "assets": ["policies/*.json"],
+        "deleteOutDir": true
+      }
+    }
+  }
+}

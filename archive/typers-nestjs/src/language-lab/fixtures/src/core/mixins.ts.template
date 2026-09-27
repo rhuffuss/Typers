@@ -1,0 +1,84 @@
+// A constructor rest parameter is the TypeScript mixin convention; constraints
+// below retain the instance members required by each business capability.
+type Constructor<T = object> = new (...args: any[]) => T;
+export class Identified {
+  constructor(readonly id: string) {
+    if (!id.trim()) throw new Error('Order id required');
+  }
+}
+export interface VersionedCapability {
+  readonly revision: number;
+  assertVersion(expected: number): void;
+  advanceVersion(expected: number): void;
+}
+export interface AuditEntry {
+  readonly entityId: string;
+  readonly revision: number;
+  readonly action: string;
+}
+export interface AuditedCapability {
+  record(action: string): void;
+  audit(): readonly AuditEntry[];
+}
+export function WithVersion<TBase extends Constructor<{ readonly id: string }>>(
+  Base: TBase,
+): TBase & Constructor<VersionedCapability> {
+  return class Versioned extends Base {
+    #revision = 1;
+    get revision(): number {
+      return this.#revision;
+    }
+    assertVersion(expected: number): void {
+      if (!Number.isSafeInteger(expected) || expected !== this.#revision)
+        throw new Error(`Version conflict: ${this.id}`);
+    }
+    advanceVersion(expected: number): void {
+      this.assertVersion(expected);
+      this.#revision += 1;
+    }
+  };
+}
+export function WithAudit<
+  TBase extends Constructor<{ readonly id: string; readonly revision: number }>,
+>(Base: TBase): TBase & Constructor<AuditedCapability> {
+  return class Audited extends Base {
+    #events: { entityId: string; revision: number; action: string }[] = [];
+    record(action: string): void {
+      this.#events.push({ entityId: this.id, revision: this.revision, action });
+    }
+    audit() {
+      return this.#events.map((event) => Object.freeze({ ...event }));
+    }
+  };
+}
+const AuditedVersionedOrder = WithAudit(WithVersion(Identified));
+export class PurchaseOrder extends AuditedVersionedOrder {
+  #state: 'draft' | 'submitted' = 'draft';
+  #totalMinor = 0n;
+  get state() {
+    return this.#state;
+  }
+  get totalMinor() {
+    return this.#totalMinor.toString();
+  }
+  addLine(quantity: number, unitMinor: bigint, expectedVersion: number): void {
+    this.assertVersion(expectedVersion);
+    if (this.#state !== 'draft')
+      throw new Error('Submitted orders cannot change');
+    if (!Number.isSafeInteger(quantity) || quantity < 1 || unitMinor <= 0n)
+      throw new Error('Positive quantity and price required');
+    const total = this.#totalMinor + BigInt(quantity) * unitMinor;
+    if (total > 999999999999n) throw new Error('Order limit exceeded');
+    this.advanceVersion(expectedVersion);
+    this.#totalMinor = total;
+    this.record('line.added');
+  }
+  submit(expectedVersion: number): void {
+    this.assertVersion(expectedVersion);
+    if (this.#state !== 'draft' || this.#totalMinor === 0n)
+      throw new Error('A nonempty draft is required');
+    this.advanceVersion(expectedVersion);
+    this.#state = 'submitted';
+    this.record('order.submitted');
+  }
+}

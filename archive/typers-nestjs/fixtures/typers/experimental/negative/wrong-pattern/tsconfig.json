@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "types": ["node"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "experimentalTypersSyntax": true
+  },
+  "files": ["case.ts"]
+}

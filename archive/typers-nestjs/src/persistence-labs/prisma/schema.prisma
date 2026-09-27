@@ -1,0 +1,26 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "./generated"
+  moduleFormat        = "esm"
+  generatedFileExtension = "ts"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model PrismaLabWriter {
+  id    Int @id @default(autoincrement())
+  name  String
+  notes PrismaLabNote[]
+  @@map("prisma_writers")
+}
+
+model PrismaLabNote {
+  id       Int @id @default(autoincrement())
+  title    String
+  writerId Int
+  writer   PrismaLabWriter @relation(fields: [writerId], references: [id], onDelete: Cascade)
+  @@map("prisma_notes")
+}

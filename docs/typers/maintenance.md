@@ -5,7 +5,7 @@
 - Upstream: `https://github.com/microsoft/TypeScript.git`.
 - Fork: `https://github.com/rhuffus/Typers.git`.
 - Base inicial: tag `v7.0.2`, commit `1e4744d68260a7cb91b62b12edc3f6a2187faaf1`.
-- Rama del proyecto: `typers-main`. `main` heredada se conserva.
+- Rama del proyecto: `main`. La antigua `main` de upstream se conserva como `archive/upstream-main-2026-09-27`.
 - Checkout inicial del propietario: `~/CodeHome/rhuffus/typers`.
 
 El clon usa `--filter=tree:0 --single-branch --branch typers-main --no-tags`. Conserva los commits alcanzables; árboles y blobs históricos se obtienen bajo demanda. No es un clon superficial y no requiere renunciar al ancestro común con upstream. El estado inicial ocupó aproximadamente 96 MB en `.git` y 1,1 GB incluyendo todos los archivos actuales; el tamaño cambia con el trabajo y las descargas.
@@ -46,13 +46,13 @@ Un build mínimo puede no necesitar todo el corpus; verificar por separado la di
 
 ## Ramas y revisión
 
-1. Partir de `typers-main` actualizada y comprobar el estado local.
+1. Partir de `main` actualizada y comprobar el estado local.
 2. Crear rama temática pequeña.
 3. Actualizar código, tests, documentación y estado coherentemente.
 4. Ejecutar validación del componente y revisar el diff completo.
-5. Commit descriptivo, push al fork y PR dirigido explícitamente a `rhuffus/Typers:typers-main`.
+5. Commit descriptivo, push al fork y PR dirigido explícitamente a `rhuffus/Typers:main`.
 6. Inspeccionar checks, resolver regresiones y hacer merge con autorización vigente del propietario.
-7. Actualizar el checkout local de `typers-main` y verificar limpieza.
+7. Actualizar el checkout local de `main` y verificar limpieza.
 
 No enviar PRs a Microsoft por accidente. No usar force-push sobre ramas compartidas ni reescribir la base para simplificar una actualización. La autorización del propietario para esta fase incluye documentación, commit, push, merge y continuación con la implementación inicial; no equivale a publicar un paquete npm ni contactar terceros.
 

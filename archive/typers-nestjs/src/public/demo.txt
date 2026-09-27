@@ -1,0 +1,1 @@
+Static asset served by NestJS ServeStaticModule.

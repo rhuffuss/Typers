@@ -1,10 +1,12 @@
 # Hoja de ruta de implementación
 
+**En pausa desde el 27-09-2026.** Este orden se conserva para una reanudación explícita; no es un encargo activo. La línea activa es [Orion](https://github.com/rhuffus/orion), una librería compatible con TypeScript estándar.
+
 ## Cómo leer el orden
 
 El orden prioriza aprendizaje y reducción de riesgo. La complejidad incluye parser, tipos, emisor, diagnóstico, runtime, editor y herramientas externas. No equivale a días de trabajo. Una API pequeña puede implementarse pronto; una sustitución universal de APIs históricas puede ser mucho más costosa que una construcción sintáctica.
 
-Estado inicial de todos los hitos de código: **pendiente**. La documentación es la entrega previa. Los avances efectivos se registran en [estado](status.md).
+El registro fundacional precedía al código. El estado efectivo es H0 CLI, H1 y H2 implementados como prototipo, H5 parcial y H3, H4 y H6 pendientes; véase [estado](status.md).
 
 Avance posterior: H0 CLI, H1 y H2 tienen un prototipo verificado. H5 incorpora clientes nativos distribuidos y emisión programática, según [ADR 0005](decisions/0005-native-api-and-project-emission.md), y el adaptador `typers-nest build`, según [ADR 0006](decisions/0006-nest-build-adapter.md). La API clásica/Nest CLI y Oxc/editor siguen abiertos; no se considera H5 terminado por disponer de estas integraciones.
 

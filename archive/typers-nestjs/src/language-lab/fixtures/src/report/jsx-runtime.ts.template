@@ -1,0 +1,124 @@
+export type Currency = 'EUR' | 'USD';
+export type ReportNode =
+  | {
+      readonly tag: 'report';
+      readonly title: string;
+      readonly children: readonly ReportNode[];
+    }
+  | { readonly tag: 'fragment'; readonly children: readonly ReportNode[] }
+  | {
+      readonly tag: 'item';
+      readonly label: string;
+      readonly amountMinor: string;
+      readonly currency: Currency;
+    }
+  | {
+      readonly tag: 'summary';
+      readonly totalMinor: string;
+      readonly currency: Currency;
+    };
+export type ReportChild =
+  ReportNode | readonly ReportChild[] | null | false | undefined;
+export const Fragment = Symbol('ReportFragment');
+export namespace JSX {
+  export type Element = ReportNode;
+  export interface ElementChildrenAttribute {
+    children: unknown;
+  }
+  export interface IntrinsicElements {
+    report: { title: string; children?: ReportChild };
+    item: { label: string; amountMinor: string; currency: Currency };
+    summary: { totalMinor: string; currency: Currency };
+  }
+}
+function children(value: unknown): ReportNode[] {
+  if (value === undefined || value === null || value === false) return [];
+  if (Array.isArray(value)) return value.flatMap(children);
+  if (typeof value !== 'object' || !('tag' in value))
+    throw new Error('Report children must be report nodes');
+  return [value as ReportNode];
+}
+function text(value: unknown): string {
+  if (typeof value !== 'string' || !value.trim())
+    throw new Error('Report text is required');
+  return value.replace(/[\r\n]/g, ' ');
+}
+function minor(value: unknown): string {
+  if (typeof value !== 'string' || !/^(0|[1-9]\d{0,11})$/.test(value))
+    throw new Error('Report amount must be canonical minor units');
+  return value;
+}
+function currency(value: unknown): Currency {
+  if (value !== 'EUR' && value !== 'USD')
+    throw new Error('Unsupported report currency');
+  return value;
+}
+// The compiler selects the public JSX namespace for type checking. This small
+// runtime separately validates values and produces an invoice-report tree.
+export function jsx(
+  type: string | typeof Fragment | ((props: any) => ReportNode),
+  props: Record<string, unknown> | null,
+): ReportNode {
+  const input = props ?? {};
+  if (typeof type === 'function') return type(input);
+  if (type === Fragment)
+    return { tag: 'fragment', children: children(input.children) };
+  switch (type) {
+    case 'report':
+      return {
+        tag: 'report',
+        title: text(input.title),
+        children: children(input.children),
+      };
+    case 'item':
+      return {
+        tag: 'item',
+        label: text(input.label),
+        amountMinor: minor(input.amountMinor),
+        currency: currency(input.currency),
+      };
+    case 'summary':
+      return {
+        tag: 'summary',
+        totalMinor: minor(input.totalMinor),
+        currency: currency(input.currency),
+      };
+    default:
+      throw new Error('Unknown report element');
+  }
+}
+export const jsxs = jsx;
+const format = (amount: string, code: Currency) =>
+  `${code} ${BigInt(amount) / 100n}.${(BigInt(amount) % 100n).toString().padStart(2, '0')}`;
+export function renderReport(report: ReportNode): string {
+  if (report.tag !== 'report') throw new Error('A report root is required');
+  function flatten(nodes: readonly ReportNode[]): ReportNode[] {
+    return nodes.flatMap((node) =>
+      node.tag === 'fragment' ? flatten(node.children) : [node],
+    );
+  }
+  const nodes = flatten(report.children);
+  const summaries = nodes.filter((node) => node.tag === 'summary');
+  const items = nodes.filter((node) => node.tag === 'item');
+  if (
+    summaries.length !== 1 ||
+    items.length === 0 ||
+    nodes.length !== summaries.length + items.length
+  )
+    throw new Error('A report needs items and exactly one summary');
+  const summary = summaries[0];
+  if (items.some((item) => item.currency !== summary.currency))
+    throw new Error('Mixed report currencies');
+  if (
+    items.reduce((sum, item) => sum + BigInt(item.amountMinor), 0n) !==
+    BigInt(summary.totalMinor)
+  )
+    throw new Error('Report total does not match its lines');
+  return [
+    report.title,
+    ...items.map(
+      (item) => `${item.label}: ${format(item.amountMinor, item.currency)}`,
+    ),
+    `TOTAL ${format(summary.totalMinor, summary.currency)}`,
+  ].join('\n');
+}

@@ -1,0 +1,8 @@
+node_modules
+dist*
+coverage
+reports
+pnpm-lock.yaml
+src/persistence-labs/prisma/generated
+docs/nest-coverage.json
+docs/nest-coverage.md

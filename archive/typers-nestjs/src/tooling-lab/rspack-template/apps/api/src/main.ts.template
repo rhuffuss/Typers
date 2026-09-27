@@ -1,0 +1,26 @@
+import 'reflect-metadata';
+import { Controller, Get, Module } from '@nestjs/common';
+import { NestFactory } from '@nestjs/core';
+import { SharedBuildModule, SharedBuildService } from '@tooling/shared';
+
+@Controller('tooling')
+class RspackController {
+  constructor(private readonly shared: SharedBuildService) {}
+  @Get() read() {
+    const dependencies = Reflect.getMetadata(
+      'design:paramtypes',
+      RspackController,
+    ) as Function[];
+    return {
+      builder: 'rspack',
+      message: this.shared.read(),
+      dependencies: dependencies.map((type) => type.name),
+    };
+  }
+}
+@Module({ imports: [SharedBuildModule], controllers: [RspackController] })
+class RspackApiModule {}
+const app = await NestFactory.create(RspackApiModule, { logger: false });
+app.enableShutdownHooks();
+await app.listen(0, '127.0.0.1');
+console.log(`TOOLING_URL=${await app.getUrl()}`);

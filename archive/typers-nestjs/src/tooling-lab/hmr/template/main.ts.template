@@ -1,0 +1,45 @@
+import 'reflect-metadata';
+import type { AddressInfo } from 'node:net';
+import { NestFactory } from '@nestjs/core';
+import { HmrAppModule } from './app.module.js';
+
+interface HotData {
+  closePromise?: Promise<void>;
+  port?: number;
+}
+
+declare const module: {
+  hot?: {
+    data?: HotData;
+    accept(): void;
+    dispose(callback: (data: HotData) => void): void;
+  };
+};
+
+async function bootstrap() {
+  // Webpack does not await dispose; pass the close promise to the next instance.
+  await module.hot?.data?.closePromise;
+  const app = await NestFactory.create(HmrAppModule, {
+    forceCloseConnections: !!module.hot,
+    logger: false,
+  });
+  app.enableShutdownHooks();
+  await app.listen(
+    module.hot?.data?.port ?? Number(process.env.PORT ?? 0),
+    '127.0.0.1',
+  );
+  const port = (app.getHttpServer().address() as AddressInfo).port;
+  console.log('HMR_URL=' + (await app.getUrl()));
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose((data) => {
+      data.port = port;
+      data.closePromise = app.close();
+    });
+  }
+}
+
+bootstrap().catch((error: unknown) => {
+  console.error(error);
+  process.exitCode = 1;
+});

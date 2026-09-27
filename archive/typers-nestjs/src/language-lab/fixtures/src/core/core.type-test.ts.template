@@ -1,0 +1,23 @@
+import './billing-events.js';
+import { EventBus } from './events.js';
+import { Identified, WithAudit, WithVersion } from './mixins.js';
+export function coreContracts(bus: EventBus): void {
+  bus.emit('invoice.issued', {
+    invoiceId: 'inv',
+    quoteId: 'q',
+    totalMinor: '100',
+  });
+  const invalidPayload = { invoiceId: 'inv', quoteId: 'q', totalMinor: 100 };
+  // @ts-expect-error Module augmentation retains the exact payload shape.
+  bus.emit('invoice.issued', invalidPayload);
+  // @ts-expect-error Unknown events cannot be published through the typed API.
+  bus.emit('payment.unknown', {});
+  const Complete = WithAudit(WithVersion(Identified));
+  const entity = new Complete('order');
+  const revision: number = entity.revision;
+  void revision;
+  // @ts-expect-error Auditing requires a versioned base, not only an identifier.
+  WithAudit(Identified);
+  // @ts-expect-error Versioning requires an identified base.
+  WithVersion(class MissingId {});
+}

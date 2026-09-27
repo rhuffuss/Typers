@@ -2,9 +2,9 @@ name: Typers
 
 on:
   push:
-    branches: [typers-main]
+    branches: [main, typers-main]
   pull_request:
-    branches: [typers-main]
+    branches: [main, typers-main]
 
 permissions:
   contents: read

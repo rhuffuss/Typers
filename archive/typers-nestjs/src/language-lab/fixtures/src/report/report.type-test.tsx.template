@@ -1,0 +1,13 @@
+import type { JSX } from './jsx-runtime.js';
+export function reportContracts(): void {
+  const valid: JSX.Element = (
+    <item label="Review" amountMinor="100" currency="EUR" />
+  );
+  // @ts-expect-error The invoice runtime has no browser canvas element.
+  const invalidElement = <canvas />;
+  // @ts-expect-error Item amounts remain string-valued minor units.
+  const invalidAmount: JSX.IntrinsicElements['item']['amountMinor'] = 100;
+  // @ts-expect-error The report requires an explicit title property.
+  const missingTitle = <report />;
+  void [valid, invalidElement, invalidAmount, missingTitle];
+}

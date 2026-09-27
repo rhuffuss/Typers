@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.errors.json",
+  "compilerOptions": { "noEmitOnError": true }
+}

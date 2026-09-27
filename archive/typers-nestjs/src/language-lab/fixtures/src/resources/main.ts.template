@@ -1,0 +1,72 @@
+import { mkdtemp, readFile, readdir, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import {
+  activeSessions,
+  ExportLock,
+  exportInvoice,
+  heldLocks,
+} from './export-session.js';
+const parent = await mkdtemp(join(tmpdir(), 'typers-invoice-export-'));
+const trace: string[] = [];
+try {
+  const exported = await exportInvoice(
+    parent,
+    'invoice-1',
+    'Release invoice\nTOTAL EUR 135.00',
+    false,
+    trace,
+  );
+  let cancelled = '';
+  try {
+    await exportInvoice(
+      parent,
+      'invoice-2',
+      'Never publish this draft',
+      true,
+      trace,
+    );
+  } catch (error) {
+    cancelled = (error as Error).message;
+  }
+  let duplicate = '';
+  {
+    using _first = new ExportLock('exclusive', trace);
+    try {
+      using _second = new ExportLock('exclusive', trace);
+    } catch (error) {
+      duplicate = (error as Error).message;
+    }
+  }
+  let suppression:
+    { name: string; error: string; suppressed: string } | undefined;
+  try {
+    using _resource: Disposable = {
+      [Symbol.dispose]() {
+        throw new Error('Audit cleanup failed');
+      },
+    };
+    throw new Error('Invoice generation failed');
+  } catch (error) {
+    const combined = error as SuppressedError;
+    suppression = {
+      name: combined.name,
+      error: (combined.error as Error).message,
+      suppressed: (combined.suppressed as Error).message,
+    };
+  }
+  console.log(
+    JSON.stringify({
+      report: await readFile(exported, 'utf8'),
+      files: await readdir(parent),
+      cancelled,
+      duplicate,
+      activeSessions: activeSessions.size,
+      heldLocks: heldLocks.size,
+      trace,
+      suppression,
+    }),
+  );
+} finally {
+  await rm(parent, { recursive: true, force: true });
+}

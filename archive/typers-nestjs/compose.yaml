@@ -1,0 +1,110 @@
+name: typers-nestjs
+services:
+  postgres:
+    image: postgres:17-alpine@sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73
+    profiles: [postgres, databases, all]
+    environment:
+      POSTGRES_USER: typers
+      POSTGRES_PASSWORD: typers-demo-local
+      POSTGRES_DB: typers
+    ports: ['127.0.0.1:55432:5432']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U typers -d typers']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes: [postgres-data:/var/lib/postgresql/data]
+  mongo:
+    # Mongo 8.x rejects this host's Linux kernel >=6.19 (SERVER-121912).
+    image: mongo:7.0.43@sha256:9854f7139445d766a9523571d6f047530c45547460ffcf8259eb2bf4264632ca
+    profiles: [mongo, databases, all]
+    ports: ['127.0.0.1:57017:27017']
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', 'db.adminCommand({ping:1})']
+      interval: 3s
+      timeout: 5s
+      retries: 30
+  redis:
+    image: redis:8-alpine@sha256:becdda6c7f4b3fb42e42fd7f120bbf5c54c4caaaf16f26da24e4563d2c1f0576
+    profiles: [redis, brokers, queues, all]
+    ports: ['127.0.0.1:56379:6379']
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  mqtt:
+    image: eclipse-mosquitto:2@sha256:6f8d8a947c506f8a2290ec65cd4bd2bc7cb4d43fb5f6271f861cb013e2ef9797
+    profiles: [mqtt, brokers, all]
+    command: ['mosquitto', '-c', '/mosquitto/config/demo.conf']
+    volumes: ['./infra/mosquitto.conf:/mosquitto/config/demo.conf:ro']
+    ports: ['127.0.0.1:51883:1883']
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'mosquitto_pub',
+          '-h',
+          '127.0.0.1',
+          '-t',
+          '_health',
+          '-m',
+          'ready',
+          '-q',
+          '1',
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  nats:
+    image: nats:2.11-alpine@sha256:e4bf19f15fd3218814a4e3c9e0064e1334bd8aa20d5984b9f1a0afd084f8cc00
+    profiles: [nats, brokers, all]
+    command: ['-js', '-m', '8222']
+    ports: ['127.0.0.1:54222:4222']
+    healthcheck:
+      test: ['CMD', 'wget', '-q', '-O', '-', 'http://127.0.0.1:8222/healthz']
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  rabbitmq:
+    image: rabbitmq:4-alpine@sha256:3486d98205df3d6395ed70e7924baa13b561cbac54116c0ddae5b0b7382bbabd
+    profiles: [rabbitmq, brokers, all]
+    environment:
+      RABBITMQ_DEFAULT_USER: typers
+      RABBITMQ_DEFAULT_PASS: typers-demo-local
+    ports: ['127.0.0.1:56720:5672']
+    healthcheck:
+      test: ['CMD', 'rabbitmq-diagnostics', '-q', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  kafka:
+    image: apache/kafka:4.0.1@sha256:9a129e03121d46d74349a480f8f17082df3dd411b28281c9eabb95cf096370b9
+    profiles: [kafka, brokers, all]
+    ports: ['127.0.0.1:59092:59092']
+    healthcheck:
+      test:
+        [
+          'CMD',
+          '/opt/kafka/bin/kafka-broker-api-versions.sh',
+          '--bootstrap-server',
+          '127.0.0.1:59092',
+        ]
+      interval: 10s
+      timeout: 10s
+      start_period: 20s
+      retries: 30
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:59092,CONTROLLER://:59093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:59092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:59093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+volumes:
+  postgres-data:

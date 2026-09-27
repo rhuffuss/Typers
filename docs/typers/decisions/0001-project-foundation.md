@@ -26,3 +26,7 @@ El core elegido es nativo Go en `tsc/`. El compilador JS heredado en raíz no se
 ## Revisión
 
 Reconsiderar arquitectura si la evidencia de compatibilidad o mantenimiento hace inviable el objetivo. Cualquier cambio de base o pipeline debe registrarse expresamente, conservando la trazabilidad de lo anterior.
+
+## Actualización del 27-09-2026
+
+La orden de consolidación del titular sustituye la distribución de ramas: `main` pasa a contener Typers y `archive/upstream-main-2026-09-27` conserva la antigua rama upstream. El desarrollo queda en pausa; no se pierde historial ni se actualiza la base del compilador.

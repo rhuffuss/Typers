@@ -1,0 +1,26 @@
+import terms from './payment-terms.json' with { type: 'json' };
+
+function dueDate(issueDate: string): string {
+  if (
+    !Number.isSafeInteger(terms.netDays) ||
+    terms.netDays < 0 ||
+    terms.netDays > 90
+  )
+    throw new Error('Invalid imported payment terms');
+  const date = new Date(issueDate + 'T00:00:00.000Z');
+  if (
+    !Number.isFinite(date.valueOf()) ||
+    date.toISOString().slice(0, 10) !== issueDate
+  )
+    throw new Error('Invalid issue date');
+  date.setUTCDate(date.getUTCDate() + terms.netDays);
+  return date.toISOString().slice(0, 10);
+}
+console.log(
+  JSON.stringify({
+    currency: terms.currency,
+    netDays: terms.netDays,
+    issued: '2026-09-15',
+    due: dueDate('2026-09-15'),
+  }),
+);

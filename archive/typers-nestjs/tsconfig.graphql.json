@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src/graphql-lab/plugin-fixture",
+    "outDir": "./dist-graphql-plugin",
+    "tsBuildInfoFile": "./dist-graphql-plugin/tsconfig.tsbuildinfo"
+  },
+  "include": ["src/graphql-lab/plugin-fixture/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "dist-graphql-plugin",
+    "**/*.spec.ts"
+  ]
+}

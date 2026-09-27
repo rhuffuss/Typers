@@ -1,0 +1,12 @@
+packages:
+  - '.'
+allowBuilds:
+  '@apollo/protobufjs': false
+  '@scarf/scarf': false
+  '@prisma/engines': true
+  '@swc/core': true
+  esbuild: true
+  prisma: true
+  msgpackr-extract: false
+  protobufjs: false
+  workerd: false

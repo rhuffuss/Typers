@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "types": [],
+    "outDir": "captured-output"
+  },
+  "files": ["index.ts"]
+}

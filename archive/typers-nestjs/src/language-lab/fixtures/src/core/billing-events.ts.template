@@ -1,0 +1,26 @@
+import { EventBus, isRecord } from './events.js';
+import type { BusinessEvents } from './events.js';
+
+declare module './events.js' {
+  interface BusinessEvents {
+    'invoice.issued': {
+      readonly invoiceId: string;
+      readonly quoteId: string;
+      readonly totalMinor: string;
+    };
+  }
+}
+
+export function registerBillingEvents(bus: EventBus): void {
+  bus.register(
+    'invoice.issued',
+    (value): value is BusinessEvents['invoice.issued'] =>
+      isRecord(value) &&
+      typeof value.invoiceId === 'string' &&
+      value.invoiceId.length > 0 &&
+      typeof value.quoteId === 'string' &&
+      value.quoteId.length > 0 &&
+      typeof value.totalMinor === 'string' &&
+      /^(0|[1-9]\d*)$/.test(value.totalMinor),
+  );
+}

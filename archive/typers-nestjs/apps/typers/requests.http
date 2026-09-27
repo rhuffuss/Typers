@@ -1,0 +1,68 @@
+@baseUrl = http://127.0.0.1:3014
+
+### Catálogo inicial: WIDGET tiene cuatro unidades; EMPTY tiene cero.
+GET {{baseUrl}}/api/products
+
+### Some(product) -> 200
+GET {{baseUrl}}/api/products/WIDGET
+
+### None -> 404 PRODUCT_NOT_FOUND
+GET {{baseUrl}}/api/products/MISSING
+
+### Result.Ok: 2002 - 200 = 1802 céntimos; no reserva stock.
+POST {{baseUrl}}/api/quotes
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":2,"coupon":"SAVE10","note":"Recoger en almacén"}
+
+### Some(0): descuento explícito del 0%.
+POST {{baseUrl}}/api/quotes
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":2,"coupon":"ZERO"}
+
+### None: discountPercent y coupon son null en HTTP.
+POST {{baseUrl}}/api/quotes
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":2}
+
+### Result.Err: 400 INVALID_INPUT
+POST {{baseUrl}}/api/quotes
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":0}
+
+### Result.Err: 400 INVALID_COUPON
+POST {{baseUrl}}/api/quotes
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":1,"coupon":"UNKNOWN"}
+
+### Reserva confirmada: 201; quedan dos unidades.
+# Repite esta petición: debe devolver la misma reserva sin consumir más stock.
+POST {{baseUrl}}/api/reservations
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":2,"coupon":"SAVE10","idempotencyKey":"order-demo-1"}
+
+### Recuperar la reserva anterior.
+GET {{baseUrl}}/api/reservations/reservation-1
+
+### Misma clave, contenido distinto: 409 IDEMPOTENCY_CONFLICT.
+POST {{baseUrl}}/api/reservations
+Content-Type: application/json
+
+{"sku":"WIDGET","quantity":1,"idempotencyKey":"order-demo-1"}
+
+### Un producto con stock cero existe: 409 INSUFFICIENT_STOCK.
+POST {{baseUrl}}/api/reservations
+Content-Type: application/json
+
+{"sku":"EMPTY","quantity":1,"idempotencyKey":"empty-demo-1"}
+
+### Política leída del asset copiado durante el build.
+GET {{baseUrl}}/api/policy
+
+### Documento OpenAPI con esquemas explícitos.
+GET {{baseUrl}}/openapi.json

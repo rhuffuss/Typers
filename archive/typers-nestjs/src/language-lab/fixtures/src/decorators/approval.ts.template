@@ -1,0 +1,95 @@
+export interface Actor {
+  readonly id: string;
+  readonly roles: readonly string[];
+}
+interface ApprovalContext {
+  readonly actor: Actor;
+}
+const entityNames = new WeakMap<Function, string>();
+export function entityName(target: Function): string | undefined {
+  return entityNames.get(target);
+}
+export function Entity(name: string) {
+  return function <T extends abstract new (...args: any[]) => object>(
+    value: T,
+    context: ClassDecoratorContext<T>,
+  ): void {
+    context.addInitializer(function () {
+      entityNames.set(this, name);
+    });
+    void value;
+  };
+}
+export function Bound<This, Args extends unknown[], Return>(
+  method: (this: This, ...args: Args) => Return,
+  context: ClassMethodDecoratorContext<
+    This,
+    (this: This, ...args: Args) => Return
+  >,
+): void {
+  if (context.private) throw new Error('Bound only supports public methods');
+  context.addInitializer(function () {
+    Object.defineProperty(this, context.name, {
+      value: method.bind(this),
+      configurable: true,
+      writable: true,
+    });
+  });
+}
+export function RequiresRole(role: string) {
+  return function <
+    This extends ApprovalContext,
+    Args extends unknown[],
+    Return,
+  >(
+    method: (this: This, ...args: Args) => Return,
+    _context: ClassMethodDecoratorContext<
+      This,
+      (this: This, ...args: Args) => Return
+    >,
+  ) {
+    return function (this: This, ...args: Args): Return {
+      if (!this.actor.roles.includes(role))
+        throw new Error(`Role required: ${role}`);
+      return method.apply(this, args);
+    };
+  };
+}
+export function PositiveLimit<This>(
+  target: ClassAccessorDecoratorTarget<This, number>,
+  _context: ClassAccessorDecoratorContext<This, number>,
+): ClassAccessorDecoratorResult<This, number> {
+  const validate = (value: number) => {
+    if (!Number.isSafeInteger(value) || value < 1)
+      throw new Error('Approval limit must be a positive safe integer');
+    return value;
+  };
+  return {
+    init: validate,
+    get() {
+      return target.get.call(this);
+    },
+    set(value) {
+      target.set.call(this, validate(value));
+    },
+  };
+}
+
+@Entity('purchase-approval')
+export class ApprovalDecision {
+  @PositiveLimit accessor limitMinor = 50000;
+  readonly approved: number[] = [];
+  constructor(readonly actor: Actor) {}
+  @Bound
+  @RequiresRole('approver')
+  approve(amountMinor: number): string {
+    if (
+      !Number.isSafeInteger(amountMinor) ||
+      amountMinor <= 0 ||
+      amountMinor > this.limitMinor
+    )
+      throw new Error('Amount exceeds approval policy');
+    this.approved.push(amountMinor);
+    return `${this.actor.id}:${amountMinor}`;
+  }
+}
