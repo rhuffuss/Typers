@@ -1,0 +1,34 @@
+{
+  "name": "@typers/commerce-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A running NestJS commerce application using native Typers Result, Option and if-let",
+  "packageManager": "pnpm@12.4.1",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "build": "node ../../scripts/typers-app.mjs build",
+    "start": "node ../../scripts/typers-app.mjs start",
+    "start:prod": "node --enable-source-maps dist/main.js",
+    "typecheck": "node ../../scripts/typers-app.mjs typecheck",
+    "test": "node ../../scripts/typers-app.mjs test",
+    "refresh": "node ../../scripts/typers-app.mjs refresh"
+  },
+  "dependencies": {
+    "@nestjs/common": "12.0.2",
+    "@nestjs/core": "12.0.2",
+    "@nestjs/platform-express": "12.0.2",
+    "@nestjs/swagger": "12.0.1",
+    "@typers/core": "file:../../../typers/built/typers/typers-core-0.1.0-alpha.0.tgz",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "24.13.4",
+    "@typers/compiler": "file:../../../typers/built/typers/typers-compiler-7.0.2-typers.0.tgz",
+    "@typers/nest": "file:../../../typers/built/typers/typers-nest-0.1.0-alpha.0.tgz"
+  }
+}

@@ -1,0 +1,3957 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-15T18:04:16.934Z",
+  "runDirectory": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv",
+  "environment": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "artifacts": [
+    {
+      "name": "@typers/compiler",
+      "version": "7.0.2-typers.0",
+      "filename": "typers-compiler-7.0.2-typers.0.tgz",
+      "sha256": "ef37a6350d19cab6b113077d1c460e7ef22d5da9dd2364b7c6b97d9d4c849b15",
+      "unpacked": {
+        "sha256": "43d588fb05de9ba83b5d9e110bacea9afca0d99170dba562f55babf104b8bde2",
+        "entries": [
+          {
+            "path": "bin/typers.cjs",
+            "sha256": "19c0736d1a5a6bf17efecb13d416dd2343dd681d737aa8987c58053b10588ef0"
+          },
+          {
+            "path": "build-info.json",
+            "sha256": "e411db020bd8da20867646904b2b2fd3108611089b7aabf5815e428db6ee4089"
+          },
+          {
+            "path": "dist/api/async/api.d.ts",
+            "sha256": "53b28ee01ae9660446af71b4fb876470f2b7aa8d2f2595e9491f901142992b77"
+          },
+          {
+            "path": "dist/api/async/api.js",
+            "sha256": "5db46cb3f91bdead32748407b433538ffc5397d60b7de57fd0bf9378342842ba"
+          },
+          {
+            "path": "dist/api/async/api.js.map",
+            "sha256": "a1a43ad484d75171d6637cb311733b1c19cab2217beec3ee2e040d92825a8887"
+          },
+          {
+            "path": "dist/api/async/client.d.ts",
+            "sha256": "ac21fb9c920e932649f8f11f51edf8d607209b5e93eb19a456fd6a73832d9303"
+          },
+          {
+            "path": "dist/api/async/client.js",
+            "sha256": "13bf0dbfb818a623e72f119d8cd15fa6ef5b18bf040d216c84971830f7c37c1d"
+          },
+          {
+            "path": "dist/api/async/client.js.map",
+            "sha256": "e7f96fdfcdf9f7a39a758328803ba30122a1f50ce6cb8b50bddc6017a5798faa"
+          },
+          {
+            "path": "dist/api/async/types.d.ts",
+            "sha256": "e20f57fe3e24062ecc89e52ddd60ee1db1e15dde0461286cc9177a0a48218cab"
+          },
+          {
+            "path": "dist/api/async/types.js",
+            "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+          },
+          {
+            "path": "dist/api/async/types.js.map",
+            "sha256": "7b870645f6f17a30e21785e69bef2aa42535477dab064fe0309b8a8e4d634fca"
+          },
+          {
+            "path": "dist/api/compilerOptions.d.ts",
+            "sha256": "012c1457bcfacdbc8cc6e707b0ab0427a821f3d89c58efa0468582fd7569488f"
+          },
+          {
+            "path": "dist/api/compilerOptions.js",
+            "sha256": "38f13c4427e7c4a5272097ad43c39d770cf4a335653f727b2c34f286608f7269"
+          },
+          {
+            "path": "dist/api/compilerOptions.js.map",
+            "sha256": "f0c42778c144eaa4a68554afe222f3190323b04ea512d73bb9ee6730149473e1"
+          },
+          {
+            "path": "dist/api/fs.d.ts",
+            "sha256": "2115a300d3b52a01de631c1f7bbb353645dc79346cfeb03eeedb51ea19a8b282"
+          },
+          {
+            "path": "dist/api/fs.js",
+            "sha256": "1c25cceaf42b84c08a1cc4203c7380fcdafd82e42d60537522b9874e058603c7"
+          },
+          {
+            "path": "dist/api/fs.js.map",
+            "sha256": "67bb56d8f6c58cbf2a2918f01fedd3b9dd30b9575d82f7d26316c0276d55b1a6"
+          },
+          {
+            "path": "dist/api/node/encoder.d.ts",
+            "sha256": "bec160c613429abeb119fb928e2908ed84ba1d07a1533272bfcfd57901b8d075"
+          },
+          {
+            "path": "dist/api/node/encoder.generated.d.ts",
+            "sha256": "5963848376a85422e8ae838a46fecf0c815839ac908a0d5a48f14781fd440c4d"
+          },
+          {
+            "path": "dist/api/node/encoder.generated.js",
+            "sha256": "6b89b639862004bea8368969775a08f45702d80002118e50bbc5b0cd750ced9e"
+          },
+          {
+            "path": "dist/api/node/encoder.generated.js.map",
+            "sha256": "11bcba0906f6534242b6a19cb8ae0f604b4288ea4c38b395fbfd9094a5f97504"
+          },
+          {
+            "path": "dist/api/node/encoder.js",
+            "sha256": "bb6aaa689a06ad705c62c538d869803ee3f5f70018637cd09e78037f2ff1d977"
+          },
+          {
+            "path": "dist/api/node/encoder.js.map",
+            "sha256": "afe709e03d3cdf3c15da77060ad62011966180a2d3eabcd711b130373d29de63"
+          },
+          {
+            "path": "dist/api/node/msgpack.d.ts",
+            "sha256": "0f8aafd7d5364f0729239094ab85cfc955d8473875092dfbd5f531e3dc5e752c"
+          },
+          {
+            "path": "dist/api/node/msgpack.js",
+            "sha256": "6e5ef1285cede6494050d1a4d2e4bdf467a729975c8a0cc5b38aaab3f2976bef"
+          },
+          {
+            "path": "dist/api/node/msgpack.js.map",
+            "sha256": "94d4bcb5daeaa9bc68c329d0afc9f9b8a89b06dabc7a384f7ea81de70e9d0499"
+          },
+          {
+            "path": "dist/api/node/node.d.ts",
+            "sha256": "026c1e147137b5564a0e10994faa2a8af131f359f93888a7d80c7ac32eb2680e"
+          },
+          {
+            "path": "dist/api/node/node.generated.d.ts",
+            "sha256": "3bfba705d15c0619d635fa3c1f9c4667078521cc525cac8d1d96ea47a4a06003"
+          },
+          {
+            "path": "dist/api/node/node.generated.js",
+            "sha256": "d0138b0429c1c9d5909a79e80addca7b8a1ba00fdb63668bb44984508ca71b22"
+          },
+          {
+            "path": "dist/api/node/node.generated.js.map",
+            "sha256": "427b7a0b08fb5d95f39f6f2934801e44a1612339853031e00b091c8455fe99a0"
+          },
+          {
+            "path": "dist/api/node/node.infrastructure.d.ts",
+            "sha256": "7d9ef671ae3b738e7b93a2a8db9ba872d7609b1cd2276afdd677fce6966a9d5f"
+          },
+          {
+            "path": "dist/api/node/node.infrastructure.js",
+            "sha256": "112f619579bc652e72e347fe8b3d2c44c243b053766f06082d8c9d203df5a88f"
+          },
+          {
+            "path": "dist/api/node/node.infrastructure.js.map",
+            "sha256": "b49369f67d012ad218e3b4adde28ca68cb4cf7a897c178defa8275f836dc5219"
+          },
+          {
+            "path": "dist/api/node/node.js",
+            "sha256": "92915f0a3486fdb40b6e71786c0d5a8eed82d80cf34b45a4babd8b47b51939dc"
+          },
+          {
+            "path": "dist/api/node/node.js.map",
+            "sha256": "bf1198d7434be0f26305988660d034e04e5acee0ede5d5cd4012331d88374503"
+          },
+          {
+            "path": "dist/api/node/protocol.d.ts",
+            "sha256": "603526303485cc1f11bf317009a03fd1fe9da83326181b39461794ee9508fcb8"
+          },
+          {
+            "path": "dist/api/node/protocol.generated.d.ts",
+            "sha256": "0547c8bae15e9d48abcfc0f3a30ff7517b7ab23186efab70a12972d51fb8da63"
+          },
+          {
+            "path": "dist/api/node/protocol.generated.js",
+            "sha256": "69da9505258c607fc47885de9c482da6d85e7c5eb9410adfd3bd51d4131748b8"
+          },
+          {
+            "path": "dist/api/node/protocol.generated.js.map",
+            "sha256": "9a953e858a256d1f806f999fd04be2f6865830cad6a08678f11d72de77479fbd"
+          },
+          {
+            "path": "dist/api/node/protocol.js",
+            "sha256": "d82e05673478f3455ed78cf24a843e92c3adaf5eb6377a45aed1d478bba2d45a"
+          },
+          {
+            "path": "dist/api/node/protocol.js.map",
+            "sha256": "181aad22029a09ec66e42a6b12a6cec2c75daa0857b083523a4ecdda29dbb7ab"
+          },
+          {
+            "path": "dist/api/node/wtf8.d.ts",
+            "sha256": "79f00c937505e497e153557a6a58b15b76852ea9f62d18fbf277bd1a475c3c11"
+          },
+          {
+            "path": "dist/api/node/wtf8.js",
+            "sha256": "30fa9045f3a63b78366808198191ffb5403723ce4a8a68363b48ba7c83393ca7"
+          },
+          {
+            "path": "dist/api/node/wtf8.js.map",
+            "sha256": "94ae7863ef31bb15fa7e83f578ec0058e86dcb15e9bfa1c5d364903c73c3df8d"
+          },
+          {
+            "path": "dist/api/options.d.ts",
+            "sha256": "1a2aea8ca1c08ea41b86c7d058c53d31a1266f32095b36f96b0f279412161531"
+          },
+          {
+            "path": "dist/api/options.js",
+            "sha256": "b47b35b4b92d2ede9c72018859528eef2a1b57c4539cb7b58eaf1b5be193ea58"
+          },
+          {
+            "path": "dist/api/options.js.map",
+            "sha256": "498caef18125cd7294abd33174c73fd1a9aeb5cbce649a0f9543ffc6b4de9546"
+          },
+          {
+            "path": "dist/api/path.d.ts",
+            "sha256": "93ce8f0929f41e55e676062d8827326f9f876855990a4943c8520653890d6db3"
+          },
+          {
+            "path": "dist/api/path.js",
+            "sha256": "f507694b565d57916e5ad6b3d7f8df62ebfff8b66e95073401eb15747afe2eb6"
+          },
+          {
+            "path": "dist/api/path.js.map",
+            "sha256": "7f36b64e39ef9c6e7cc7072d7d4aebeb1f853697dcf7e770149d019362d627a4"
+          },
+          {
+            "path": "dist/api/proto.d.ts",
+            "sha256": "b9cedf5c2ae7fc6811ce5024d32407d2860daacda723a663b18738980b14b0f7"
+          },
+          {
+            "path": "dist/api/proto.js",
+            "sha256": "51d912228da37019fd5192e17bda9ebdd5b191757bb2fb420f11ea90901b7f79"
+          },
+          {
+            "path": "dist/api/proto.js.map",
+            "sha256": "51258336550110558cfa0dfddeac0b4961671a8bedca5c7b9281f6878ad9ef01"
+          },
+          {
+            "path": "dist/api/sourceFileCache.d.ts",
+            "sha256": "a213153f2da52fdf87d85310b51150ee20af7466256b4a187100b3d526fdca8d"
+          },
+          {
+            "path": "dist/api/sourceFileCache.js",
+            "sha256": "1628e460c0e191547222fbc6b3fc7a5da8badef4f65e5749736d31477d35cac5"
+          },
+          {
+            "path": "dist/api/sourceFileCache.js.map",
+            "sha256": "2c9aa43ef1b59406f2116e7ebe8a0583bd0b35b2a5338d3c7a32fe964cf45469"
+          },
+          {
+            "path": "dist/api/sync/api.d.ts",
+            "sha256": "5b565d8cfcf04133ab0464236b1bb0ea6b0903108e5ca998f561f0a9ca42fb56"
+          },
+          {
+            "path": "dist/api/sync/api.js",
+            "sha256": "22257dad9d681b859f9c46a225d6c70aede26072d73f3e746e7979bfdc13a027"
+          },
+          {
+            "path": "dist/api/sync/api.js.map",
+            "sha256": "2fdab9fd80132e58e4fb80d58214b425db9a7111d645837bbcf97aac5c18ace9"
+          },
+          {
+            "path": "dist/api/sync/client.d.ts",
+            "sha256": "ac24f193c426f4027f094fc57ac0611e16ae15cb9c6db8caff167aa50e872f4e"
+          },
+          {
+            "path": "dist/api/sync/client.js",
+            "sha256": "4cca322e20fff9460d1843a62b2cac4ee963109b4d07e984bed9f54e7baa10b8"
+          },
+          {
+            "path": "dist/api/sync/client.js.map",
+            "sha256": "85c5e0b89d0aff35d64aba38c8da5a704e4ae06cebd87ca0448e0fcfabbb5b0f"
+          },
+          {
+            "path": "dist/api/sync/types.d.ts",
+            "sha256": "97c78de3907641868e69a7c057fc60e555721347039c895ca6823d06ad4de4d0"
+          },
+          {
+            "path": "dist/api/sync/types.js",
+            "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+          },
+          {
+            "path": "dist/api/sync/types.js.map",
+            "sha256": "3b09282e207ce38182ad5ae30f5dd418869e4f435187dccaa3416b82c9904af2"
+          },
+          {
+            "path": "dist/api/syncChannel.d.ts",
+            "sha256": "e99bd992c8c10910fedafc69fdb1932d5e75e50a1d4fda1a86c4bee0b998e614"
+          },
+          {
+            "path": "dist/api/syncChannel.js",
+            "sha256": "132714a6e2dd7fd079f7f67bf9ed41d4123ab2ab4d94043a34ea3b1a8f1fb001"
+          },
+          {
+            "path": "dist/api/syncChannel.js.map",
+            "sha256": "8861cc80cb5d2368e4573c6147147effd7d1cafa23d75b81ea210d4c6ceff918"
+          },
+          {
+            "path": "dist/api/timing.d.ts",
+            "sha256": "f3683c05c0c3f8b68bbbf5ede3145e9031ea41a8d631adf1f2a2c902c8ca39a7"
+          },
+          {
+            "path": "dist/api/timing.js",
+            "sha256": "cdbc4abacbe16ade786e743ea3d875d7f5a3b5dd35706f79c1a506f45886f73d"
+          },
+          {
+            "path": "dist/api/timing.js.map",
+            "sha256": "97faf43f0b0b3f0b8a72e5dbe7911b1925d8209337780ad6e7e7bf76edfd8927"
+          },
+          {
+            "path": "dist/ast/ast.d.ts",
+            "sha256": "8a8df27aed8e27c6f8b437a6add46bad039e1972fed5a3fc8ae901ec67c046e4"
+          },
+          {
+            "path": "dist/ast/ast.generated.d.ts",
+            "sha256": "e4c0ec821e41555a16a2750e8c004a312093ee2a16849a03e81ba4e9efbf6c7b"
+          },
+          {
+            "path": "dist/ast/ast.generated.js",
+            "sha256": "60e15787fc96f48eaf8f4a5a1020fad008becf396b36e5aa83471e4ee71357dd"
+          },
+          {
+            "path": "dist/ast/ast.generated.js.map",
+            "sha256": "b83aaabf9cbccbd48939db2c1d6d079d43a5bd4d0235a9d9aee4d70efaa017db"
+          },
+          {
+            "path": "dist/ast/ast.js",
+            "sha256": "926b099f2b9be9a7c887141bb0687ae75a0bbaf79d1d7e493c7a73fda68469b9"
+          },
+          {
+            "path": "dist/ast/ast.js.map",
+            "sha256": "79e02e3eb173a52816a12ef40fdacf2a111dcf6378cb85e2e10371e921782b45"
+          },
+          {
+            "path": "dist/ast/astnav.d.ts",
+            "sha256": "dbfbf307dd185b814badf522f18f3a8f04f25db59360009265855ff29e63148e"
+          },
+          {
+            "path": "dist/ast/astnav.js",
+            "sha256": "7018001b9742a308ca94b62745efc15bd3396fb0d1624e1957a1c0dc23dedbac"
+          },
+          {
+            "path": "dist/ast/astnav.js.map",
+            "sha256": "e12410368262e2f52dad057247fd0d552cd3b57fd849bbc3ea59bd1696a6d4f5"
+          },
+          {
+            "path": "dist/ast/clone.d.ts",
+            "sha256": "8b5b046e781d5a7b32c3ad087b514ffb5ec6a234e797ae0fadfb05d4a876ce61"
+          },
+          {
+            "path": "dist/ast/clone.js",
+            "sha256": "bd30383a0ac47612e533c46a2c73d94179fafde70640ccef347d705e04bb5a93"
+          },
+          {
+            "path": "dist/ast/clone.js.map",
+            "sha256": "dddebebb831c7b58d8918c7be759bc612a98caff1a138d9739dd7b960319b98d"
+          },
+          {
+            "path": "dist/ast/factory.generated.d.ts",
+            "sha256": "638013c412064050bbc958a38edcba1c99ada690cc6cc18d8405200de25844d1"
+          },
+          {
+            "path": "dist/ast/factory.generated.js",
+            "sha256": "330f890fb1a4a072d1abf483f38196e399e40b8a797047157f51f8e7b2368199"
+          },
+          {
+            "path": "dist/ast/factory.generated.js.map",
+            "sha256": "0eec2c1d01ec598d8cbff6803a4cfa29995ac314e77a81a74b0d46bea3696b00"
+          },
+          {
+            "path": "dist/ast/index.d.ts",
+            "sha256": "3b0579e60502a0e2453d3dc6f0c14c7523df88c7d4222903a7666207c86ea15d"
+          },
+          {
+            "path": "dist/ast/index.js",
+            "sha256": "aa95c0544bb2a42541421ab0ec2c1dc41b7b1f75f0694e28d8caa33e120d8c22"
+          },
+          {
+            "path": "dist/ast/index.js.map",
+            "sha256": "a7bc08db49cfe899b604ed389725f0230232e31a73f605db2fb1077ad4e0048f"
+          },
+          {
+            "path": "dist/ast/is.d.ts",
+            "sha256": "2fc0444af75ebdc0ad629ef4cf5e03b414ac9af9324a888cc0220e961d74c88b"
+          },
+          {
+            "path": "dist/ast/is.generated.d.ts",
+            "sha256": "f9fe8354311c8f73ab358ae0845f24e79c236419d88be3451782bd4e633aedd5"
+          },
+          {
+            "path": "dist/ast/is.generated.js",
+            "sha256": "7deab60a24468eb1fa6de4f7d3feb7fe2bb2c16d3d833049b558aec23c266f19"
+          },
+          {
+            "path": "dist/ast/is.generated.js.map",
+            "sha256": "cc068fa0c472aa15a9bdc714851bcc90aa18eb2c6bd91b86fa944f59383600f2"
+          },
+          {
+            "path": "dist/ast/is.js",
+            "sha256": "d7defde440ec95c662e030219a020c5e9285721f38306b7bbaf06d2393ca83d4"
+          },
+          {
+            "path": "dist/ast/is.js.map",
+            "sha256": "eda79d9ca734135f3193d5c0bc5219ec1d7c460f9cc707ac1370a9206d93aa4b"
+          },
+          {
+            "path": "dist/ast/jsdoc.d.ts",
+            "sha256": "75818d639bacfcc76d3c357b097476a1ebdaffa43ac1163ac66c7b168637ffb2"
+          },
+          {
+            "path": "dist/ast/jsdoc.js",
+            "sha256": "677b92df5a9ccb64d03ed5906601f06231ea38cdf5eedc6765d3f996b18663d6"
+          },
+          {
+            "path": "dist/ast/jsdoc.js.map",
+            "sha256": "24ab8e5bc93a27514b3092b062b1eff0f18221de00af912bb0b03466edcfd1ef"
+          },
+          {
+            "path": "dist/ast/scanner.d.ts",
+            "sha256": "0c5d2b69a5b17f583650cf475692613641467d0f83915999a9dfce7d72ee0003"
+          },
+          {
+            "path": "dist/ast/scanner.js",
+            "sha256": "a5e29430a9414acc5e6f3ede98c255394801dcbb3626010075860c03e676a057"
+          },
+          {
+            "path": "dist/ast/scanner.js.map",
+            "sha256": "8b8437db53fff271f5b567da8309e7b4baa7ef4c5afbc04f79e7852323a7533b"
+          },
+          {
+            "path": "dist/ast/utils.d.ts",
+            "sha256": "e59bceddd2182e568543ea8f6fd953926f8ae31c9c4ddb51fe3aa087cddebbb2"
+          },
+          {
+            "path": "dist/ast/utils.js",
+            "sha256": "7a148ddeeb4cf43df152b1b82620a937ac6cdab11b0c27f155eb9394d40f9f3b"
+          },
+          {
+            "path": "dist/ast/utils.js.map",
+            "sha256": "c15c74f3e532763e6a76a2792d59c22a84196380d41dbf89cc81e0ede68ba68a"
+          },
+          {
+            "path": "dist/ast/visitor.d.ts",
+            "sha256": "20ea131a76f5dc2ae451433e093bd2bbfbd64f21cb00a7517d2309b7992b1f81"
+          },
+          {
+            "path": "dist/ast/visitor.generated.d.ts",
+            "sha256": "17399c322b9a900364828df46ee7bc44e5c69fc79363fc01eae29fd87c440326"
+          },
+          {
+            "path": "dist/ast/visitor.generated.js",
+            "sha256": "7744e4663d57850c0384f5624864a24c228aeb0dd3ab9383057674e8376c2a53"
+          },
+          {
+            "path": "dist/ast/visitor.generated.js.map",
+            "sha256": "94a92b3bb40319f9fb57d7109ef7793e3b9146b1d63408863252538d79cfb497"
+          },
+          {
+            "path": "dist/ast/visitor.js",
+            "sha256": "9a9c1e0068bfe8296719d2f8c1773a8b8332164f5cef54535ea1f28116eec785"
+          },
+          {
+            "path": "dist/ast/visitor.js.map",
+            "sha256": "268e19f3ab863a64ce0aa5cb0a082965d425fa28a79dc8d7a7e47446a8fcef5c"
+          },
+          {
+            "path": "dist/enums/characterCodes.d.ts",
+            "sha256": "5be1f532d6db725128729d575b10c7e09407e0888daca928199df032189c5d68"
+          },
+          {
+            "path": "dist/enums/characterCodes.enum.d.ts",
+            "sha256": "8201fb432ba341ebef86d80d916970aad008d3a37815d3645ee60fd480845f63"
+          },
+          {
+            "path": "dist/enums/characterCodes.enum.js",
+            "sha256": "fb3372a295bd62d44760c476231c0dede7cc5c06a4d01b3f8398a7fd2b01b135"
+          },
+          {
+            "path": "dist/enums/characterCodes.enum.js.map",
+            "sha256": "15864504d29f15b466cdb74c38a6e3237b5448b51135441a78514835cbdf011e"
+          },
+          {
+            "path": "dist/enums/characterCodes.js",
+            "sha256": "fffb9be3caa46903c029b53f850ad27f4bf62f0d455512c559be7e26bc09e2db"
+          },
+          {
+            "path": "dist/enums/characterCodes.js.map",
+            "sha256": "26ca405d072eac6605a47e70b2262d5a6839e567e47d5ca927ec8a8029fd2084"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.d.ts",
+            "sha256": "7f5f40b75999652f96b1dcd1997be33f7ccbf9f4a47f4ec53a6ec72f542882f9"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.enum.d.ts",
+            "sha256": "660d2beacb205dcdc1cd82b73b0c4e5f6208db20751e255df6f9da484863d0fa"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.enum.js",
+            "sha256": "e1027b6be0d41bf0bd4074d55393298aece1744a94069dfa82f2bcc23f677a0e"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.enum.js.map",
+            "sha256": "5b87a13b41fdae26a18ece186e6fc5a02efb291798596603fd18493a86b82aa3"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.js",
+            "sha256": "650dd1d3ff59d2505a58862360cc868d1e7fe8fa97cda3c4e3f98e94d0c2e948"
+          },
+          {
+            "path": "dist/enums/commentDirectiveType.js.map",
+            "sha256": "5e9301f5e00cfeb0e10271f059948630172ee367d560a72bfc1c3e6b82a5567d"
+          },
+          {
+            "path": "dist/enums/completionItemKind.d.ts",
+            "sha256": "09c88c459fcf9e5151d2b750f5c2a5426b69448083fb6cbd909cf5bee68b70e6"
+          },
+          {
+            "path": "dist/enums/completionItemKind.enum.d.ts",
+            "sha256": "3d875e3beb843360eca75674405b52b6fa71fa34725a2a35fcb1d78349d5112a"
+          },
+          {
+            "path": "dist/enums/completionItemKind.enum.js",
+            "sha256": "f81caa87da8e49590482c84915f71415b504201f342449dd1d06856d06614ba7"
+          },
+          {
+            "path": "dist/enums/completionItemKind.enum.js.map",
+            "sha256": "feb1cadd6772488895c49d7465fa79fa41c1824c2c3e80f2fa3a79af34c410ef"
+          },
+          {
+            "path": "dist/enums/completionItemKind.js",
+            "sha256": "59033dc51d356ed0168b9cc755d6201a97d365a14bf421e10d05b9f3a0571f41"
+          },
+          {
+            "path": "dist/enums/completionItemKind.js.map",
+            "sha256": "60bddcf52699234cf5d7450fa03c9c63b98d3a7ab4756a9726484e8ac73fbd32"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.d.ts",
+            "sha256": "7479dd115248c21d19865ae45eb0e861dd3681bd13d2995c07f2010dc0dd40a2"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.enum.d.ts",
+            "sha256": "90ecbf750aa35ffef7a37253c4e495afbfec06e43a4a31b63b1be8741c10f515"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.enum.js",
+            "sha256": "4f9b45f51cc16f8cee50793c41179b93ee769ee3d1e611ec244a7f0c617e5c6e"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.enum.js.map",
+            "sha256": "8729ed30e04d155124e3d4ca4fefb8e152244ffef7f4872e4cd791c37c469679"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.js",
+            "sha256": "cf915e42f7d1cb80516dbee95f60e07e1de32a99f70d564a28a2f8341c4ae9b3"
+          },
+          {
+            "path": "dist/enums/diagnosticCategory.js.map",
+            "sha256": "6de30b20f3d5d63a38d0af55cd387a85c5ae18fa3f205d0187027c5f86990b07"
+          },
+          {
+            "path": "dist/enums/elementFlags.d.ts",
+            "sha256": "a0a2f474bc2e846eaf8088d4af2db94444f9cb2e3fbb6046ef4569fa0d5525b5"
+          },
+          {
+            "path": "dist/enums/elementFlags.enum.d.ts",
+            "sha256": "0499ad948bd15834164ad4a5ba44b134ab7ff335a011c732af059664f438a2ad"
+          },
+          {
+            "path": "dist/enums/elementFlags.enum.js",
+            "sha256": "d11fe277c615112d887017e5a8219d56ef16f5096e32212b79027a3ed9accfdb"
+          },
+          {
+            "path": "dist/enums/elementFlags.enum.js.map",
+            "sha256": "55ec88e851bb4602f75cf01287d3adda53a5d1423e0109c794137d4e72f37a17"
+          },
+          {
+            "path": "dist/enums/elementFlags.js",
+            "sha256": "2fa1d0e56bd17504d4c993f8f35ea1e4e19db913ee6d2de659230b2c68a8a73b"
+          },
+          {
+            "path": "dist/enums/elementFlags.js.map",
+            "sha256": "09089b816b6fbf00b92120656df43a2de0aa87b9b82da6a1a0787f717f06ed86"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.d.ts",
+            "sha256": "5d28acacf0cda251681f153ea878a7ac002eca0e2425d5ab720461d41f79155b"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.enum.d.ts",
+            "sha256": "b70d902eed13cec9981e17a09bb7d0e65f39bfcc4269ecffed7a88aace176624"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.enum.js",
+            "sha256": "03071bc395b4ef318ca4bbde7b200ea57e3dc24c81ecadb9c317341f393e244b"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.enum.js.map",
+            "sha256": "99bbb3ae989db1b04c1c1ec408be400d9373e8012c0ff2213d5a78141b0a92de"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.js",
+            "sha256": "07ecb2004c4889635771fc1c8a2d8cf3532268341950ae4990d0b557a0888671"
+          },
+          {
+            "path": "dist/enums/internalSymbolName.js.map",
+            "sha256": "e52502ab34d8d3b578251d61233eb687d0720ddce292a9a7c08be7a21c790904"
+          },
+          {
+            "path": "dist/enums/jsxEmit.d.ts",
+            "sha256": "6fa97a76beff0848211efe624a37b751228bd862c4e310bec3dadc4e6aca38bb"
+          },
+          {
+            "path": "dist/enums/jsxEmit.enum.d.ts",
+            "sha256": "e9635c19324029912bd05f719ca8f6df32bec98b1feffcd40a9c540a879e7ebc"
+          },
+          {
+            "path": "dist/enums/jsxEmit.enum.js",
+            "sha256": "37d08774176ffe4e90fe170e7116f5c6f36d0462862b672121b84d0ee4b17ff8"
+          },
+          {
+            "path": "dist/enums/jsxEmit.enum.js.map",
+            "sha256": "c5651b70da1647bfd385fcb475c71e4e30dcd695c256c87aced61d400d34ca2e"
+          },
+          {
+            "path": "dist/enums/jsxEmit.js",
+            "sha256": "c5b09d0759e42b62338a39725b436efc7a0fe540e7879f244463d5c0e9ea2eab"
+          },
+          {
+            "path": "dist/enums/jsxEmit.js.map",
+            "sha256": "c09570b08fc1c836fe7f795104bf32534071adbd9651c83ec9f260f0a93387ca"
+          },
+          {
+            "path": "dist/enums/languageVariant.d.ts",
+            "sha256": "924e12c9b76decbf267510cb0b2f05a7ea14534751299038ec0a54deebad0353"
+          },
+          {
+            "path": "dist/enums/languageVariant.enum.d.ts",
+            "sha256": "684201d25133b3fc15568ff6972a2eafcba52063cd8f295a137dd2b803b66560"
+          },
+          {
+            "path": "dist/enums/languageVariant.enum.js",
+            "sha256": "02135aecac35b2215f959c4ebfd3632c92a357c0fa0018850f33b5e35520d706"
+          },
+          {
+            "path": "dist/enums/languageVariant.enum.js.map",
+            "sha256": "eab4ab42d902da9b01158c1ae54747f56b2a1645d436e7d1fa8a973fb74c7540"
+          },
+          {
+            "path": "dist/enums/languageVariant.js",
+            "sha256": "2bd1141343ef8bc71de225575410b908f15e2bdcb29490d33fcee32e0ba1556c"
+          },
+          {
+            "path": "dist/enums/languageVariant.js.map",
+            "sha256": "0e82261696963765ea425283005e2f4085f89f4f87eea8e0e063c784641f071b"
+          },
+          {
+            "path": "dist/enums/modifierFlags.d.ts",
+            "sha256": "747f3a84277c854d9a4272fd7789489290c9a5fda338a552ec9f602000f4474a"
+          },
+          {
+            "path": "dist/enums/modifierFlags.enum.d.ts",
+            "sha256": "5ef92e63de5238c94800a09bc6e55ce5052e3c09a644ecd6c057e81593bc9420"
+          },
+          {
+            "path": "dist/enums/modifierFlags.enum.js",
+            "sha256": "1356470ea6a49e3e641e23d09a6421af6c6e9a94376043c9ef7107481bb6336a"
+          },
+          {
+            "path": "dist/enums/modifierFlags.enum.js.map",
+            "sha256": "6141d62bca26502e8f696ab24152efd3142a19bb310718af07f91d6cc859dec5"
+          },
+          {
+            "path": "dist/enums/modifierFlags.js",
+            "sha256": "3d461dc43c00b36bd8359d5b306ee07548c67bb2b5bdcb2b65de366499a67342"
+          },
+          {
+            "path": "dist/enums/modifierFlags.js.map",
+            "sha256": "33ba69edc7d7b0338ccd012af8f550b0fd59f6b922f30a4955bdfe9d0d78faf3"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.d.ts",
+            "sha256": "9df18bdfd99806b47b6b9a13a00ad117e24678c5d1813c6eb4e01a9665535837"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.enum.d.ts",
+            "sha256": "a4e998d6f7fb902ad0df43cd1f33ef970d5324c26387a446fc3008045e6846a7"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.enum.js",
+            "sha256": "501f60993b5871ed5c7a821e2a43089e6749d5aa21490ca04af127a30a4effa3"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.enum.js.map",
+            "sha256": "3377c477fd3e2c5d99f2037dc2514b208176e8dd1190d96bdad48446c27e5b93"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.js",
+            "sha256": "b7962b828d3b24aee676d3e024b6411ed8322ea149da82dd1b62849d73575b35"
+          },
+          {
+            "path": "dist/enums/moduleDetectionKind.js.map",
+            "sha256": "c8e9e86c77986609d381c5a18993dca8e62caef01c893887932b6410ca12e6a0"
+          },
+          {
+            "path": "dist/enums/moduleKind.d.ts",
+            "sha256": "e5a8ec1842adf2e2b091201b65bf5e7bf163b14c878f970cc17f2ee61d838162"
+          },
+          {
+            "path": "dist/enums/moduleKind.enum.d.ts",
+            "sha256": "61f131f16e825a10c998f85ad1420aa95c30bef458d4f1078012d9a4f273b263"
+          },
+          {
+            "path": "dist/enums/moduleKind.enum.js",
+            "sha256": "531b12256ac2344c682502a7cd950f3131b88ed47038bf0bf1dbb5b54ccbf726"
+          },
+          {
+            "path": "dist/enums/moduleKind.enum.js.map",
+            "sha256": "5c4dc5f798d62d133d882dae4997acf043418b820e139db7857aac44c545f3cb"
+          },
+          {
+            "path": "dist/enums/moduleKind.js",
+            "sha256": "4dfa15b46fed77be5ab7cd912b5ee157b4d47348efe579d6c0026e8075bd57f9"
+          },
+          {
+            "path": "dist/enums/moduleKind.js.map",
+            "sha256": "f68e0d9dab02fe1da3dbfc02b291919373f669c6acae8a3589d63115a7d452d1"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.d.ts",
+            "sha256": "f768f6462b091295d3f96fece9126e71a6ff6042c5f0b76da657c4039ea1fa6e"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.enum.d.ts",
+            "sha256": "c02d61f153a5d641dc0f3824e7506f14d301f19a0a075b2ea4a3b7a8b42e7ec2"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.enum.js",
+            "sha256": "1e16560e252100063cddb488fb1eec86f846be74343dd3c47457804d20bd27f4"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.enum.js.map",
+            "sha256": "9e47d023eb641e7bb1e8d91cb4069413f55fc84d919fd4e992778ed1a84c9e5b"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.js",
+            "sha256": "42729fc8802f15cc7564efe0e324446175d1bc6d60778c23808897d0b1ad3296"
+          },
+          {
+            "path": "dist/enums/moduleResolutionKind.js.map",
+            "sha256": "46daf5d381f982d4ea0e305fb98d2161c6ccf5ede33a3e68b5fbc0c61d927a1c"
+          },
+          {
+            "path": "dist/enums/newLineKind.d.ts",
+            "sha256": "6ad503e7e5af992eedfcb10605c8fbfa72e45db39ffbf0cae02ba08f5b8e7b53"
+          },
+          {
+            "path": "dist/enums/newLineKind.enum.d.ts",
+            "sha256": "40b2d851f27b0682fe385126d74fb1547f484f179fe398d19b9784e420a2d46d"
+          },
+          {
+            "path": "dist/enums/newLineKind.enum.js",
+            "sha256": "89142141c8956066ab63534c5d964819670eb57d013a986b4bfc2f69a8c0c5b9"
+          },
+          {
+            "path": "dist/enums/newLineKind.enum.js.map",
+            "sha256": "21b99afff0f72e2d5be9bfe4b965e1d6ec0163069eed6ee4d576087921445d59"
+          },
+          {
+            "path": "dist/enums/newLineKind.js",
+            "sha256": "9cc97d0e3c8e33fcc63607b687d28aaad59c5f405c2a0a0349991b9c858ee814"
+          },
+          {
+            "path": "dist/enums/newLineKind.js.map",
+            "sha256": "3720c8270286a4656527b1d7c7152d14f71f2d939bb0e1a5a2f8760b84659f7b"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.d.ts",
+            "sha256": "5944035f298da37bf31231495108aadd2f3b31c7f788b485ad5f8e56bd803276"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.enum.d.ts",
+            "sha256": "721a0de9110441dea1a9128788b1234c7210420fc1cf695d345110671b19bf94"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.enum.js",
+            "sha256": "26b8f90f2bd77d4d9320f7db626e5d7515e873e0bba983702960e614dd24e235"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.enum.js.map",
+            "sha256": "07d4dbc944b67f1cc54feb1cd6890077d2c02fb3594debbc4232ff87d94c477d"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.js",
+            "sha256": "4e78db129e03c5fbe09565379e5652b7d67e435c2be020fc387f8d194e1c3dc2"
+          },
+          {
+            "path": "dist/enums/nodeBuilderFlags.js.map",
+            "sha256": "6b7a2e3494c5f83a53ec635507297ee76cdedca328dc21a8d382ac4a6c537e62"
+          },
+          {
+            "path": "dist/enums/nodeFlags.d.ts",
+            "sha256": "0080ee886392778101fb199b62beaf1276987f90c7bd4018a26e8fe27204c969"
+          },
+          {
+            "path": "dist/enums/nodeFlags.enum.d.ts",
+            "sha256": "3d91c8f1f104ea7d6064d87bef4dd09ce7a9938c3df1d780ffbb9e441122baf3"
+          },
+          {
+            "path": "dist/enums/nodeFlags.enum.js",
+            "sha256": "2f27880cabda0bdf91deff41fe789f30a17fb75c4ecb110a029c5932a10d5340"
+          },
+          {
+            "path": "dist/enums/nodeFlags.enum.js.map",
+            "sha256": "87e31f8d141981ffdf22b22abc80b3c420161d5c7bf7a44c7f8b4600e7018f79"
+          },
+          {
+            "path": "dist/enums/nodeFlags.js",
+            "sha256": "6ff7171d15c07b9e82d1b3efadbf88202bc5bdbca390ad8f6927fb6d1b11b9bd"
+          },
+          {
+            "path": "dist/enums/nodeFlags.js.map",
+            "sha256": "afaa44809183f765dc725b4c259d80b6a6e37e8eada4546455747c48401d8c77"
+          },
+          {
+            "path": "dist/enums/objectFlags.d.ts",
+            "sha256": "eb60dbabca3dcceab3152510d122391274a5ee93a99e4b81fdf611da1e418778"
+          },
+          {
+            "path": "dist/enums/objectFlags.enum.d.ts",
+            "sha256": "2793c2eb37ce82887ee89878988dc17d1412acafc717509bf55b964b1c4acb6a"
+          },
+          {
+            "path": "dist/enums/objectFlags.enum.js",
+            "sha256": "2c7b94095fad9c71d2a3629cbf3b5aa390d4b538a9cdaae22a0bdb44eba093a0"
+          },
+          {
+            "path": "dist/enums/objectFlags.enum.js.map",
+            "sha256": "6d4f014f73e8e938a73ca947e3ac56c09d8b351c8d7275655dc8be1b9f441a26"
+          },
+          {
+            "path": "dist/enums/objectFlags.js",
+            "sha256": "73f1d3c4d6e11a6ad9570a5a1247ee6bb98df374ecd9ca37c2c0f281b2d95a2f"
+          },
+          {
+            "path": "dist/enums/objectFlags.js.map",
+            "sha256": "1819d75582f97b7f5faf8ac1e480bbb0ea50ad18331f57ef26550d11ca9e13b0"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.d.ts",
+            "sha256": "4f277dc97701d564dab315500e875e30a73f2e6c5b06ec32c1644f3bced780df"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.enum.d.ts",
+            "sha256": "ff522f6721e569bab5aab8617385920c9ed9c31374487add868f7fd16a23f67d"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.enum.js",
+            "sha256": "e1433ccaacf408e99c9101157467ba4d43f7995c7bf0fccffa0f5a4a336ca9c9"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.enum.js.map",
+            "sha256": "59d6fd627808465d1b9f9ea21c907cbd7852017ae8850a7802b2aa2b59fd9cf0"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.js",
+            "sha256": "824746b3ef02f47933fdd6f70fd0218dd140b20cbbeb23e35a8a84000b577457"
+          },
+          {
+            "path": "dist/enums/outerExpressionKinds.js.map",
+            "sha256": "195fc94c047604a392c4d29c3f42aaa71b649dbbb286363bdc43f96a318f9b0c"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.d.ts",
+            "sha256": "99b12dd7cd58e6075b1960d925f345d1e2dc1bcc611327627b9394e7ce2436c2"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.enum.d.ts",
+            "sha256": "1968d1e27574ccc64805de642aa139e5bfa6c2040883b5447e8db9c9be76b512"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.enum.js",
+            "sha256": "59b38c4083ef4aa686858e101685e5b04a981639c51c0efe5cdb7e95e2207094"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.enum.js.map",
+            "sha256": "e078c9bea9ef58c5941e7bf4dca858340965f506d284817cb3f016cefa4b1cf1"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.js",
+            "sha256": "1577cfcc7e966fe178751685a4aec96ff2e1c3e2d104808ff1d194ba3d239a71"
+          },
+          {
+            "path": "dist/enums/regularExpressionFlags.js.map",
+            "sha256": "bb17dc0549ab078d0d904a8eaaf5cae7d325ac196bd3adb4d2f285955342692c"
+          },
+          {
+            "path": "dist/enums/scriptKind.d.ts",
+            "sha256": "7a883c771d1a34f2db748f082051a79ee629acf30aadfbb947a8b96c403123bd"
+          },
+          {
+            "path": "dist/enums/scriptKind.enum.d.ts",
+            "sha256": "b333ca7d6b6fdc444abdc5d9955f7b494ad40826005090b87fed253a6c0197ee"
+          },
+          {
+            "path": "dist/enums/scriptKind.enum.js",
+            "sha256": "71d4902b0f5e35b7eae1b75f69f4539c9ec13b18ad671c1c1901b20c83e3ee75"
+          },
+          {
+            "path": "dist/enums/scriptKind.enum.js.map",
+            "sha256": "22af44af1c1f74f4919378322d7ea9f66150a3402dc1345a75151352f5677d2e"
+          },
+          {
+            "path": "dist/enums/scriptKind.js",
+            "sha256": "a856f6b29174b42bcd460b1e02ed853b10f2c0165cdeb34d82ee7b4d8f91c48d"
+          },
+          {
+            "path": "dist/enums/scriptKind.js.map",
+            "sha256": "9877969567f2f3948471152305580dca38c8ff980cac44f87db3185c8adc11d1"
+          },
+          {
+            "path": "dist/enums/scriptTarget.d.ts",
+            "sha256": "24c2a517538333f0b2ac94b7c851e37c1883374c8f7380c7c7c10ce976d48041"
+          },
+          {
+            "path": "dist/enums/scriptTarget.enum.d.ts",
+            "sha256": "0edec5b446f6cc373431051ccb2030891811f09965183522a441d7ce22e01c95"
+          },
+          {
+            "path": "dist/enums/scriptTarget.enum.js",
+            "sha256": "857f909600dab4899500cc1fc266bf0fd92fda871c885440b0cf9c6eba539d16"
+          },
+          {
+            "path": "dist/enums/scriptTarget.enum.js.map",
+            "sha256": "a1da6ecd10328d18708d841b5ef67a13b5cd4e4aaf4262ce4afe8590f929bc4c"
+          },
+          {
+            "path": "dist/enums/scriptTarget.js",
+            "sha256": "213b7faf86b6e8dbf7d4becbe0ff8f54461219b58b99ab9a6832d503486f452e"
+          },
+          {
+            "path": "dist/enums/scriptTarget.js.map",
+            "sha256": "3c5b3e5283d651b7fe6b4c4fe4a682a0c9b0ff1b1ec1d0c6c13e6914a76153cd"
+          },
+          {
+            "path": "dist/enums/signatureFlags.d.ts",
+            "sha256": "aebbb122011a28a685528ae5b155e1b051d3c4692a7c8bd104d6c06b3d587d65"
+          },
+          {
+            "path": "dist/enums/signatureFlags.enum.d.ts",
+            "sha256": "e3eac387d6400d6c743c2f59cb54a74bc30dd09af13d30085ddf4290d8a00392"
+          },
+          {
+            "path": "dist/enums/signatureFlags.enum.js",
+            "sha256": "e378a4dd1c6399acfde61afd9dba3b0372b19138ace123bd2ffb455f8ed18428"
+          },
+          {
+            "path": "dist/enums/signatureFlags.enum.js.map",
+            "sha256": "bbdbd01e61be4b1b1c61eef87640b139c2c07001c09b99816a57bb0e13af6b24"
+          },
+          {
+            "path": "dist/enums/signatureFlags.js",
+            "sha256": "218381fc21b41568fc0ee2a00bb80279322770986aa994f09ac3ebf4a250ef08"
+          },
+          {
+            "path": "dist/enums/signatureFlags.js.map",
+            "sha256": "e2ddaeee5c12c166a42f81a3ee11235961d22f5b88a7048373b44dd34e66f84e"
+          },
+          {
+            "path": "dist/enums/signatureKind.d.ts",
+            "sha256": "f526fcce36405de414b306cf7b8144dc88e6bb49fae5acb2b0221596a3e38c45"
+          },
+          {
+            "path": "dist/enums/signatureKind.enum.d.ts",
+            "sha256": "bb3e91a4a34f2fc855810fdd50ea1a494613333ef93f7e1b0d9d61258e355770"
+          },
+          {
+            "path": "dist/enums/signatureKind.enum.js",
+            "sha256": "eb2431ae7431e8c1f34065a62570756a33ce9595dc057addbf1ca9f1b9626ba7"
+          },
+          {
+            "path": "dist/enums/signatureKind.enum.js.map",
+            "sha256": "629e46e26d75209ff14f72003f746bc681ac6ca7f3e24f96f53c2723d24b27bc"
+          },
+          {
+            "path": "dist/enums/signatureKind.js",
+            "sha256": "e67526799ce2d8693678fbcf3954e67498b7180f21faaec197d6aa235e74fbd9"
+          },
+          {
+            "path": "dist/enums/signatureKind.js.map",
+            "sha256": "a6cde1a6dc4778472f5df298183b513f17e7e4ca0aaa0ffa1bcac7ec84e894eb"
+          },
+          {
+            "path": "dist/enums/symbolFlags.d.ts",
+            "sha256": "4549318ca66a40b0b53a1f8c16468988cc7aed36bf5a3deb0cdbea3a4b1f4de1"
+          },
+          {
+            "path": "dist/enums/symbolFlags.enum.d.ts",
+            "sha256": "7d6adc93f879f2df6fe1c6d27ca949af538a60f599b8a18e1345105d33f1ce96"
+          },
+          {
+            "path": "dist/enums/symbolFlags.enum.js",
+            "sha256": "3edae7f8ff53e55fc61227a3fd9983f57c4a13e0223591607e5930ddfd09cbb5"
+          },
+          {
+            "path": "dist/enums/symbolFlags.enum.js.map",
+            "sha256": "23a8281215f26b16385117fd50840aba5a40d50aa6f9121377eb736d9de9c4a1"
+          },
+          {
+            "path": "dist/enums/symbolFlags.js",
+            "sha256": "1fca9cf92b6bf3670fa8414ff368a442f91ec6c655e6a611c12fddbfe65c4589"
+          },
+          {
+            "path": "dist/enums/symbolFlags.js.map",
+            "sha256": "1befadbc9ef129220431c499be7655cedd07b80ffb5480f738928b848330b4be"
+          },
+          {
+            "path": "dist/enums/syntaxKind.d.ts",
+            "sha256": "3e5a2a905cfacb1e95f98296ef1b13c3d08598a9c2ad904c487cf3c66854fb8f"
+          },
+          {
+            "path": "dist/enums/syntaxKind.enum.d.ts",
+            "sha256": "7f4b98a1c2b150a48879e08339708f2d42f2b863fd5d5780d9d31d2923d8fa74"
+          },
+          {
+            "path": "dist/enums/syntaxKind.enum.js",
+            "sha256": "a2a13332dbe56069786f56126dd1d4f19c602fbf1d616d4d881ff176ad13a44e"
+          },
+          {
+            "path": "dist/enums/syntaxKind.enum.js.map",
+            "sha256": "4eedc07c9e9007ab5deeae1c1cb1751a9ad26629089488e2ca3146120fdf8039"
+          },
+          {
+            "path": "dist/enums/syntaxKind.js",
+            "sha256": "f5cc780058a86f406358654944bdc0b060eaf0790c0fc81fa7eaa430c2bead07"
+          },
+          {
+            "path": "dist/enums/syntaxKind.js.map",
+            "sha256": "d93a70aaf079ed79cdf373b32736cdc9eca63cf3bb3d77399247667c8ae15c1c"
+          },
+          {
+            "path": "dist/enums/tokenFlags.d.ts",
+            "sha256": "e524b9075233794a72b5f3968367c2721db2a2ce7247a1a578f677cf7ac28994"
+          },
+          {
+            "path": "dist/enums/tokenFlags.enum.d.ts",
+            "sha256": "3fa0d6151498afe1bda2d317a44a1d8cd61777a4b80224b8592f92f0fade17a0"
+          },
+          {
+            "path": "dist/enums/tokenFlags.enum.js",
+            "sha256": "226b78cce46bbd9a81032a518105a3942db873a955cea04870df0af0a9d61602"
+          },
+          {
+            "path": "dist/enums/tokenFlags.enum.js.map",
+            "sha256": "028d76005ca066b0003589aba702a5302548c26437a6cc7428e627988c8cd63a"
+          },
+          {
+            "path": "dist/enums/tokenFlags.js",
+            "sha256": "326ce49b7bba8060568a1463ddcf915bcebbe02d726d2451c6ce2dbb3d320016"
+          },
+          {
+            "path": "dist/enums/tokenFlags.js.map",
+            "sha256": "d43cb01208646b44750def05095c81eb153c98749675e3a00aef53a6beb32cdb"
+          },
+          {
+            "path": "dist/enums/typeFlags.d.ts",
+            "sha256": "88465cbf9005c643c8f576c419b553453d1546332fe8aa60461f686b70ac2a78"
+          },
+          {
+            "path": "dist/enums/typeFlags.enum.d.ts",
+            "sha256": "738e705773e762794a424b5fcc2fba9a78c13c75a97d2d4da4b31ceeb201ca4a"
+          },
+          {
+            "path": "dist/enums/typeFlags.enum.js",
+            "sha256": "3e5600f24aaf2038109780495829c6509c86fb730a4c0545d92c8518b718b59d"
+          },
+          {
+            "path": "dist/enums/typeFlags.enum.js.map",
+            "sha256": "95226cba456a69d8233afa4b9e7b4186e92a2ec4f519dc56435f0799efef901e"
+          },
+          {
+            "path": "dist/enums/typeFlags.js",
+            "sha256": "c3a87e18397beb89101ad9b726c9a4a092539dba4e005cc8eec44aec763600d0"
+          },
+          {
+            "path": "dist/enums/typeFlags.js.map",
+            "sha256": "672f1fa0dc6a461b13d036d8341c27fef5ded552a6891c8e6975c239be04a9d8"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.d.ts",
+            "sha256": "7266982b084ee707de6a96a833f161dd919be39b0c521c5f4a22a231042c9dc3"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.enum.d.ts",
+            "sha256": "bad2bb75e66c730009461a14042bf01ce9a3428011e317b0a5413c66451e3d12"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.enum.js",
+            "sha256": "db417ffeeea692d759b33774daacd6385e3889950ad7473b8af230fb2187927d"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.enum.js.map",
+            "sha256": "be71ffd456af12d3763ec0ede072540efb09fe94c0b8696d68addb43b0f65e58"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.js",
+            "sha256": "a030b9ebc8a1d3b9b598b10a633f0e358ad9140dc18e3a3c543413523ab0b769"
+          },
+          {
+            "path": "dist/enums/typePredicateKind.js.map",
+            "sha256": "81035064c2071498432872d9064726a998b8a042db85464aefe32feca40485da"
+          },
+          {
+            "path": "dist/internal/utils.d.ts",
+            "sha256": "0990d413616ccfac6c9051eb91c666ae675bcc0a5af401e3c5490866c9201849"
+          },
+          {
+            "path": "dist/internal/utils.js",
+            "sha256": "b95a71d8933c7fcd50c40ecf20d89849870ee7f743dd0b0a241ecf173d3a0af0"
+          },
+          {
+            "path": "dist/internal/utils.js.map",
+            "sha256": "bb548acc867971d6eea3472cdd56a36c803e561a896af460945eaf4d0d8ab10f"
+          },
+          {
+            "path": "lib/getExePath.d.ts",
+            "sha256": "d68795ce2ecbe8fdc223d49705fa69bad582beadb72717f79ac8018d6f7c719c"
+          },
+          {
+            "path": "lib/getExePath.js",
+            "sha256": "1d99d8b4be5b4c97391991a659cc93de726b98b200ae50317c3f365eb257f23d"
+          },
+          {
+            "path": "lib/version.cjs",
+            "sha256": "c90ade3f6c8361b4c752678384236b2dd2caa7fcbdcda791333fb10fe100fd5c"
+          },
+          {
+            "path": "lib/version.d.cts",
+            "sha256": "ae7e9043ba3d4e31012f1e52742e8a4ab38a4535c50b763939c9b4c2c1aaccc1"
+          },
+          {
+            "path": "LICENSE.txt",
+            "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+          },
+          {
+            "path": "native/typers",
+            "sha256": "5057f05cdcadd8ff8c0dce28ae737ae9758b7300822886b71bcc8af3f1e83651"
+          },
+          {
+            "path": "NOTICE.txt",
+            "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+          },
+          {
+            "path": "package.json",
+            "sha256": "ca9b510087953acdb987925aa67cc21734ec91337651314411ed0b4580e41a08"
+          },
+          {
+            "path": "README.md",
+            "sha256": "bb06416d8b886499227f965573036e47106c28170547ed673f70a5ad1e42aff7"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/browser/main.d.ts",
+            "sha256": "fbbdb0baaade3505088d8eeaee2e57468ccd5fb08189cb5dfc58ec9c571f3191"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/browser/main.js",
+            "sha256": "3d8217c2dde5d7602a722ad015eff7a02ce3ae46d42e32b6c5e22a7175e46a8f"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/browser/ril.d.ts",
+            "sha256": "fbfcd7c063556aca0f88a89414d5168d531fe4ecac5b172a0b39d193cfec0846"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/browser/ril.js",
+            "sha256": "0005e065b0500c85e7cf3c4dc856b9a1282084d4405c7c17fafa9ee3f2143aab"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/api.d.ts",
+            "sha256": "3d6103a9369b34873198bae0db9745986046f20eaa8e805d81886e8982f49554"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/api.js",
+            "sha256": "0d8ccd38514f3994256d0c271b9b6e288174e13847ed2c8561abd5f005bdeb76"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/cancellation.d.ts",
+            "sha256": "392dd7b1117b588cba36c04909efd24b0458980506e8e8c1966114f8989058e2"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/cancellation.js",
+            "sha256": "b851c4246fa5a644bcebe56b1fb74048948eab0886d706e59e2090fa7e41550b"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/connection.d.ts",
+            "sha256": "86beb461bcefd29f17e932d32affa1dd08ab05ceb80c00befebe67bf5072f608"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/connection.js",
+            "sha256": "0a3a46fad254b78fc2ee371d8438037c860b9bc73124fddb038bf3bb5a3c94f4"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/disposable.d.ts",
+            "sha256": "f0745ab78e18a2befaf1d9951481973318722c4e2f33e859239f55fa999ff2b1"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/disposable.js",
+            "sha256": "ad43f37a324cf41af376ea66004063ac5867a2e3dfce81b47ab617b9105a0a7d"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/encoding.d.ts",
+            "sha256": "e445daedeac3005da51d0a3e3258be16096e1c0116701e8979272aaf7aba5fb4"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/encoding.js",
+            "sha256": "812de3b9b71e07f4c042de286e44a3acc070d4639257e39a9de20548b1f3262b"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/events.d.ts",
+            "sha256": "886e183dd0199e7de45d6308ac3e2185dac6f83283d1b8200ea62cf5c43966a1"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/events.js",
+            "sha256": "d521b1fc2887c04a2d3f4d4403b5bd9fa734ef83e6f53e99bcc781d791db1508"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/is.d.ts",
+            "sha256": "cf445a02b226e862589a7a4d4296dc0eb7e2b3398d24e2a9109fae165a179db1"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/is.js",
+            "sha256": "db07129f8322e52c81034004a1a1eb9b1be743c9ec55f5f6a5b33da48cb8a2a8"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/linkedMap.d.ts",
+            "sha256": "10884636f0702390dbaee15bc8837d258174ce41dc4d4ce447da3e4c2fe785c1"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/linkedMap.js",
+            "sha256": "9c2041c8828be66893ba5f97933cc7d3698a1bad2f34b742761e6f2a3e615346"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageBuffer.d.ts",
+            "sha256": "4962729121c2cb97a4481cdb06dfc720a79a3bc2fc9330ff2bcf604cfc541177"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageBuffer.js",
+            "sha256": "27beae232413871d20551178d3342ee0bc927e8b05862883c75ce021291f11cc"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageReader.d.ts",
+            "sha256": "3ca7b2e8012b9a6be09fafd62f8f3937388b9e1600a59c98887d2b11f6d01b43"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageReader.js",
+            "sha256": "5f912919f4b2584a38812535e7894c851a13b8f51a7ad6b769f2b5e35beffaef"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messages.d.ts",
+            "sha256": "b716daa9737308e83fc9d3826cac21b3a6c12ff420b5e89415d1ca396616f1b6"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messages.js",
+            "sha256": "7a06cfd7456c2f2471dc6aab3fb69683a62245d2a91859b337e03e0e66fa0b26"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageWriter.d.ts",
+            "sha256": "b138b3f30708386023a7dc9981bb867808e5ff3383429ac7f69b7bfd0dcc5bd5"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/messageWriter.js",
+            "sha256": "cd9cd263bdd57b32eac86a0dd83ac7241aa95ffb7a43af1e680b65449799afbc"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/ral.d.ts",
+            "sha256": "2d79ae695899e28c4dba32ba39268a1eafc556f3f183175a355424fae553585a"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/ral.js",
+            "sha256": "9b4736fe0168adf1dff8a1f41cf76dc8e9f380684cbb39056403e81a05a51cb3"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/semaphore.d.ts",
+            "sha256": "e861653b284114109a695dd061a427b7bb09ce01dbe1c2d3e753fc342919faaf"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/semaphore.js",
+            "sha256": "9a7afb92b0ae8d9c341373fdecfb0133b4ba7414455110408809c2f4a05af1d1"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/sharedArrayCancellation.d.ts",
+            "sha256": "13ec544ab0a3a7ff96afac1016f55b264c812428e37d595dc33b688296435469"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/common/sharedArrayCancellation.js",
+            "sha256": "91a1128bc09e21d95be67dd441e13a0373af7c97d6ccf912b7b4168d11190efa"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/node/main.d.ts",
+            "sha256": "9fa6d0cba5093edfc07799a4fbe8f7609d106e992b84a6763613c17ba6bad6d6"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/node/main.js",
+            "sha256": "bcbe8e0f8693a2e3effb4a890a70c331153b616a4a2f88406dcffd842364a2e6"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/node/ril.d.ts",
+            "sha256": "8c4c4c0580961b284c2196e9abbfd6f456249a4710aecf88a8c3b53f1ed98244"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/lib/node/ril.js",
+            "sha256": "b05099278ce67ce95c1b87ff3297c670d178969553b6b49e0e97083e0805ac94"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/License.txt",
+            "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/package.json",
+            "sha256": "85d5135a9ae9d7b7ef4b444711eaaa2c90d84c0c314722046e0126c55fe67479"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/README.md",
+            "sha256": "aa24dd83f5f65d1ad0e816438f62fc4eb30f0a8af04b8d97933b1b09c59446af"
+          },
+          {
+            "path": "vendor/vscode-jsonrpc/typings/thenable.d.ts",
+            "sha256": "65b9243c80068ec9696b1fbdd23c9acf80d51df02f97b2d7a0514312b0a9fe7d"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@typers/core",
+      "version": "0.1.0-alpha.0",
+      "filename": "typers-core-0.1.0-alpha.0.tgz",
+      "sha256": "9c1571d8c4d7f64afc5b1841a92a2a6c27835a7472ef4bf3f270753070e25a45",
+      "unpacked": {
+        "sha256": "204da4677ab24f69a2c74b937ad353d2016fea88fbc63418c761442d340ef4d5",
+        "entries": [
+          {
+            "path": "dist/cjs/index.d.ts",
+            "sha256": "8e86b326848aa701a5f78371d345457c17083580d918c0fc5f8140fba1bce8bc"
+          },
+          {
+            "path": "dist/cjs/index.js",
+            "sha256": "79cefd57d64f45c417419aca5c95729a8d3031ee221dc59808fd566b0e8355b4"
+          },
+          {
+            "path": "dist/cjs/package.json",
+            "sha256": "dbf8353f77358bc12169b7bb7301e1978d5b503e002ee927229a8993672818fc"
+          },
+          {
+            "path": "dist/esm/index.d.ts",
+            "sha256": "8e86b326848aa701a5f78371d345457c17083580d918c0fc5f8140fba1bce8bc"
+          },
+          {
+            "path": "dist/esm/index.js",
+            "sha256": "ac1ebe26824602942f8b8e2a1ccf173afff3744091a97b248322405ef2e2fbc4"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "527adf9d4c760f7367c2aeffed6a89afba8ba40ea1b0efbc8f56496ad30ea9cf"
+          },
+          {
+            "path": "package.json",
+            "sha256": "650d359cf35146848f70d67d097b65aab2bf0bc089988d2f41770ae3636f6e99"
+          },
+          {
+            "path": "README.md",
+            "sha256": "f920d4e3972c7a44e773dd35532ff237e53f7ac4b10ab5e8a2b01d3a40e9a067"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@typers/nest",
+      "version": "0.1.0-alpha.0",
+      "filename": "typers-nest-0.1.0-alpha.0.tgz",
+      "sha256": "38c6b942bc9fefa75a1f0d514e8969220e68d1dfeaec5593518b727d0ce6fe72",
+      "unpacked": {
+        "sha256": "395c1cc35d76ae2db314445519423f7ef0ebe32732101cceda224e1ce0ea9725",
+        "entries": [
+          {
+            "path": "bin/typers-nest.mjs",
+            "sha256": "ea8380f1e73a2afc4377ada463afe2a311b1a7dc918b30a4fd329a545df80680"
+          },
+          {
+            "path": "LICENSE.txt",
+            "sha256": "527adf9d4c760f7367c2aeffed6a89afba8ba40ea1b0efbc8f56496ad30ea9cf"
+          },
+          {
+            "path": "package.json",
+            "sha256": "b058d76dbf6f3d7d2fd15e5b6195b4fc67112bf7f00f6789efc78d3a3ac9e67b"
+          },
+          {
+            "path": "README.md",
+            "sha256": "45fbd6f01b5209254f34775f886f5e9ed6c9a9e7d81bdaa8f7e3ce49bbf7cfc1"
+          },
+          {
+            "path": "src/assets.mjs",
+            "sha256": "c07a2ad27b04227ba9937ef4f14f1ed0d6a77dce86161add18b0e1c94be6d7bf"
+          },
+          {
+            "path": "src/build.d.ts",
+            "sha256": "1fde04e32cb30d1937ef03c55f0d6fdb393a09774e2f805d3cb315e1a6653dbe"
+          },
+          {
+            "path": "src/build.mjs",
+            "sha256": "3af57b4aa5309d08a99b17a0f42c44943d6a7c131bbbe895ea2ef9bdf95f67e3"
+          },
+          {
+            "path": "src/config.mjs",
+            "sha256": "8b85a07a517c63c30b6d5b1613f8ff6f92b9d504684a0aa863526ed231b68cb6"
+          },
+          {
+            "path": "src/paths.mjs",
+            "sha256": "2b26f40a1b25afa31a3c27bde2a80360064427a48b40e8429536f69c6787fc58"
+          }
+        ]
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@apollo/gateway",
+      "version": "2.14.4",
+      "packageJsonSha256": "6addf6331257f523818a556da7e0d9e46b30b38e3daf3d7513dfc28845c695be"
+    },
+    {
+      "name": "@apollo/server",
+      "version": "5.5.1",
+      "packageJsonSha256": "582fba594f451699e19c5d31d2b98dad641daa936be92104bf7409fa97ab746d"
+    },
+    {
+      "name": "@apollo/subgraph",
+      "version": "2.15.0",
+      "packageJsonSha256": "760a7f700968a3b27a4e189d3d9a329149411101094bad9dc035ef46d7a25514"
+    },
+    {
+      "name": "@as-integrations/express5",
+      "version": "1.1.2",
+      "packageJsonSha256": "08d1a3e98e14d916b7fd4cc7b5bfdf82b9caffd8e84638d56bb01b9fc4458ccc"
+    },
+    {
+      "name": "@codegenie/serverless-express",
+      "version": "5.0.0",
+      "packageJsonSha256": "9ac6428b698681ab4b7f85540027d1436c4286ab3f16e1f47ef9b96272aaf262"
+    },
+    {
+      "name": "@fastify/compress",
+      "version": "9.2.0",
+      "packageJsonSha256": "70030f6eaff3024d81002c6112a93f1765d161c63d1f0831a95c9f97c4b7fcb8"
+    },
+    {
+      "name": "@fastify/cookie",
+      "version": "11.1.2",
+      "packageJsonSha256": "9eae9cc0becad4abd43a4c5898a2a1b55ff329b58312fa2c03e586c3e5d7ac42"
+    },
+    {
+      "name": "@fastify/helmet",
+      "version": "13.1.1",
+      "packageJsonSha256": "64bd5f1a094b8b87b00998c07289c5e81113c1e6a72f9d03c15e80ecd8883cce"
+    },
+    {
+      "name": "@fastify/multipart",
+      "version": "10.1.1",
+      "packageJsonSha256": "3ba0386b97c2cac901d3c52df058dc35205ccfcdc60761b876dece56aaa14bf0"
+    },
+    {
+      "name": "@fastify/static",
+      "version": "10.1.3",
+      "packageJsonSha256": "9767239fd7283ebf31dd0d042bf66ed1b25fb80344b28d5049c26d3752e6d713"
+    },
+    {
+      "name": "@graphql-tools/utils",
+      "version": "12.0.1",
+      "packageJsonSha256": "4ec0c3abeee398d94e87621e78ecd9255412a05032d7a66f579579c6cc9bd816"
+    },
+    {
+      "name": "@grpc/grpc-js",
+      "version": "1.14.4",
+      "packageJsonSha256": "90f749f4e42ea4a568ac89c630c5d463ce094ad22bf5b0ff1427e1acc4538169"
+    },
+    {
+      "name": "@grpc/proto-loader",
+      "version": "0.8.1",
+      "packageJsonSha256": "04fc16d6ba1496e29f0919c9c9438e19156153988b4a4776c9139365bd6650a9"
+    },
+    {
+      "name": "@mikro-orm/core",
+      "version": "7.2.0",
+      "packageJsonSha256": "0a613984a90e2c7eb1372ea8e4d2e571086817892c41c7c6f26faddec8e0744d"
+    },
+    {
+      "name": "@mikro-orm/decorators",
+      "version": "7.2.0",
+      "packageJsonSha256": "3a11fc98910d9d80cc3d2a7d47853d8981af0235f039b1b47c90112134a987de"
+    },
+    {
+      "name": "@mikro-orm/nestjs",
+      "version": "7.1.0",
+      "packageJsonSha256": "204ea5dcecdb5ba8042c5ba9e1c9dc12d4025f03ad7e2ce559f69a1dbc8e4afb"
+    },
+    {
+      "name": "@mikro-orm/postgresql",
+      "version": "7.2.0",
+      "packageJsonSha256": "bad2ae2a52c93dea1f22fa45125f9a0372fbc8e3971392d144e61a105c7e8bca"
+    },
+    {
+      "name": "@nats-io/nats-core",
+      "version": "3.4.0",
+      "packageJsonSha256": "2866920339fec2de454ec4947c8c158ae1912acc30806f6e5cdfeb1cf211a760"
+    },
+    {
+      "name": "@nats-io/transport-node",
+      "version": "3.4.0",
+      "packageJsonSha256": "c78be46a34f9808f850f490cf28c092be9458156460b66f9dda9ecbc06f049de"
+    },
+    {
+      "name": "@nestjs/apollo",
+      "version": "14.0.0",
+      "packageJsonSha256": "7bdf5536018d9586e0bb5cf7e3c6ccf095a4a114eed0ab55815a17bd93ee19bf"
+    },
+    {
+      "name": "@nestjs/axios",
+      "version": "12.0.1",
+      "packageJsonSha256": "2c6ea52246fd2e5269c8d11f55603eb79e95b4320824138ce80652bcc4009e00"
+    },
+    {
+      "name": "@nestjs/bullmq",
+      "version": "12.0.0",
+      "packageJsonSha256": "6106150df29fea8a875c4d6b9cfb744753e1358f80ba8ecd8c0b3d1f0b63355e"
+    },
+    {
+      "name": "@nestjs/cache-manager",
+      "version": "12.0.0",
+      "packageJsonSha256": "623c35963f168a5078302dc721e7c2684b050a87c903b846aeb01b4afc29e13a"
+    },
+    {
+      "name": "@nestjs/cli",
+      "version": "12.0.1",
+      "packageJsonSha256": "a75b340b3d882e1767b7c33c5c95c2ab539df0d1c313c73164ee5d115da02a87"
+    },
+    {
+      "name": "@nestjs/common",
+      "version": "12.0.2",
+      "packageJsonSha256": "2321d7d7b5d9936e1905eadd8ca5a7840ad8f5b8a4b3b605d81fcfcb5d2f2aaf"
+    },
+    {
+      "name": "@nestjs/config",
+      "version": "12.0.0",
+      "packageJsonSha256": "667c3c86aae59990c0d9b333a7f10407ba751f30ab0afc7f1d992a2dab8aefd9"
+    },
+    {
+      "name": "@nestjs/core",
+      "version": "12.0.2",
+      "packageJsonSha256": "cd03953b5f311ce696892d5a31a7d3ae2f2392f2d1c25ec01689e8550d15c80d"
+    },
+    {
+      "name": "@nestjs/cqrs",
+      "version": "12.0.0",
+      "packageJsonSha256": "3b87e91c9c02b9af7a2ae85980afbf0e6da6672b7626ecffcf5ad4dd8edb743b"
+    },
+    {
+      "name": "@nestjs/devtools-integration",
+      "version": "12.0.0",
+      "packageJsonSha256": "7e0307136180bf7c8e9677fa03580aee10b162d618f0683f1506f40b655a6896"
+    },
+    {
+      "name": "@nestjs/event-emitter",
+      "version": "12.0.1",
+      "packageJsonSha256": "e693553b8be968648233ef18a070e8120b6c2b890c96e810ac7233357a792ccd"
+    },
+    {
+      "name": "@nestjs/graphql",
+      "version": "14.0.0",
+      "packageJsonSha256": "87202ab9a7f8bae53ca9d53ae5b5e5d5b62af664616a65d4c3efb3a1d7155d8e"
+    },
+    {
+      "name": "@nestjs/jwt",
+      "version": "12.0.2",
+      "packageJsonSha256": "533c95fbedb6d716007acd1ea9527579f641e4076e3776958d6406980def3235"
+    },
+    {
+      "name": "@nestjs/mapped-types",
+      "version": "12.0.0",
+      "packageJsonSha256": "c123d0c127df0db660b165fe231752816ac360303dca60cb642cb48b0056bf63"
+    },
+    {
+      "name": "@nestjs/mau",
+      "version": "0.2.6",
+      "packageJsonSha256": "550c9c5e3cc70b2da9e7a705d8b3e0821f376f5ff890285c7b44de8df51c5181"
+    },
+    {
+      "name": "@nestjs/mercurius",
+      "version": "14.0.0",
+      "packageJsonSha256": "1b713444318ba09df6686538ab9dd1b66f5c00949c46aa78209cbe8f2fd3414a"
+    },
+    {
+      "name": "@nestjs/microservices",
+      "version": "12.0.2",
+      "packageJsonSha256": "99fadd590cea979b9e8605aa5cf6604a04d294997467a4be35aaac70a0929c3b"
+    },
+    {
+      "name": "@nestjs/mongoose",
+      "version": "12.0.0",
+      "packageJsonSha256": "961496244458e727e4c7b2743b1bf4b4bc9d4af1304064a3ed7ace74f13bedb6"
+    },
+    {
+      "name": "@nestjs/observe",
+      "version": "0.2.0",
+      "packageJsonSha256": "aa3cbda99b035ce6471319311b4d2414958bcf605be42f9e42710161264a4969"
+    },
+    {
+      "name": "@nestjs/passport",
+      "version": "12.0.0",
+      "packageJsonSha256": "3d742c54355bcf3aa7c0c948f8cc7d70d90c50520d89e60b3123aaf68296e425"
+    },
+    {
+      "name": "@nestjs/platform-express",
+      "version": "12.0.2",
+      "packageJsonSha256": "4545e2238046eb2350060b153d6d48a158d585e6903eb2e0d93d4460c31467d8"
+    },
+    {
+      "name": "@nestjs/platform-fastify",
+      "version": "12.0.2",
+      "packageJsonSha256": "2519d4017c45c29975a1a3caba0ca2146710999495bb8b52c03531770df2cb39"
+    },
+    {
+      "name": "@nestjs/platform-socket.io",
+      "version": "12.0.2",
+      "packageJsonSha256": "e154a04dca293adc7dec4029bf0d12fda294a4fb9839e4fa1dd33036ea27d8e0"
+    },
+    {
+      "name": "@nestjs/platform-ws",
+      "version": "12.0.2",
+      "packageJsonSha256": "fb8e996e4d25228440fe05be2f488c41b35412a305eb0c7e0c37660e3a7bafc4"
+    },
+    {
+      "name": "@nestjs/schedule",
+      "version": "12.0.2",
+      "packageJsonSha256": "2ab3855e317fadb18c67c70b503b3ef77ea234822598b5bf7e2efdbfe774baaf"
+    },
+    {
+      "name": "@nestjs/schematics",
+      "version": "12.0.2",
+      "packageJsonSha256": "80b992a46587826c717e9a9e970a9f561d64b4e349784e281b8b62b3677fc545"
+    },
+    {
+      "name": "@nestjs/sequelize",
+      "version": "12.0.0",
+      "packageJsonSha256": "5b9fd8bce078f03e74b461825468d63d64c74bfc18ceaa8c34c9f1fb9dcd31c5"
+    },
+    {
+      "name": "@nestjs/serve-static",
+      "version": "12.0.0",
+      "packageJsonSha256": "66fbf68d09f215ab79a46752c3613040ed7a90eec4788fae511bc3303f9f92a8"
+    },
+    {
+      "name": "@nestjs/swagger",
+      "version": "12.0.1",
+      "packageJsonSha256": "0209914607f44ea13b103b75292a533bbdc8fb8d6b822c113debf9c839cb3a79"
+    },
+    {
+      "name": "@nestjs/terminus",
+      "version": "12.0.0",
+      "packageJsonSha256": "1bb7a94d85552f710bba9df0641fffd1d49a037d629184d9c804aff1fbe9094d"
+    },
+    {
+      "name": "@nestjs/testing",
+      "version": "12.0.2",
+      "packageJsonSha256": "dae521d29578d17d6592196dd82c1fbc42f4500e8a2260946b76ce78c961b2d9"
+    },
+    {
+      "name": "@nestjs/throttler",
+      "version": "6.5.0",
+      "packageJsonSha256": "97eab86748b13c278f827e766113a36bb321df2a3fc4834274835f3477e34064"
+    },
+    {
+      "name": "@nestjs/typeorm",
+      "version": "12.0.1",
+      "packageJsonSha256": "04a8054d71c5040baee18aeb2d6c09ee0f38b95898f9470b3798f1e585db1a2d"
+    },
+    {
+      "name": "@nestjs/websockets",
+      "version": "12.0.2",
+      "packageJsonSha256": "64a659c88b815782c9a296720f66a1e04bc32691fc040d29a3d5443d55ce18d9"
+    },
+    {
+      "name": "@prisma/adapter-pg",
+      "version": "7.10.0",
+      "packageJsonSha256": "8256e8a778b798a5552a3b795409ec23a1c629ee94c308ad2d5909a29fe03e5b"
+    },
+    {
+      "name": "@prisma/client",
+      "version": "7.10.0",
+      "packageJsonSha256": "974ee2fedaddb6f7707ba2dc0c4d95219be80d6e952034ba9d5d10c68eddc9a7"
+    },
+    {
+      "name": "@rspack/core",
+      "version": "2.2.4",
+      "packageJsonSha256": "a7ea1b069f6de478397899450c944d1ea808d764e0cae812e2c1dcbf12df1ddb"
+    },
+    {
+      "name": "@swc/cli",
+      "version": "0.8.1",
+      "packageJsonSha256": "8990f2b84b3b6e3b1b84c0eb1b1f9aae1becca569ef59ab8096cf0a9993ce86b"
+    },
+    {
+      "name": "@swc/core",
+      "version": "1.16.2",
+      "packageJsonSha256": "fbfa2d85ff7193cb911d312168501c7190dcabb0c2333989ad3e73533d71e4ba"
+    },
+    {
+      "name": "@types/amqplib",
+      "version": "0.10.8",
+      "packageJsonSha256": "b4a0eb136f0bf3717ff1136c8a38adb40604c9b7508a0b021a35d77e91634284"
+    },
+    {
+      "name": "@types/aws-lambda",
+      "version": "8.10.163",
+      "packageJsonSha256": "7e65a35812d8555af5fbec1c8b7bc719502746df4cfa090e02373217dbeb2f51"
+    },
+    {
+      "name": "@types/compression",
+      "version": "1.8.1",
+      "packageJsonSha256": "125da80c0d58e7b4b1b3d28aabfd193d3ce08bd7d0c19725345507446c5aa0ee"
+    },
+    {
+      "name": "@types/cookie-parser",
+      "version": "1.4.10",
+      "packageJsonSha256": "2de520058d49d912f78afc28d5d06096d1c1ecc195c5630eee7d442536a3a02f"
+    },
+    {
+      "name": "@types/express",
+      "version": "5.0.6",
+      "packageJsonSha256": "d409671d7fa9036b9423b5d41a361df7f7a19024ad5d770a9390975a4f46a66e"
+    },
+    {
+      "name": "@types/express-session",
+      "version": "1.19.0",
+      "packageJsonSha256": "8ded949b56fbe68ad8de3b833e0146446b16c0fe5a9b365be671aeeb38bb46df"
+    },
+    {
+      "name": "@types/multer",
+      "version": "2.2.0",
+      "packageJsonSha256": "aeaf90be5241bc19d936755a52a71e2afb5aacf15c0387a4bf225ce193c87c6f"
+    },
+    {
+      "name": "@types/node",
+      "version": "24.13.4",
+      "packageJsonSha256": "5cb83de4ba6065603bf54706024d8506983ea29e4db41853274209c614e526f1"
+    },
+    {
+      "name": "@types/passport-jwt",
+      "version": "4.0.1",
+      "packageJsonSha256": "4f2cb4d2859b4f151a2545b0cda20f63a7698f0170c790647704725de9c7704c"
+    },
+    {
+      "name": "@types/pg",
+      "version": "8.23.1",
+      "packageJsonSha256": "d122ef1e1bdb760edd5cff70d39597b9b3ae757c80e829bc297cd34fb7f01bd3"
+    },
+    {
+      "name": "@types/supertest",
+      "version": "7.2.1",
+      "packageJsonSha256": "04a614b82a1b65e0305501b69f2400d3d2fca285451043e50164486d716cee74"
+    },
+    {
+      "name": "@types/ws",
+      "version": "8.18.1",
+      "packageJsonSha256": "92f0a87117b71231a0864f7bb7c6a84b7fc91dbdd7d33379fc23d655980ad083"
+    },
+    {
+      "name": "@vitest/coverage-v8",
+      "version": "4.1.11",
+      "packageJsonSha256": "2fda0ef9aa32bb1c64ae42c04652c9b3221d4881db6fb227d82535a6b6665c28"
+    },
+    {
+      "name": "amqp-connection-manager",
+      "version": "5.0.0",
+      "packageJsonSha256": "93acc6ffd9bf3969fd2099e8b57ba6b54b1c11327f999f2611aa91e090827257"
+    },
+    {
+      "name": "amqplib",
+      "version": "2.0.1",
+      "packageJsonSha256": "f0d72709be18cea4528edb4223a93ae7ffec73197160aec321042bed96932928"
+    },
+    {
+      "name": "axios",
+      "version": "1.20.0",
+      "packageJsonSha256": "cc221510be6315b0ebf648d7e4346680e47a828fafcbb9cc141922d2d219761e"
+    },
+    {
+      "name": "bullmq",
+      "version": "6.3.6",
+      "packageJsonSha256": "eeab06b88a6be684aa60caf947e72a3adc96724d5f835c166d2666bd08600895"
+    },
+    {
+      "name": "cache-manager",
+      "version": "7.2.9",
+      "packageJsonSha256": "4be6608bccb97a5c21b3591c593fe3046e8e520fa3196c4a90afd18438e790aa"
+    },
+    {
+      "name": "class-transformer",
+      "version": "0.5.1",
+      "packageJsonSha256": "73490bf64a406c25ac02771de7990e65edafb55501166e3ccffad5b8030dc13d"
+    },
+    {
+      "name": "class-validator",
+      "version": "0.15.1",
+      "packageJsonSha256": "7cf635cde2fa6d4166fc105c71f1570307435dd444f8b4235326fc3a6a1a5dd2"
+    },
+    {
+      "name": "compression",
+      "version": "1.8.2",
+      "packageJsonSha256": "0b7fae36342883daa0f2ffeb91de83d702e8e02e7186feb2d6f62e0b25d37f0a"
+    },
+    {
+      "name": "cookie-parser",
+      "version": "1.4.7",
+      "packageJsonSha256": "27eebaa9ad78117c9b6965e3c6cd24356504e5a7abd3450cafc46a1b6e1e97e5"
+    },
+    {
+      "name": "cron",
+      "version": "4.4.0",
+      "packageJsonSha256": "7df0241df0d8fbe6ed267c5b8d4145ff40c00254f51f70c5302af54ea045acfa"
+    },
+    {
+      "name": "csrf-csrf",
+      "version": "4.0.3",
+      "packageJsonSha256": "6a4e050553a2b24e18cc487c8d96a11b81f30bafcb6650303496b13c6111a26c"
+    },
+    {
+      "name": "express-session",
+      "version": "1.19.0",
+      "packageJsonSha256": "9136f39563be07f963eae5265cf7e8f02bd5b0739c458af6d32995c38acc5a1c"
+    },
+    {
+      "name": "fastify",
+      "version": "5.12.4",
+      "packageJsonSha256": "fa2c2c939b5225ded813adc38d14c05afe9ee76bd0349c6ad9b7446cc7c2cd5c"
+    },
+    {
+      "name": "fork-ts-checker-webpack-plugin",
+      "version": "9.1.0",
+      "packageJsonSha256": "394144e70b7bc590d5e35f4052118a6328a8b97e83e9a35ff018fb768008a21a"
+    },
+    {
+      "name": "graphql",
+      "version": "16.14.2",
+      "packageJsonSha256": "d936a7b80542de54dd1323cd20c5e3481a753e7cc00dac6191d3ff8a3ed187d3"
+    },
+    {
+      "name": "graphql-query-complexity",
+      "version": "2.0.0",
+      "packageJsonSha256": "09456bacc1e569bee1326bbebe0b58d60e52af9940d25154ccf14b2726cde141"
+    },
+    {
+      "name": "graphql-subscriptions",
+      "version": "3.0.0",
+      "packageJsonSha256": "87b60738fde0bfee7002389373db9aa780a6e90feef70517d297a6cef8d5d289"
+    },
+    {
+      "name": "graphql-ws",
+      "version": "6.2.1",
+      "packageJsonSha256": "7dba1544ebd484ed0464ade181eaf3092b3c21db0791bc6c157f1020c200785d"
+    },
+    {
+      "name": "hbs",
+      "version": "4.3.1",
+      "packageJsonSha256": "0ae3e946cea929acb46b8c0c077b2f107bf4c5d0669f931dddc1cd810def4ca9"
+    },
+    {
+      "name": "helmet",
+      "version": "8.3.0",
+      "packageJsonSha256": "4957a2d012552796cb3655020ace21066aa485bceb18c9b804e8ab7993ad109e"
+    },
+    {
+      "name": "ioredis",
+      "version": "5.11.1",
+      "packageJsonSha256": "aab3b06ddef6e6754aaefc35ebce7c0cb76b4d0237d08c965dc21d36d509d89d"
+    },
+    {
+      "name": "kafkajs",
+      "version": "2.2.4",
+      "packageJsonSha256": "c8453acdf1944fccc07b0ff73cab22f462c120398338cb5663fe36392575d8a5"
+    },
+    {
+      "name": "keyv",
+      "version": "5.6.0",
+      "packageJsonSha256": "c010aefc9bdae5618edf0c4e206544d6fb83ff65fe120e3a57a79f57d272a9b6"
+    },
+    {
+      "name": "mercurius",
+      "version": "16.10.0",
+      "packageJsonSha256": "860523972d92bd071314008e243698bc226a69e2b5750909313d700edd834a16"
+    },
+    {
+      "name": "mongoose",
+      "version": "9.10.0",
+      "packageJsonSha256": "1c2729226514f0af55f08fceac2abeff78016d787ca585a72b5ff28204dd1941"
+    },
+    {
+      "name": "mqtt",
+      "version": "5.15.2",
+      "packageJsonSha256": "f7cc7633365246edc692726519a55aae09d57d0cd96f0a95157042fdd3313520"
+    },
+    {
+      "name": "nest-commander",
+      "version": "3.21.0",
+      "packageJsonSha256": "79c463c3fc470168ec4bb30d42c84869a202226f7357f6922e71eed8c7c0003d"
+    },
+    {
+      "name": "oxlint",
+      "version": "1.83.0",
+      "packageJsonSha256": "d0314b9693c3c1262cdd691bcea365ae66adbb030db5e87e2fc5e42fd44e3bc2"
+    },
+    {
+      "name": "oxlint-tsgolint",
+      "version": "7.0.2001",
+      "packageJsonSha256": "8a8557b69b36f17bf69c53339b246b7cf787212ba84daf2bdb30ea4bdd94af03"
+    },
+    {
+      "name": "passport",
+      "version": "0.7.0",
+      "packageJsonSha256": "242c005dcf36ca349071068ea8a5604cc8ffc43035361fbf8effdc46e0322e2e"
+    },
+    {
+      "name": "passport-jwt",
+      "version": "4.0.1",
+      "packageJsonSha256": "8c343692c310759968b93e84369bf01667d59744b76c0f508f0ede3c78c1768d"
+    },
+    {
+      "name": "pg",
+      "version": "8.23.0",
+      "packageJsonSha256": "e42dd36cba6e9dd8dbb6f773a2f7be8a8c3c273e18b155e42e75961a4cb8bc28"
+    },
+    {
+      "name": "prettier",
+      "version": "3.9.6",
+      "packageJsonSha256": "b69988ff94407ccd6f9e1e66d92f54da25fdc5d14c219902fdb1ed17702f886b"
+    },
+    {
+      "name": "prisma",
+      "version": "7.10.0",
+      "packageJsonSha256": "e0d96b7612a7592e62b1e2ba5b40e686e96af588bf9dafe74799b99d0b31abed"
+    },
+    {
+      "name": "reflect-metadata",
+      "version": "0.2.2",
+      "packageJsonSha256": "e0f6d5cf809e02e338f501d3030e917fa57e3a10044387de890cbf142b4f4083"
+    },
+    {
+      "name": "run-script-webpack-plugin",
+      "version": "0.2.3",
+      "packageJsonSha256": "2e6824578f42091549d95f615c73e166742933582b13ad269498c031786e60a6"
+    },
+    {
+      "name": "rxjs",
+      "version": "7.8.2",
+      "packageJsonSha256": "2399f5d968d1d693ecd206e7972fd26cb7e3daa45931ecc12202b3a924be38b7"
+    },
+    {
+      "name": "sequelize",
+      "version": "6.37.8",
+      "packageJsonSha256": "7549212df1c0b263cdee3b2026961ee206b75661555c56e03f97e078a74e3bdf"
+    },
+    {
+      "name": "sequelize-typescript",
+      "version": "2.1.6",
+      "packageJsonSha256": "4023bc534833b7d817de14118c91b3236ff928f503b534f417f741ca8fc3a037"
+    },
+    {
+      "name": "socket.io",
+      "version": "4.8.3",
+      "packageJsonSha256": "1508f8ace1f6faf56a5ed767fe22e8af6026e1c4244ae7a8438f6a04e8c93f7e"
+    },
+    {
+      "name": "socket.io-client",
+      "version": "4.8.3",
+      "packageJsonSha256": "69aacfccf32c81095a560cc29026eb79c3108ad28ae193bed54fb8f031b0cd9d"
+    },
+    {
+      "name": "source-map-support",
+      "version": "0.5.21",
+      "packageJsonSha256": "f54089d5208d092e8bebc7547a3bd2dc35d27668717158bfc3562c55ec4861bf"
+    },
+    {
+      "name": "supertest",
+      "version": "7.2.2",
+      "packageJsonSha256": "b619641c2b4810756117658b7604f8210291b2833cf0509e659f772403cfe96d"
+    },
+    {
+      "name": "ts-loader",
+      "version": "9.6.2",
+      "packageJsonSha256": "18391734b4b9c347d707855b7512500f22cbcc3d3f3a3eb8676634198081b99e"
+    },
+    {
+      "name": "ts-morph",
+      "version": "28.0.0",
+      "packageJsonSha256": "8318b74ce9398ad5bedf8d08a01c6fce5c15be62074f0771a628a526096acf3f"
+    },
+    {
+      "name": "tsconfig-paths-webpack-plugin",
+      "version": "4.2.0",
+      "packageJsonSha256": "bdfd1fb6a60e50789c5e4250234ef54176c9d6a22e78cb8454363fe7a01c7e5f"
+    },
+    {
+      "name": "typeorm",
+      "version": "0.3.31",
+      "packageJsonSha256": "958d04d32e7e69653bd908fa984cd57a1dfa6fc36c536dc3b8674a14a2abb932"
+    },
+    {
+      "name": "typescript",
+      "version": "6.0.3",
+      "packageJsonSha256": "9332e97c30d3e53ed54910b89207ed657fb444066484df6e5b6965bf130865e9"
+    },
+    {
+      "name": "vitest",
+      "version": "4.1.11",
+      "packageJsonSha256": "a28126d97bcaf567da5bed69443b7f3bcd9a7a8c38c8b66e554686b6bb2c10e0"
+    },
+    {
+      "name": "webpack",
+      "version": "5.111.0",
+      "packageJsonSha256": "5f65d7bc748f7177b33ed28b44c9df7917f6ea1adcb09772b3798d65589d6736"
+    },
+    {
+      "name": "webpack-node-externals",
+      "version": "3.0.0",
+      "packageJsonSha256": "8d303b0f8f2e4251df3e32de650aebf071bd18bb9a9c2cac2e72768dabb734d3"
+    },
+    {
+      "name": "ws",
+      "version": "8.21.3",
+      "packageJsonSha256": "a56a3fd55945a3ce177e3ca165dafae6f7eb03b7aefd58c092ac723d5741a6fb"
+    },
+    {
+      "name": "zod",
+      "version": "4.6.5",
+      "packageJsonSha256": "a046ed85fa09571dba539fee9ef236152d12dabd1f229b014ec3bd2ebaad9000"
+    }
+  ],
+  "steps": [
+    {
+      "id": "list-compiler",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/compiler-ef37a6350d19cab6b113077d1c460e7ef22d5da9dd2364b7c6b97d9d4c849b15.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 62,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/list-compiler.stdout.log",
+        "stderr": "logs/list-compiler.stderr.log"
+      },
+      "stdoutSha256": "a0a89fa869c43f3ef9eed93c3f01515316a6df4277112cead8732a845f970599",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "archive-types-compiler",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tvzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/compiler-ef37a6350d19cab6b113077d1c460e7ef22d5da9dd2364b7c6b97d9d4c849b15.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 59,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/archive-types-compiler.stdout.log",
+        "stderr": "logs/archive-types-compiler.stderr.log"
+      },
+      "stdoutSha256": "06b014e6c0d253fd18cbca5f7475bf5637c00fab2f6f71d338a1f8e5562590f0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "extract-compiler",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-xzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/compiler-ef37a6350d19cab6b113077d1c460e7ef22d5da9dd2364b7c6b97d9d4c849b15.tgz",
+        "-C",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler",
+        "--strip-components=1"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 115,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/extract-compiler.stdout.log",
+        "stderr": "logs/extract-compiler.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "list-core",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/core-9c1571d8c4d7f64afc5b1841a92a2a6c27835a7472ef4bf3f270753070e25a45.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 5,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/list-core.stdout.log",
+        "stderr": "logs/list-core.stderr.log"
+      },
+      "stdoutSha256": "97eeaa9fca65ddc650fc84955bd420d6af1cc4c97e64989a21f52e35562a21d4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "archive-types-core",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tvzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/core-9c1571d8c4d7f64afc5b1841a92a2a6c27835a7472ef4bf3f270753070e25a45.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 5,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/archive-types-core.stdout.log",
+        "stderr": "logs/archive-types-core.stderr.log"
+      },
+      "stdoutSha256": "e3fafd445e72a08250ece8f73be78d53d57a6710fe3547c5c98fb6d10023e6dc",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "extract-core",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-xzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/core-9c1571d8c4d7f64afc5b1841a92a2a6c27835a7472ef4bf3f270753070e25a45.tgz",
+        "-C",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/core",
+        "--strip-components=1"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 6,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/extract-core.stdout.log",
+        "stderr": "logs/extract-core.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "list-nest",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/nest-38c6b942bc9fefa75a1f0d514e8969220e68d1dfeaec5593518b727d0ce6fe72.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 5,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/list-nest.stdout.log",
+        "stderr": "logs/list-nest.stderr.log"
+      },
+      "stdoutSha256": "663e4b052be3a81d8344ed8ca86baa9f88d8a0bf0b3758afdf7cf3246e9078ed",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "archive-types-nest",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-tvzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/nest-38c6b942bc9fefa75a1f0d514e8969220e68d1dfeaec5593518b727d0ce6fe72.tgz"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 5,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/archive-types-nest.stdout.log",
+        "stderr": "logs/archive-types-nest.stderr.log"
+      },
+      "stdoutSha256": "1d03f70dfbc4497994b456871b06e0f1d4251c9f993bd8c5ac9bd327a42e3fa4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "extract-nest",
+      "cwd": "",
+      "command": [
+        "tar",
+        "-xzf",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/artifacts/nest-38c6b942bc9fefa75a1f0d514e8969220e68d1dfeaec5593518b727d0ce6fe72.tgz",
+        "-C",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/nest",
+        "--strip-components=1"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 5,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/extract-nest.stdout.log",
+        "stderr": "logs/extract-nest.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compiler-version",
+      "cwd": "",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "--version"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 870,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/compiler-version.stdout.log",
+        "stderr": "logs/compiler-version.stderr.log"
+      },
+      "stdoutSha256": "912f2d74d5afb2bfd1aff54e1b5a6326da5a96221bd7001abba6cad8e4389458",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "tsc-command-alias",
+      "cwd": "",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/.bin/tsc",
+        "--version"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 43,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/tsc-command-alias.stdout.log",
+        "stderr": "logs/tsc-command-alias.stderr.log"
+      },
+      "stdoutSha256": "912f2d74d5afb2bfd1aff54e1b5a6326da5a96221bd7001abba6cad8e4389458",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compiler-help",
+      "cwd": "",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "--help",
+        "--all"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 45,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/compiler-help.stdout.log",
+        "stderr": "logs/compiler-help.stderr.log"
+      },
+      "stdoutSha256": "28783d0ba95b45b6c2e8203048d47582be5a5da6120d8c3cdbafdb5a0603e54a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "runtime-compile",
+      "cwd": "profiles/runtime",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 87,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/runtime-compile.stdout.log",
+        "stderr": "logs/runtime-compile.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "runtime-node",
+      "cwd": "profiles/runtime",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "runtime.test.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 93,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/runtime-node.stdout.log",
+        "stderr": "logs/runtime-node.stderr.log"
+      },
+      "stdoutSha256": "e3f01afba646785500c1800846fb9c6c7a2f04008d2ba4f9fe92dd84bea1e7db",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodeTests": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "skipped": 0
+      },
+      "testNames": [
+        "ESM: all five runtime exports; falsy values remain present",
+        "ESM: fromNullable, None and structural cross-format interoperability",
+        "ESM: Ok/Err preserve references; readonly is not a deep freeze",
+        "CommonJS emitted .cts: all five runtime exports; falsy values remain present",
+        "CommonJS emitted .cts: fromNullable, None and structural cross-format interoperability",
+        "CommonJS emitted .cts: Ok/Err preserve references; readonly is not a deep freeze",
+        "budget: BigInt success, integer rounding, explicit zero and absent discount",
+        "budget: typed domain errors and unknown HTTP boundary validation",
+        "unknown structural Option: validate tags and payload before use",
+        "CJS consumer: success, error, absent product and zero stock",
+        "Result does not implicitly catch thrown errors or rejected promises"
+      ]
+    },
+    {
+      "id": "runtime-official-types",
+      "cwd": "profiles/runtime",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json",
+        "--noEmit",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 437,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/runtime-official-types.stdout.log",
+        "stderr": "logs/runtime-official-types.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "experimental-compile",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 119,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/experimental-compile.stdout.log",
+        "stderr": "logs/experimental-compile.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "experimental-node",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "experimental.test.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 583,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/experimental-node.stdout.log",
+        "stderr": "logs/experimental-node.stderr.log"
+      },
+      "stdoutSha256": "f6c17b26e6d038117b9b8d9af0d8096442c7f7d13af93c763a637f9208d29add",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodeTests": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      "testNames": [
+        "if-let: Some/None and all falsy payloads, including explicit undefined",
+        "if-let: evaluate RHS once for both branches and preserve thrown exceptions",
+        "if-let: structural producer, narrowed payload, nested patterns and hygienic temporaries",
+        "if-let: explicit await success/absence/rejection without implicit error conversion",
+        "if-let: labeled loops, early return, finally, this and arguments retain semantics",
+        "if-let: CommonJS .cts emits executable .cjs with cross-format Option",
+        "native declarations and source maps retain public types and original experimental source",
+        "Nest emitted ESM: real DI metadata, HTTP reservation, error mapping and zero/absent stock"
+      ]
+    },
+    {
+      "id": "experimental-declarations-official",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.consumer.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 470,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/experimental-declarations-official.stdout.log",
+        "stderr": "logs/experimental-declarations-official.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "experimental-official-rejection",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.official.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 2,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 365,
+      "diagnostics": [
+        1005,
+        1128
+      ],
+      "logs": {
+        "stdout": "logs/experimental-official-rejection.stdout.log",
+        "stderr": "logs/experimental-official-rejection.stderr.log"
+      },
+      "stdoutSha256": "143be877cb3e2038b7f63f76192e2d953ee2c706ad660fd01a4c98122949f533",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "src/commonjs.cts(4,6): error TS1005: '(' expected.\nsrc/commonjs.cts(4,10): error TS1005: ')' expected.\nsrc/commonjs.cts(4,30): error TS1005: ';' expected.\nsrc/commonjs.cts(5,3): error TS1128: Declaration or statement expected.\nsrc/nest-app.ts(35,6): error TS1005: '(' expected.\nsrc/nest-app.ts(35,10): error TS1005: ')' expected.\nsrc/nest-app.ts(35,34): error TS1005: ';' expected.\nsrc/nest-app.ts(67,8): error TS1005: '(' expected.\nsrc/nest-app.ts(67,12): error TS1005: ')' expected.\nsrc/nest-app.ts(67,59): error TS1005: ';' expected.\nsrc/nest-app.ts(72,7): error TS1128: Declaration or statement expected.\nsrc/nest-app.ts(85,8): error TS1005: '(' expected.\nsrc/nest-app.ts(85,12): error TS1005: ')' expected.\nsrc/nest-app.ts(85,37): error TS1005: ';' expected.\nsrc/nest-app.ts(86,5): error TS1128: Declaration or statement expected.\nsrc/semantics.ts(5,6): error TS1005: '(' expected.\nsrc/semantics.ts(5,10): error TS1005: ')' expected.\nsrc/semantics.ts(5,31): error TS1005: ';' expected.\nsrc/semantics.ts(7,5): error TS1128: Declaration or statement expected.\nsrc/semantics.ts(14,6): error TS1005: '(' expected.\nsrc/semantics.ts(14,10): error TS1005: ')' expected.\nsrc/semantics.ts(14,35): error TS1005: ';' expected.\nsrc/semantics.ts(22,6): error TS1005: '(' expected.\nsrc/semantics.ts(22,10): error TS1005: ')' expected.\nsrc/semantics.ts(22,31): error TS1005: ';' expected.\nsrc/semantics.ts(25,5): error TS1128: Declaration or statement expected.\nsrc/semantics.ts(35,6): error TS1005: '(' expected.\nsrc/semantics.ts(35,10): error TS1005: ')' expected.\nsrc/semantics.ts(35,35): error TS1005: ';' expected.\nsrc/semantics.ts(37,8): error TS1005: '(' expected.\nsrc/semantics.ts(37,12): error TS1005: ')' expected.\nsrc/semantics.ts(37,61): error TS1005: ';' expected.\nsrc/semantics.ts(49,6): error TS1005: '(' expected.\nsrc/semantics.ts(49,10): error TS1005: ')' expected.\nsrc/semantics.ts(49,29): error TS1005: ';' expected.\nsrc/semantics.ts(53,6): error TS1005: '(' expected.\nsrc/semantics.ts(53,10): error TS1005: ')' expected.\nsrc/semantics.ts(53,35): error TS1005: ';' expected.\nsrc/semantics.ts(61,6): error TS1005: '(' expected.\nsrc/semantics.ts(61,10): error TS1005: ')' expected.\nsrc/semantics.ts(61,41): error TS1005: ';' expected.\nsrc/semantics.ts(63,5): error TS1128: Declaration or statement expected.\nsrc/semantics.ts(70,6): error TS1005: '(' expected.\nsrc/semantics.ts(70,10): error TS1005: ')' expected.\nsrc/semantics.ts(70,41): error TS1005: ';' expected.\nsrc/semantics.ts(82,10): error TS1005: '(' expected.\nsrc/semantics.ts(82,14): error TS1005: ')' expected.\nsrc/semantics.ts(82,43): error TS1005: ';' expected.\nsrc/semantics.ts(91,10): error TS1005: '(' expected.\nsrc/semantics.ts(91,14): error TS1005: ')' expected.\nsrc/semantics.ts(91,39): error TS1005: ';' expected.\nsrc/semantics.ts(98,10): error TS1005: '(' expected.\nsrc/semantics.ts(98,14): error TS1005: ')' expected.\nsrc/semantics.ts(98,43): error TS1005: ';' expected.\nsrc/type-contracts.ts(5,6): error TS1005: '(' expected.\nsrc/type-contracts.ts(5,10): error TS1005: ')' expected.\nsrc/type-contracts.ts(5,31): error TS1005: ';' expected.\nsrc/type-contracts.ts(12,5): error TS1128: Declaration or statement expected.\nsrc/type-contracts.ts(18,6): error TS1005: '(' expected.\nsrc/type-contracts.ts(18,10): error TS1005: ')' expected.\nsrc/type-contracts.ts(18,45): error TS1005: ';' expected."
+    },
+    {
+      "id": "experimental-negative-disabled",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/disabled/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 71,
+      "diagnostics": [
+        1005
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-disabled.stdout.log",
+        "stderr": "logs/experimental-negative-disabled.stderr.log"
+      },
+      "stdoutSha256": "ddbc5f3d1514089ccd97e67cedcbb817dedac92797d90248fbddd9bf3460d5ea",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/disabled/case.ts(2,4): error TS1005: '(' expected.\nnegative/disabled/case.ts(2,8): error TS1005: ')' expected.\nnegative/disabled/case.ts(2,29): error TS1005: ';' expected."
+    },
+    {
+      "id": "experimental-negative-wrong-operand",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/wrong-operand/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 82,
+      "diagnostics": [
+        1360
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-wrong-operand.stdout.log",
+        "stderr": "logs/experimental-negative-wrong-operand.stderr.log"
+      },
+      "stdoutSha256": "76cf0335dfa2428e8a1ce3e5f8f1249c8660a23e9d138516dc5f0737881a466c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/wrong-operand/case.ts(2,28): error TS1360: Type 'unknown' does not satisfy the expected type '{ readonly kind: \"some\"; readonly value: unknown; } | { readonly kind: \"none\"; }'."
+    },
+    {
+      "id": "experimental-negative-wrong-pattern",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/wrong-pattern/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 73,
+      "diagnostics": [
+        180001
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-wrong-pattern.stdout.log",
+        "stderr": "logs/experimental-negative-wrong-pattern.stderr.log"
+      },
+      "stdoutSha256": "ce737f219bf6c9a2876700b6a2e54c24d1fc0a9e878bb47d0deb8af156ea3732",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/wrong-pattern/case.ts(2,8): error TS180001: The experimental 'if let' statement supports only the pattern 'Some(identifier)'."
+    },
+    {
+      "id": "experimental-negative-destructuring",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/destructuring/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 73,
+      "diagnostics": [
+        1128,
+        1434,
+        180001,
+        180002
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-destructuring.stdout.log",
+        "stderr": "logs/experimental-negative-destructuring.stderr.log"
+      },
+      "stdoutSha256": "783c130a088c71f9be3c9867ca8b36225489d7dae69a233373a8a30498b405c2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/destructuring/case.ts(2,13): error TS180001: The experimental 'if let' statement supports only the pattern 'Some(identifier)'.\nnegative/destructuring/case.ts(2,22): error TS180002: The experimental 'if let' statement requires a block for each branch.\nnegative/destructuring/case.ts(2,24): error TS1128: Declaration or statement expected.\nnegative/destructuring/case.ts(2,26): error TS1434: Unexpected keyword or identifier."
+    },
+    {
+      "id": "experimental-negative-missing-block",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/missing-block/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 73,
+      "diagnostics": [
+        180002
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-missing-block.stdout.log",
+        "stderr": "logs/experimental-negative-missing-block.stderr.log"
+      },
+      "stdoutSha256": "82092210011dae9f0c51caaca853eddab0575b58ea6bad491888755d9651c2fa",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/missing-block/case.ts(2,29): error TS180002: The experimental 'if let' statement requires a block for each branch."
+    },
+    {
+      "id": "experimental-negative-promise-without-await",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/promise-without-await/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 84,
+      "diagnostics": [
+        1360
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-promise-without-await.stdout.log",
+        "stderr": "logs/experimental-negative-promise-without-await.stderr.log"
+      },
+      "stdoutSha256": "6785f287b221d70168212ddd317bb3a7619da950205296c0bda1116e11bb1cbf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/promise-without-await/case.ts(2,29): error TS1360: Type 'Promise<{ readonly kind: \"some\"; readonly value: 1; }>' does not satisfy the expected type '{ readonly kind: \"some\"; readonly value: unknown; } | { readonly kind: \"none\"; }'."
+    },
+    {
+      "id": "experimental-negative-missing-payload",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "negative/missing-payload/tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "status": "failed",
+      "expectedRejection": true,
+      "expectationMet": true,
+      "durationMs": 81,
+      "diagnostics": [
+        1360
+      ],
+      "logs": {
+        "stdout": "logs/experimental-negative-missing-payload.stdout.log",
+        "stderr": "logs/experimental-negative-missing-payload.stderr.log"
+      },
+      "stdoutSha256": "97e3b7174a6effca80ddfcdea17c1a63d7736a9cf3522bcb7849b90d7fc70410",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "diagnosticText": "negative/missing-payload/case.ts(2,29): error TS1360: Type '{ readonly kind: 'some'; }' does not satisfy the expected type '{ readonly kind: \"some\"; readonly value: unknown; } | { readonly kind: \"none\"; }'.\n  Property '(Missing)' is missing in type '{ readonly kind: 'some'; }' but required in type '{ readonly kind: \"some\"; readonly value: unknown; }'."
+    },
+    {
+      "id": "experimental-adapter-build",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/nest/bin/typers-nest.mjs",
+        "build",
+        "--compiler",
+        "@typers/compiler",
+        "--json"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 214,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/experimental-adapter-build.stdout.log",
+        "stderr": "logs/experimental-adapter-build.stderr.log"
+      },
+      "stdoutSha256": "4510416fa3ff6e88a925c0cee6debf73bb34a47e3eb0e8cad8738ce73e8cc809",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": {
+        "success": true,
+        "emitSkipped": false,
+        "diagnostics": [],
+        "configFile": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/nest-cli.json",
+        "tsconfig": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/tsconfig.json",
+        "compiler": {
+          "name": "@typers/compiler",
+          "version": "7.0.2-typers.0",
+          "packagePath": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/package.json"
+        },
+        "emittedFiles": [
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/commonjs.cjs",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/commonjs.cjs.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/commonjs.d.cts",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/commonjs.d.cts.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/main.d.ts",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/main.d.ts.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/main.js",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/main.js.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/nest-app.d.ts",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/nest-app.d.ts.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/nest-app.js",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/nest-app.js.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/semantics.d.ts",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/semantics.d.ts.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/semantics.js",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/semantics.js.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/type-contracts.d.ts",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/type-contracts.d.ts.map",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/type-contracts.js",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/experimental/dist/src/type-contracts.js.map"
+        ],
+        "assetFiles": []
+      }
+    },
+    {
+      "id": "experimental-adapter-node",
+      "cwd": "profiles/experimental",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "experimental.test.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 411,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/experimental-adapter-node.stdout.log",
+        "stderr": "logs/experimental-adapter-node.stderr.log"
+      },
+      "stdoutSha256": "ec60340dad8851f3d8538ffcdd3877224d6d6ac154904c318b242015051b36c4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodeTests": {
+        "tests": 8,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 0
+      },
+      "testNames": [
+        "if-let: Some/None and all falsy payloads, including explicit undefined",
+        "if-let: evaluate RHS once for both branches and preserve thrown exceptions",
+        "if-let: structural producer, narrowed payload, nested patterns and hygienic temporaries",
+        "if-let: explicit await success/absence/rejection without implicit error conversion",
+        "if-let: labeled loops, early return, finally, this and arguments retain semantics",
+        "if-let: CommonJS .cts emits executable .cjs with cross-format Option",
+        "native declarations and source maps retain public types and original experimental source",
+        "Nest emitted ESM: real DI metadata, HTTP reservation, error mapping and zero/absent stock"
+      ]
+    },
+    {
+      "id": "native-api-public-types",
+      "cwd": "profiles/native-api",
+      "command": [
+        "node",
+        "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/bin/typers.cjs",
+        "-p",
+        "tsconfig.contracts.json",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 291,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/native-api-public-types.stdout.log",
+        "stderr": "logs/native-api-public-types.stderr.log"
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "native-api-node",
+      "cwd": "profiles/native-api",
+      "command": [
+        "node",
+        "run.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 2319,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/native-api-node.stdout.log",
+        "stderr": "logs/native-api-node.stderr.log"
+      },
+      "stdoutSha256": "cabf647e2e2ebf639a57bdbd97d59bf47f1992c5a3bc3a80c600c0028ee72d89",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": {
+        "suite": "typers-native-api",
+        "status": "passed",
+        "compilerVersion": "7.0.2-typers.0",
+        "rootPackage": {
+          "version": "7.0.2",
+          "versionMajorMinor": "7.0",
+          "typersVersion": "7.0.2-typers.0",
+          "upstreamVersion": "7.0.2",
+          "absentLegacyExports": [
+            "createProgram",
+            "sys",
+            "getParsedCommandLineOfConfigFile"
+          ]
+        },
+        "contracts": 36,
+        "installedRoutes": [
+          {
+            "route": "@typers/compiler/unstable/sync",
+            "runtimeExportCount": 44
+          },
+          {
+            "route": "@typers/compiler/unstable/async",
+            "runtimeExportCount": 44
+          },
+          {
+            "route": "@typers/compiler/unstable/fs",
+            "runtimeExportCount": 2
+          },
+          {
+            "route": "@typers/compiler/unstable/proto",
+            "runtimeExportCount": 3
+          },
+          {
+            "route": "@typers/compiler/unstable/ast",
+            "runtimeExportCount": 409
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/is",
+            "runtimeExportCount": 347
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/factory",
+            "runtimeExportCount": 370
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/utils",
+            "runtimeExportCount": 6
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/scanner",
+            "runtimeExportCount": 25
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/visitor",
+            "runtimeExportCount": 8
+          },
+          {
+            "route": "@typers/compiler/unstable/ast/clone",
+            "runtimeExportCount": 2
+          }
+        ],
+        "scanner": [
+          "ConstKeyword",
+          "Identifier",
+          "ColonToken",
+          "NumberKeyword",
+          "EqualsToken",
+          "NumericLiteral",
+          "SemicolonToken"
+        ],
+        "clients": {
+          "sync": {
+            "executable": "default installed binary",
+            "checks": [
+              "configuration-and-client-return-shape",
+              "project-syntax-semantic-diagnostics",
+              "source-ast-symbol-type-signature-references-completions",
+              "factory-visitor-clone-native-printer",
+              "captured-js-declarations-maps-config-chain-no-writes",
+              "node-budget-success-error-validation",
+              "node-if-let-present-absent",
+              "snapshot-disposal",
+              "noEmit",
+              "errors-with-output",
+              "noEmitOnError",
+              "declaration-only",
+              "reject-incremental",
+              "reject-composite",
+              "reject-references",
+              "timing-and-reset"
+            ],
+            "queries": {
+              "symbol": "maximumBudget",
+              "type": "number",
+              "referenceCount": 3,
+              "functionParameter": "amount",
+              "functionReturn": "Allocation",
+              "completion": "Number.isSafeInteger",
+              "globalCompletionRejection": "completion list needs auto imports"
+            },
+            "printer": {
+              "original": "string | number",
+              "visited": "string | boolean",
+              "cloned": "string | boolean"
+            },
+            "main": {
+              "emitSkipped": false,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/budget.js",
+                  "bytes": 483,
+                  "sha256": "cc6bd8174af2778599b187da12e91ffce75a57430c85c7362da0266e98c2d198"
+                },
+                {
+                  "fileName": "captured-output/budget.js.map",
+                  "bytes": 525,
+                  "sha256": "c42c482dea26469797aadc863eccc4566cd430261f48108d18463d087a1e115a"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts",
+                  "bytes": 160,
+                  "sha256": "af584d39984e1f3dea76fdd6b854e51fc17b4f7309a51104fe954c1289d5fbca"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts.map",
+                  "bytes": 248,
+                  "sha256": "66a7e6bc07ad5f9583958bd453c456bf66694247d53df8b67a8055aa1ce36630"
+                },
+                {
+                  "fileName": "captured-output/capacity.js",
+                  "bytes": 424,
+                  "sha256": "d35bb50ae4a0c8da07fd930ec90274777ef3ddef39c11734681098f98a4c3d71"
+                },
+                {
+                  "fileName": "captured-output/capacity.js.map",
+                  "bytes": 284,
+                  "sha256": "a895764e5bc3065a0b1db07361478232ef09c3f834765978660e9735cb23ead2"
+                }
+              ],
+              "capturedExamples": {
+                "budgetJavaScript": "/** A small project-allocation rule queried and emitted by the native API. */\nexport const maximumBudget = 1200;\nexport function allocateBudget(amount) {\n    if (!Number.isSafeInteger(amount) || amount <= 0) {\n        return { kind: 'rejected', reason: 'invalid-amount' };\n    }\n    if (amount > maximumBudget) {\n        return { kind: 'rejected', reason: 'over-budget' };\n    }\n    return { kind: 'accepted', remaining: maximumBudget - amount };\n}\n//# sourceMappingURL=budget.js.map",
+                "budgetDeclaration": "/** A small project-allocation rule queried and emitted by the native API. */\nexport declare const maximumBudget: number;\nexport type Allocation = {\n    kind: 'accepted';\n    remaining: number;\n} | {\n    kind: 'rejected';\n    reason: 'invalid-amount' | 'over-budget';\n};\nexport declare function allocateBudget(amount: number): Allocation;\n//# sourceMappingURL=budget.d.ts.map",
+                "budgetSourceMap": {
+                  "version": 3,
+                  "file": "budget.js",
+                  "sourceRoot": "",
+                  "sources": [
+                    "../src/budget.ts"
+                  ],
+                  "names": [],
+                  "mappings": "AAAA,6EAA6E;AAC7E,MAAM,CAAC,MAAM,aAAa,GAAW,IAAI,CAAC;AAM1C,MAAM,UAAU,cAAc,CAAC,MAAc;IAC3C,IAAI,CAAC,MAAM,CAAC,aAAa,CAAC,MAAM,CAAC,IAAI,MAAM,IAAI,CAAC,EAAE,CAAC;QACjD,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,EAAE,gBAAgB,EAAE,CAAC;IACxD,CAAC;IACD,IAAI,MAAM,GAAG,aAAa,EAAE,CAAC;QAC3B,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,EAAE,aAAa,EAAE,CAAC;IACrD,CAAC;IACD,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,SAAS,EAAE,aAAa,GAAG,MAAM,EAAE,CAAC;AACjE,CAAC"
+                },
+                "budgetDeclarationMap": {
+                  "version": 3,
+                  "file": "budget.d.ts",
+                  "sourceRoot": "",
+                  "sources": [
+                    "../src/budget.ts"
+                  ],
+                  "names": [],
+                  "mappings": "AAAA,6EAA6E;AAC7E,eAAO,MAAM,aAAa,EAAE,MAAa,CAAC;AAE1C,MAAM,MAAM,UAAU,GAClB;IAAE,IAAI,EAAE,UAAU,CAAC;IAAC,SAAS,EAAE,MAAM,CAAA;CAAE,GACvC;IAAE,IAAI,EAAE,UAAU,CAAC;IAAC,MAAM,EAAE,gBAAgB,GAAG,aAAa,CAAA;CAAE,CAAC;AAEnE,wBAAgB,cAAc,CAAC,MAAM,EAAE,MAAM,GAAG,UAAU,CAQzD"
+                },
+                "capacityJavaScript": "// Experimental syntax is isolated here. Its structural input needs no runtime import.\nexport function chooseCapacity(option) {\n    {\n        const __typers_iflet_0 = option;\n        const __typers_iflet_1 = __typers_iflet_0;\n        if (__typers_iflet_1.kind === \"some\") {\n            const capacity = __typers_iflet_1.value;\n            return capacity;\n        }\n    }\n    return 0;\n}\n//# sourceMappingURL=capacity.js.map"
+              }
+            },
+            "noEmit": {
+              "emitSkipped": true,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.json",
+                "tsconfig.no-emit.json"
+              ],
+              "outputs": []
+            },
+            "errors": {
+              "emitSkipped": false,
+              "diagnostics": [
+                {
+                  "code": 2322,
+                  "category": 1,
+                  "text": "Type 'string' is not assignable to type 'number'.",
+                  "fileName": "src/invalid-budget.ts",
+                  "pos": 170,
+                  "end": 183
+                }
+              ],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.errors.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/budget.js",
+                  "bytes": 483,
+                  "sha256": "cc6bd8174af2778599b187da12e91ffce75a57430c85c7362da0266e98c2d198"
+                },
+                {
+                  "fileName": "captured-output/budget.js.map",
+                  "bytes": 525,
+                  "sha256": "c42c482dea26469797aadc863eccc4566cd430261f48108d18463d087a1e115a"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.d.ts",
+                  "bytes": 88,
+                  "sha256": "abe41f460515c870a8a9515dc9f3a50417c64b8b391bb323bbc80a7f4f6e55fc"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.d.ts.map",
+                  "bytes": 156,
+                  "sha256": "a669ff36504a9ca9dafd81b766203c259124872e83380f624e3be3921329496a"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.js",
+                  "bytes": 236,
+                  "sha256": "c27f16e8ee6857ab2dd1ad34f9f418c670ef49116da7f038dbe2aadadecb6a4d"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.js.map",
+                  "bytes": 185,
+                  "sha256": "5159a82f5586ac45e18714c21aae8d86fc0325908ac07e35f56585860ccba70e"
+                }
+              ]
+            },
+            "blocked": {
+              "emitSkipped": true,
+              "diagnostics": [
+                {
+                  "code": 2322,
+                  "category": 1,
+                  "text": "Type 'string' is not assignable to type 'number'.",
+                  "fileName": "src/invalid-budget.ts",
+                  "pos": 170,
+                  "end": 183
+                }
+              ],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.blocked.json",
+                "tsconfig.errors.json",
+                "tsconfig.json"
+              ],
+              "outputs": []
+            },
+            "declarations": {
+              "emitSkipped": false,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.declarations.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts",
+                  "bytes": 160,
+                  "sha256": "af584d39984e1f3dea76fdd6b854e51fc17b4f7309a51104fe954c1289d5fbca"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts.map",
+                  "bytes": 248,
+                  "sha256": "66a7e6bc07ad5f9583958bd453c456bf66694247d53df8b67a8055aa1ce36630"
+                }
+              ]
+            },
+            "rejections": [
+              {
+                "feature": "incremental",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              },
+              {
+                "feature": "composite",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              },
+              {
+                "feature": "references",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              }
+            ],
+            "timing": {
+              "requestsObserved": 40,
+              "reset": true
+            }
+          },
+          "async": {
+            "executable": "default installed binary",
+            "checks": [
+              "configuration-and-client-return-shape",
+              "project-syntax-semantic-diagnostics",
+              "source-ast-symbol-type-signature-references-completions",
+              "factory-visitor-clone-native-printer",
+              "captured-js-declarations-maps-config-chain-no-writes",
+              "node-budget-success-error-validation",
+              "node-if-let-present-absent",
+              "snapshot-disposal",
+              "noEmit",
+              "errors-with-output",
+              "noEmitOnError",
+              "declaration-only",
+              "reject-incremental",
+              "reject-composite",
+              "reject-references",
+              "timing-and-reset"
+            ],
+            "queries": {
+              "symbol": "maximumBudget",
+              "type": "number",
+              "referenceCount": 3,
+              "functionParameter": "amount",
+              "functionReturn": "Allocation",
+              "completion": "Number.isSafeInteger",
+              "globalCompletionRejection": "completion list needs auto imports"
+            },
+            "printer": {
+              "original": "string | number",
+              "visited": "string | boolean",
+              "cloned": "string | boolean"
+            },
+            "main": {
+              "emitSkipped": false,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/budget.js",
+                  "bytes": 483,
+                  "sha256": "cc6bd8174af2778599b187da12e91ffce75a57430c85c7362da0266e98c2d198"
+                },
+                {
+                  "fileName": "captured-output/budget.js.map",
+                  "bytes": 525,
+                  "sha256": "c42c482dea26469797aadc863eccc4566cd430261f48108d18463d087a1e115a"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts",
+                  "bytes": 160,
+                  "sha256": "af584d39984e1f3dea76fdd6b854e51fc17b4f7309a51104fe954c1289d5fbca"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts.map",
+                  "bytes": 248,
+                  "sha256": "66a7e6bc07ad5f9583958bd453c456bf66694247d53df8b67a8055aa1ce36630"
+                },
+                {
+                  "fileName": "captured-output/capacity.js",
+                  "bytes": 424,
+                  "sha256": "d35bb50ae4a0c8da07fd930ec90274777ef3ddef39c11734681098f98a4c3d71"
+                },
+                {
+                  "fileName": "captured-output/capacity.js.map",
+                  "bytes": 284,
+                  "sha256": "a895764e5bc3065a0b1db07361478232ef09c3f834765978660e9735cb23ead2"
+                }
+              ],
+              "capturedExamples": {
+                "budgetJavaScript": "/** A small project-allocation rule queried and emitted by the native API. */\nexport const maximumBudget = 1200;\nexport function allocateBudget(amount) {\n    if (!Number.isSafeInteger(amount) || amount <= 0) {\n        return { kind: 'rejected', reason: 'invalid-amount' };\n    }\n    if (amount > maximumBudget) {\n        return { kind: 'rejected', reason: 'over-budget' };\n    }\n    return { kind: 'accepted', remaining: maximumBudget - amount };\n}\n//# sourceMappingURL=budget.js.map",
+                "budgetDeclaration": "/** A small project-allocation rule queried and emitted by the native API. */\nexport declare const maximumBudget: number;\nexport type Allocation = {\n    kind: 'accepted';\n    remaining: number;\n} | {\n    kind: 'rejected';\n    reason: 'invalid-amount' | 'over-budget';\n};\nexport declare function allocateBudget(amount: number): Allocation;\n//# sourceMappingURL=budget.d.ts.map",
+                "budgetSourceMap": {
+                  "version": 3,
+                  "file": "budget.js",
+                  "sourceRoot": "",
+                  "sources": [
+                    "../src/budget.ts"
+                  ],
+                  "names": [],
+                  "mappings": "AAAA,6EAA6E;AAC7E,MAAM,CAAC,MAAM,aAAa,GAAW,IAAI,CAAC;AAM1C,MAAM,UAAU,cAAc,CAAC,MAAc;IAC3C,IAAI,CAAC,MAAM,CAAC,aAAa,CAAC,MAAM,CAAC,IAAI,MAAM,IAAI,CAAC,EAAE,CAAC;QACjD,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,EAAE,gBAAgB,EAAE,CAAC;IACxD,CAAC;IACD,IAAI,MAAM,GAAG,aAAa,EAAE,CAAC;QAC3B,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,EAAE,aAAa,EAAE,CAAC;IACrD,CAAC;IACD,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,SAAS,EAAE,aAAa,GAAG,MAAM,EAAE,CAAC;AACjE,CAAC"
+                },
+                "budgetDeclarationMap": {
+                  "version": 3,
+                  "file": "budget.d.ts",
+                  "sourceRoot": "",
+                  "sources": [
+                    "../src/budget.ts"
+                  ],
+                  "names": [],
+                  "mappings": "AAAA,6EAA6E;AAC7E,eAAO,MAAM,aAAa,EAAE,MAAa,CAAC;AAE1C,MAAM,MAAM,UAAU,GAClB;IAAE,IAAI,EAAE,UAAU,CAAC;IAAC,SAAS,EAAE,MAAM,CAAA;CAAE,GACvC;IAAE,IAAI,EAAE,UAAU,CAAC;IAAC,MAAM,EAAE,gBAAgB,GAAG,aAAa,CAAA;CAAE,CAAC;AAEnE,wBAAgB,cAAc,CAAC,MAAM,EAAE,MAAM,GAAG,UAAU,CAQzD"
+                },
+                "capacityJavaScript": "// Experimental syntax is isolated here. Its structural input needs no runtime import.\nexport function chooseCapacity(option) {\n    {\n        const __typers_iflet_0 = option;\n        const __typers_iflet_1 = __typers_iflet_0;\n        if (__typers_iflet_1.kind === \"some\") {\n            const capacity = __typers_iflet_1.value;\n            return capacity;\n        }\n    }\n    return 0;\n}\n//# sourceMappingURL=capacity.js.map"
+              }
+            },
+            "noEmit": {
+              "emitSkipped": true,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.json",
+                "tsconfig.no-emit.json"
+              ],
+              "outputs": []
+            },
+            "errors": {
+              "emitSkipped": false,
+              "diagnostics": [
+                {
+                  "code": 2322,
+                  "category": 1,
+                  "text": "Type 'string' is not assignable to type 'number'.",
+                  "fileName": "src/invalid-budget.ts",
+                  "pos": 170,
+                  "end": 183
+                }
+              ],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.errors.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/budget.js",
+                  "bytes": 483,
+                  "sha256": "cc6bd8174af2778599b187da12e91ffce75a57430c85c7362da0266e98c2d198"
+                },
+                {
+                  "fileName": "captured-output/budget.js.map",
+                  "bytes": 525,
+                  "sha256": "c42c482dea26469797aadc863eccc4566cd430261f48108d18463d087a1e115a"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.d.ts",
+                  "bytes": 88,
+                  "sha256": "abe41f460515c870a8a9515dc9f3a50417c64b8b391bb323bbc80a7f4f6e55fc"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.d.ts.map",
+                  "bytes": 156,
+                  "sha256": "a669ff36504a9ca9dafd81b766203c259124872e83380f624e3be3921329496a"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.js",
+                  "bytes": 236,
+                  "sha256": "c27f16e8ee6857ab2dd1ad34f9f418c670ef49116da7f038dbe2aadadecb6a4d"
+                },
+                {
+                  "fileName": "captured-output/invalid-budget.js.map",
+                  "bytes": 185,
+                  "sha256": "5159a82f5586ac45e18714c21aae8d86fc0325908ac07e35f56585860ccba70e"
+                }
+              ]
+            },
+            "blocked": {
+              "emitSkipped": true,
+              "diagnostics": [
+                {
+                  "code": 2322,
+                  "category": 1,
+                  "text": "Type 'string' is not assignable to type 'number'.",
+                  "fileName": "src/invalid-budget.ts",
+                  "pos": 170,
+                  "end": 183
+                }
+              ],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.blocked.json",
+                "tsconfig.errors.json",
+                "tsconfig.json"
+              ],
+              "outputs": []
+            },
+            "declarations": {
+              "emitSkipped": false,
+              "diagnostics": [],
+              "configFileNames": [
+                "tsconfig.base.json",
+                "tsconfig.declarations.json",
+                "tsconfig.json"
+              ],
+              "outputs": [
+                {
+                  "fileName": "captured-output/budget.d.ts",
+                  "bytes": 375,
+                  "sha256": "f3513dee86ee5560c26bd9a313a92e6fafae2a8652e77feb0f225feb36dddf7b"
+                },
+                {
+                  "fileName": "captured-output/budget.d.ts.map",
+                  "bytes": 367,
+                  "sha256": "df711a3ba76a56ad2017232dd566a186ec8e0d93004cd5b4c01b1b2c5cd8ce0c"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts",
+                  "bytes": 160,
+                  "sha256": "af584d39984e1f3dea76fdd6b854e51fc17b4f7309a51104fe954c1289d5fbca"
+                },
+                {
+                  "fileName": "captured-output/capacity.d.ts.map",
+                  "bytes": 248,
+                  "sha256": "66a7e6bc07ad5f9583958bd453c456bf66694247d53df8b67a8055aa1ce36630"
+                }
+              ]
+            },
+            "rejections": [
+              {
+                "feature": "incremental",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              },
+              {
+                "feature": "composite",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              },
+              {
+                "feature": "references",
+                "message": "api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+              }
+            ],
+            "timing": {
+              "requestsObserved": 40,
+              "reset": true
+            }
+          }
+        },
+        "snapshots": [
+          {
+            "mode": "sync",
+            "before": 1200,
+            "after": 1500,
+            "retainedSnapshot": 1200,
+            "diskSourceUnchanged": true
+          },
+          {
+            "mode": "async",
+            "before": 1200,
+            "after": 1500,
+            "retainedSnapshot": 1200,
+            "diskSourceUnchanged": true
+          }
+        ],
+        "limits": [
+          "Representative behavioral contracts, not coverage of every upstream method or overload.",
+          "All unstable/* APIs are experimental; no classic createProgram facade.",
+          "AST visitor/printer are not compiler plugins; scanner tokenizes standard TypeScript here.",
+          "No LSP attachment, CPU/heap profiling, concurrent snapshots or large-project memory guarantee."
+        ]
+      }
+    },
+    {
+      "id": "nest-adapter-node",
+      "cwd": "profiles/nest-adapter",
+      "command": [
+        "node",
+        "run.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed",
+      "expectedRejection": false,
+      "expectationMet": true,
+      "durationMs": 1980,
+      "diagnostics": [],
+      "logs": {
+        "stdout": "logs/nest-adapter-node.stdout.log",
+        "stderr": "logs/nest-adapter-node.stderr.log"
+      },
+      "stdoutSha256": "b87b857871cc3182c4f0aa2124956570ce2e7b0b5a6cb2896b14284c6fa6c700",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "evidence": {
+        "checks": [
+          {
+            "name": "buildNest: JS/declarations/maps, cleanup, globs, directories, exclusion, hidden/binary/separate assets",
+            "status": "passed"
+          },
+          {
+            "name": "emitted Nest: constructor metadata, DI, HTTP 200/404 and copied policy asset",
+            "status": "passed"
+          },
+          {
+            "name": "typers-nest CLI --json and buildNest API emit identical bytes",
+            "status": "passed"
+          },
+          {
+            "name": "named dotted project, builder.options.configPath, replacement of root asset array",
+            "status": "passed"
+          },
+          {
+            "name": "explicit path overrides project configPath",
+            "status": "passed"
+          },
+          {
+            "name": "noEmit succeeds without modifying old JS or assets",
+            "status": "passed"
+          },
+          {
+            "name": "TS2322 preserves previous outputs",
+            "status": "passed"
+          },
+          {
+            "name": "plugins: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "watchAssets: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "builder: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "asset collision: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "paths aliases: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "extends inside outDir: previous output preserved",
+            "status": "passed"
+          },
+          {
+            "name": "asset symlink: previous output preserved",
+            "status": "passed"
+          }
+        ],
+        "rejections": [
+          {
+            "name": "invalid types",
+            "status": "failed",
+            "expected": true,
+            "diagnostics": [
+              {
+                "fileName": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/no-emit/src/error.ts",
+                "pos": 13,
+                "end": 19,
+                "code": 2322,
+                "category": 1,
+                "text": "Type 'string' is not assignable to type 'number'."
+              }
+            ]
+          },
+          {
+            "name": "plugins",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "compilerOptions.plugins must be empty; this feature is not supported by typers-nest build"
+          },
+          {
+            "name": "watchAssets",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "compilerOptions.watchAssets is not supported by typers-nest build"
+          },
+          {
+            "name": "builder",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "Unsupported builder: swc; typers-nest uses the native Typers API"
+          },
+          {
+            "name": "asset collision",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "Output directory overlaps a protected source or configuration path: /private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/src / /private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/t/typers-features-1xlqrv/profiles/nest-adapter/runs-4ffvov/root/src"
+          },
+          {
+            "name": "paths aliases",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "compilerOptions.paths requires alias rewriting, which typers-nest does not support yet. Use runtime-resolvable imports for this build."
+          },
+          {
+            "name": "extends inside outDir",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "Output directory overlaps a protected source or configuration path: /private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist / /private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/t/typers-features-1xlqrv/profiles/nest-adapter/runs-4ffvov/root/dist/base.json"
+          },
+          {
+            "name": "asset symlink",
+            "status": "failed",
+            "expected": true,
+            "diagnostic": "Asset paths cannot traverse symlinks: /private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/symlink/src/policies/linked.json"
+          }
+        ],
+        "exampleRoot": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter",
+        "firstBuild": {
+          "success": true,
+          "emitSkipped": false,
+          "diagnostics": [],
+          "configFile": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/nest-cli.json",
+          "tsconfig": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/tsconfig.json",
+          "compiler": {
+            "name": "@typers/compiler",
+            "version": "7.0.2-typers.0",
+            "packagePath": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/node_modules/@typers/compiler/package.json"
+          },
+          "emittedFiles": [
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/app.d.ts",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/app.d.ts.map",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/app.js",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/app.js.map"
+          ],
+          "assetFiles": [
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/policies/expenses.json",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/templates/.revision",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/dist/templates/approval.txt",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/public-assets/downloads/policy.txt",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-features-1xlQrv/profiles/nest-adapter/runs-4FfvOv/root/public-assets/downloads/sample.bin"
+          ]
+        }
+      }
+    }
+  ],
+  "isolation": "Copied fixtures and explicit local tarballs. Locked reference dependencies linked per package; no install, network, source transformer or compiler fallback. Emitted programs run with Node.",
+  "adapterDependency": {
+    "name": "minimatch",
+    "version": "10.2.6"
+  },
+  "compilerBuild": {
+    "name": "@typers/compiler",
+    "version": "7.0.2-typers.0",
+    "upstreamVersion": "7.0.2",
+    "upstreamCommit": "1e4744d68260a7cb91b62b12edc3f6a2187faaf1",
+    "sourceCommit": "efe9894778169f53a3a6a0d3d42e0efa4bae3d7f",
+    "compilerWorktreeDirty": false,
+    "platform": "darwin",
+    "arch": "arm64",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "goVersion": "go version go1.27.1 darwin/arm64",
+    "nativeApi": {
+      "source": "tsc/_packages/native-preview",
+      "compiler": "native Typers",
+      "exports": [
+        "./unstable/sync",
+        "./unstable/async",
+        "./unstable/fs",
+        "./unstable/proto",
+        "./unstable/ast",
+        "./unstable/ast/is",
+        "./unstable/ast/factory",
+        "./unstable/ast/utils",
+        "./unstable/ast/scanner",
+        "./unstable/ast/visitor",
+        "./unstable/ast/clone"
+      ]
+    }
+  },
+  "harness": [
+    {
+      "path": "scripts/demonstrate-typers.mjs",
+      "sha256": "e1579bf19372bef132b8a8deefc6d79dcceeae71d38f1091626d45ff31c27c65"
+    },
+    {
+      "path": "scripts/typers-lab-support.mjs",
+      "sha256": "606e8476068d68b0390d39b64bfbd5e86896b389a8d4064ed2768058ee853602"
+    }
+  ],
+  "sources": {
+    "sha256": "181e623b6b4691e256d29afb25c5b29ca2f298e524da45948ff55d176f4760bd",
+    "entries": [
+      {
+        "path": "experimental/consumer.mts",
+        "sha256": "b045350f6fc886c7468154b044db8b2f7214348ef7b74975d75ff794180765be"
+      },
+      {
+        "path": "experimental/experimental.test.mjs",
+        "sha256": "0d8078aa18f8a4844b2eefc1e0193a6ee962a1f8ff90594c5806369d8fd47b1f"
+      },
+      {
+        "path": "experimental/negative/destructuring/case.ts",
+        "sha256": "533920fac0e5b8d318c00db8304a29bbdb61cfd95d39b0022587f6e602542ebe"
+      },
+      {
+        "path": "experimental/negative/destructuring/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/negative/disabled/case.ts",
+        "sha256": "9057eed66f14da610b8ca62d02ca4c478b2017daeecdc662721a2a32521eaa39"
+      },
+      {
+        "path": "experimental/negative/disabled/tsconfig.json",
+        "sha256": "eb24c01eb46bff24009e8f8c19179a46f97fb6cb4b990c67a84439913e32ab25"
+      },
+      {
+        "path": "experimental/negative/missing-block/case.ts",
+        "sha256": "775bbb0b7b8e30d730ec62efbb6579e9e514cf2578fa67755e358d4fce01d81c"
+      },
+      {
+        "path": "experimental/negative/missing-block/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/negative/missing-payload/case.ts",
+        "sha256": "4e1438605a96a31b4ea572e0dc49933fe8948f1ec2f3c0af1abbe1d1fe406729"
+      },
+      {
+        "path": "experimental/negative/missing-payload/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/negative/promise-without-await/case.ts",
+        "sha256": "9a78ef084a858474578f6daa39f7f81fc5d93b85586cb6e32097d2bc6b734507"
+      },
+      {
+        "path": "experimental/negative/promise-without-await/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/negative/wrong-operand/case.ts",
+        "sha256": "c7fc0b0c2ac85488e3bd94083ce23486472c340fca4ac8b1eaa8e16aecff194d"
+      },
+      {
+        "path": "experimental/negative/wrong-operand/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/negative/wrong-pattern/case.ts",
+        "sha256": "1b04d3c353a6b40ab38094e587014c5812a116c87d02fb9780e556d6e3042f70"
+      },
+      {
+        "path": "experimental/negative/wrong-pattern/tsconfig.json",
+        "sha256": "be58df53ebd169eb1ee0cd7734f9cb446e5487691ba0dd4936c6e8929897d8e7"
+      },
+      {
+        "path": "experimental/package.json",
+        "sha256": "a7287ad5eaba381737ade4833bb2bad10ce580aeefd2443b67c63703b179b37c"
+      },
+      {
+        "path": "experimental/README.md",
+        "sha256": "0481be57706f447caa0ea930334a974d42ea1d8a88e357504c04b5aefe222d88"
+      },
+      {
+        "path": "experimental/src/commonjs.cts",
+        "sha256": "4a4dc872d0d1867d2e3b89a5e0eef1422ac2913d801239a3cbece513a2c6d8c2"
+      },
+      {
+        "path": "experimental/src/main.ts",
+        "sha256": "d76a90cbe5b21a329647cc60727b137deeedbbf307d46c7f095399a10a1ccb92"
+      },
+      {
+        "path": "experimental/src/nest-app.ts",
+        "sha256": "70a1823539492111513bf1385c46cabb1a19e81fa8d63516a753b0b3c954f91f"
+      },
+      {
+        "path": "experimental/src/semantics.ts",
+        "sha256": "e881426ecc770fae6b812878193c64a1979c5e0d4493f133b2c0546145112ace"
+      },
+      {
+        "path": "experimental/src/type-contracts.ts",
+        "sha256": "c96baeea43e5c60c9065cb64544b9326e713929a85865909f95faceac72bc5f8"
+      },
+      {
+        "path": "experimental/tsconfig.consumer.json",
+        "sha256": "8b5961e8bd63e11d2fae0080cff08411cd0d9f7ed2f851c7af95bf662dd68b85"
+      },
+      {
+        "path": "experimental/tsconfig.json",
+        "sha256": "715d35c04a84127f32aeb45d45a9fdddf5eb5e94a9722c8e60b73df2bf971d50"
+      },
+      {
+        "path": "native-api/contracts.mts",
+        "sha256": "facb39d2888cbfc57d582dbd7dd3fa1a605d24a1ef296c054c9200d08c872f01"
+      },
+      {
+        "path": "native-api/package.json",
+        "sha256": "0adf992cb266ba28878cee7ca7a95ca35bccf5b505cfb61d12751801b3206fd8"
+      },
+      {
+        "path": "native-api/README.md",
+        "sha256": "fd2664243be094e9b7a2c077258c18487155e7814a023b504ac90de27b9f0a68"
+      },
+      {
+        "path": "native-api/reference/index.ts",
+        "sha256": "d075070f4703bebeb4179d7c9c41e0b1835b45597f909c5a7eaec6c3bee2479e"
+      },
+      {
+        "path": "native-api/reference/tsconfig.json",
+        "sha256": "6b9c95ed20f78a49de7f5cb7d4824caca99f3f88f5ce3ec8deb06478ba05212a"
+      },
+      {
+        "path": "native-api/run.mjs",
+        "sha256": "012151e6547fdbe7e5052dcd4a66987ea3ba9863fa467d867728942791a7e386"
+      },
+      {
+        "path": "native-api/src/budget.ts",
+        "sha256": "cc1ebd744f74f0a43ff7ba5fe4cad4084a22600fb3bd4addc2c1de889e6fe8ed"
+      },
+      {
+        "path": "native-api/src/capacity.ts",
+        "sha256": "a7ecaacc407aca9a78a41de001bf4c1726207d0d590b02384dffbcb09758a929"
+      },
+      {
+        "path": "native-api/src/invalid-budget.ts",
+        "sha256": "49f1d0fc6816a67ff56ef26be194c6f936a90b362f4e1581e754c33e62d5e8be"
+      },
+      {
+        "path": "native-api/tsconfig.base.json",
+        "sha256": "8b9bdf697441676bb4d8ab203815658b64b4b1c5061fb471e35eb8f6cbdfe369"
+      },
+      {
+        "path": "native-api/tsconfig.blocked.json",
+        "sha256": "8d6bb8db9af07ab0da0b8155fe06dd623ba7f5f203471c7a551404c6e107ac6a"
+      },
+      {
+        "path": "native-api/tsconfig.composite.json",
+        "sha256": "3748abaec2564f1bbc12b1660f8a308f6a47fdee84d4ba7db44b76e17795f29b"
+      },
+      {
+        "path": "native-api/tsconfig.contracts.json",
+        "sha256": "4abb5a29298c063e5e09df30434b732d471273e3640d19eeb41dd66513a7b623"
+      },
+      {
+        "path": "native-api/tsconfig.declarations.json",
+        "sha256": "2ccd174dfba0434e82421e37d139f20abd65b5b900a16a3e95acc7a4a6383c0e"
+      },
+      {
+        "path": "native-api/tsconfig.errors.json",
+        "sha256": "45ab8264891f4b937ecc1b92434bc8eff589cc12d30c71e7d12c91a62a3caf63"
+      },
+      {
+        "path": "native-api/tsconfig.incremental.json",
+        "sha256": "350209fbdbc2a44d542af9a10ab2dfa49e7ad4bce941679518486f9ed93daf3e"
+      },
+      {
+        "path": "native-api/tsconfig.json",
+        "sha256": "88f3dbfb93f907ccd82c0bb2da7055e4f1f79d7b05de5bf0cce6c887fa9f158e"
+      },
+      {
+        "path": "native-api/tsconfig.no-emit.json",
+        "sha256": "9c79980aaa3f176818c9d977a027af4e99a34889efb9fffaee9bdea2474c999b"
+      },
+      {
+        "path": "native-api/tsconfig.references.json",
+        "sha256": "21606d1a712bc296e029f70eb821ac156eb658205026b2b73b74baec7035094f"
+      },
+      {
+        "path": "nest-adapter/nest-cli.json",
+        "sha256": "e26c02afacf3f9d0a7a8a876ddbfe972572574fb39d77f14748581fbafe47a5c"
+      },
+      {
+        "path": "nest-adapter/package.json",
+        "sha256": "e867da99e189c176f92c9f576d5c61acd3ceab511600595c9f0a592d60fe9525"
+      },
+      {
+        "path": "nest-adapter/README.md",
+        "sha256": "de7614c3df6e14d9dc98878c8a9a6b256cfa5152cfecd85ef54243380af9a4fb"
+      },
+      {
+        "path": "nest-adapter/run.mjs",
+        "sha256": "d6ba6e7bcffdd8ae342a1f767d590f3b771b874e4796a35214beca7ff4b9972c"
+      },
+      {
+        "path": "nest-adapter/src/app.ts",
+        "sha256": "e37dbf29e6445605c0c4ca1b909e1ee2b8bf58fe2b60531daf86efa1c9b49fe0"
+      },
+      {
+        "path": "nest-adapter/src/downloads/policy.txt",
+        "sha256": "5aee16737e7f2731194bac175a357a8e60d81812d7742730ecae0204309e0d4a"
+      },
+      {
+        "path": "nest-adapter/src/policies/expenses.json",
+        "sha256": "c93aeea87bbf8a9a6e74e920edc289e3ea0fc459d22b679bc67a693be3686f9c"
+      },
+      {
+        "path": "nest-adapter/src/templates/.revision",
+        "sha256": "cf8ab883f602a08796eaf7df6428af67ed80e7fb3f83d0261bb28c0630c049aa"
+      },
+      {
+        "path": "nest-adapter/src/templates/approval.txt",
+        "sha256": "bc6b59f3f5de11358783ee0cb5f1eda8d7aef070fb084f3c78cd35f95a5a0488"
+      },
+      {
+        "path": "nest-adapter/src/templates/private/internal.txt",
+        "sha256": "8ebd2c3c9c1d57e35610b33bc4f02db376c3e1b9c7e0aaf18f60f3949bed828a"
+      },
+      {
+        "path": "nest-adapter/tsconfig.base.json",
+        "sha256": "18256ac704179f9e2ae1fcc8ff13d81aba6163b69adc890a546d7fc2a0428cbe"
+      },
+      {
+        "path": "nest-adapter/tsconfig.json",
+        "sha256": "fd7a1117386de08505e6882d30e876100a44e14ddbd6b2945b3437a4ca417459"
+      },
+      {
+        "path": "runtime/package.json",
+        "sha256": "c57d3a58b48997ece4c45aa15771d31cde29b350310c9efa9394469ec45946ba"
+      },
+      {
+        "path": "runtime/README.md",
+        "sha256": "f0404a414775ee0328c7f27dc5bb1688c05d8cccc0b072ca3bc34c958370e21a"
+      },
+      {
+        "path": "runtime/runtime.test.mjs",
+        "sha256": "0416134a17caf7d45b95aebcaf00270f1cafb1ecb3a4180085951e2750f53f91"
+      },
+      {
+        "path": "runtime/src/budget.ts",
+        "sha256": "ed16e3278ad189e854bf677ba71b711fc89d1170a284df779eaf79119ed11e43"
+      },
+      {
+        "path": "runtime/src/commonjs.cts",
+        "sha256": "f79b2082a7e5b1d7401914d829da7daf9c0b208d097eada1622c9593b6b7cc38"
+      },
+      {
+        "path": "runtime/src/type-contracts.ts",
+        "sha256": "38405d6389358965eed883f1c8a7b9673581ad8cd8ef07325cf7b0d881ced0f0"
+      },
+      {
+        "path": "runtime/tsconfig.json",
+        "sha256": "c2942a98569a5dc8a932e6d9fc8e6a62adf664502a72df426b411cdc928175a6"
+      }
+    ]
+  },
+  "reference": {
+    "typescript": "6.0.3",
+    "typescriptSha256": "e393c393511a897c9d55c5bd3a5b05110cad45d1a2f0d6340f6616a61850e125",
+    "lockfileSha256": "f59aa36a3e724a8ef5b6aa415a324652890d3b749b7cd4cfb2317fbc23612fcd",
+    "preserved": true
+  },
+  "selectedProfile": "all",
+  "commands": {
+    "runtime": [
+      "node ../../node_modules/.bin/typers -p tsconfig.json",
+      "node --test runtime.test.mjs"
+    ],
+    "experimental": [
+      "node ../../node_modules/.bin/typers -p tsconfig.json",
+      "node --test experimental.test.mjs"
+    ],
+    "native-api": [
+      "node run.mjs"
+    ],
+    "nest-adapter": [
+      "node run.mjs"
+    ]
+  },
+  "completed": true,
+  "passed": true
+}

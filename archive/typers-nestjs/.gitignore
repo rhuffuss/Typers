@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-*/
+coverage/
+reports/
+.env
+.env.*
+!.env.example
+.idea/
+*.tsbuildinfo
+*.log
+.DS_Store
+src/persistence-labs/prisma/generated/

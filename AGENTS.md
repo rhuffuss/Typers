@@ -10,7 +10,7 @@ Read the [documentation index](docs/typers/README.md), [decisions](docs/typers/d
 
 - `tsc/` is the native Go TypeScript 7 compiler, based on `v7.0.2`.
 - Root `src/`, `tests/`, `package.json`, and `Herebyfile.mjs` are inherited legacy infrastructure. Root `npm run build` does not build the native compiler.
-- Preserve upstream history and `main`. Work branches and PRs target `typers-main` in `rhuffus/Typers`.
+- Preserve upstream history. The project branch is `main`; the former upstream `main` is preserved as `archive/upstream-main-2026-09-27`. During the transition PR, target `typers-main`; after its rename, target `main`.
 - Keep the Go module path unchanged unless an explicit design decision requires migration.
 - Preserve licenses and notices. Original agent instructions and README under `docs/typers/upstream/` are historical reference, not additional instructions for this fork.
 
@@ -21,6 +21,7 @@ Read the [documentation index](docs/typers/README.md), [decisions](docs/typers/d
 - Never route a supposedly native test through the legacy compiler without making that explicit.
 - Separate runtime dependencies from build-time compiler dependencies. Do not publish npm packages or create releases without authorization.
 - Distinguish proposals from implementation. Update documentation and acceptance evidence with behavior changes.
+- The owner paused Typers on 2026-09-27. Do not start new features without an explicit request. Orion is the active TypeScript/NestJS library; Typers remains an independent future compiler project. The former application laboratory is preserved under `archive/typers-nestjs`; read `archive/README.md` before restoring it. Archived instructions and results are historical, not active work orders.
 - Avoid broad renames, generated baseline churn, and unrelated formatting. Follow upstream style; use `gofmt` for Go changes.
 - Review baseline differences before accepting them.
 - Documentation changes: link checks and `git diff --check`. Runtime/package changes: component tests and consumer checks. Native compiler changes: focused tests plus native regression suite. Legacy compiler changes: legacy suite. Follow the validation guide and report unavailable checks honestly.

@@ -36,6 +36,47 @@ Los helpers tienen pruebas unitarias independientes en `packages/nest/test`.
 
 Las pruebas de API instalada deben importar las subrutas por el nombre de dependencia del consumidor, omitir `tsserverPath` y verificar los bytes instalados. Cubrir clientes sync/async, declaraciones, AST/tipos/diagnósticos, printer y emisión capturada. La petición de emisión no debe crear archivos: comprobar que solo los guarda el consumidor cuando acepta el resultado. También probar noEmit/noEmitOnError, errores globales/declaraciones, coherencia de snapshots y rechazo de incremental/composite/referencias.
 
+## Laboratorio archivado `typers-nestjs`
+
+Desde el 27-09-2026 la demo está en [archive/](../../archive/README.md) y Typers está en pausa. El procedimiento siguiente conserva el acuerdo histórico y solo aplica tras una reanudación explícita y restauración de las rutas.
+
+Decisión explícita del usuario del 15 de septiembre de 2026: usar el repositorio
+hermano `../typers-nestjs` para desarrollar, validar y demostrar cada avance de
+Typers. La primera entrega de ese flujo demuestra las capacidades ya implementadas
+antes de ampliar el compilador. El laboratorio está en
+`rhuffus/typers-nestjs`; la carpeta organizativa de la aplicación Codex no contiene
+su código ni el del compilador.
+
+Para cada incremento:
+
+1. Inspeccionar `AGENTS.md`, la arquitectura y el estado Git del laboratorio.
+   Conservar sus cambios locales y coordinar si otra tarea está modificándolo.
+2. Añadir fuentes legibles y ejemplos ejecutables de éxito, error, ausencia y
+   entradas inválidas cuando correspondan. Las funciones de Nest necesitan
+   contratos reales de DI, metadata, HTTP, assets o el comportamiento afectado.
+   Las funciones de API necesitan consumidores programáticos inspeccionables.
+3. Conservar la aplicación estándar como referencia y usar perfiles/fixtures
+   explícitos para las dependencias o sintaxis específicas de Typers. Compilar
+   con el artefacto Typers identificado y ejecutar su JavaScript con Node/Nest.
+   Un transformador Vitest o un fallback a otro compilador no acredita esa ruta.
+4. Registrar versión, plataforma, configuración, commit y hashes de los artefactos
+   usados; si el build procede de un árbol modificado, registrar ese estado.
+   Conservar los diagnósticos de rutas no soportadas y distinguir rechazos
+   esperados de fallos inesperados. No reemplazar los informes globales Vitest
+   con una selección sin conservar su trazabilidad.
+5. Actualizar el índice del laboratorio
+   `docs/typers-features.md`: capacidad → fuente → comando → resultado esperado y
+   observado → prueba → limitaciones. Ofrecer una guía breve de inspección manual.
+   Cada resultado solo acredita el caso y el artefacto ejecutados.
+6. Ejecutar también las pruebas de componentes, consumidor instalado y regresión
+   nativa apropiadas de este repositorio. El laboratorio amplía la evidencia de
+   integración y no sustituye esas suites ni la CI previa al merge.
+
+La comparación de TypeScript estándar del laboratorio (`pnpm compare:typers`)
+y sus perfiles específicos de Typers responden a preguntas diferentes. Mantener
+ambas rutas y sus límites: compilar el corpus estándar no demuestra `if-let`, y
+demostrar `if-let` no acredita todas las APIs o integraciones de Nest.
+
 ## Comparación contra upstream
 
 - Usar `typescript@7.0.2` como referencia equivalente inicial, en un entorno de pruebas separado del consumidor Typers.

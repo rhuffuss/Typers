@@ -1,0 +1,1 @@
+export const HMR_MESSAGE = 'hmr-initial';

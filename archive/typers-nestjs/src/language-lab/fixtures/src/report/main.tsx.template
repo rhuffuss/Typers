@@ -1,0 +1,64 @@
+import { renderReport } from './jsx-runtime.js';
+import type { Currency } from './jsx-runtime.js';
+function BilledWork({
+  label,
+  quantity,
+  unitMinor,
+  currency,
+}: {
+  label: string;
+  quantity: number;
+  unitMinor: bigint;
+  currency: Currency;
+}) {
+  if (!Number.isSafeInteger(quantity) || quantity < 1 || unitMinor < 0n)
+    throw new Error('Invalid billed quantity or price');
+  return (
+    <item
+      label={label}
+      amountMinor={(BigInt(quantity) * unitMinor).toString()}
+      currency={currency}
+    />
+  );
+}
+const invoice = (
+  <report title="Release invoice">
+    <>
+      <BilledWork
+        label="API delivery"
+        quantity={2}
+        unitMinor={6000n}
+        currency="EUR"
+      />
+      <item label="Service fee" amountMinor="1500" currency="EUR" />
+    </>
+    <summary totalMinor="13500" currency="EUR" />
+  </report>
+);
+const errors: string[] = [];
+try {
+  renderReport(
+    <report title="Mismatch">
+      <item label="Work" amountMinor="100" currency="EUR" />
+      <summary totalMinor="99" currency="EUR" />
+    </report>,
+  );
+} catch (error) {
+  errors.push((error as Error).message);
+}
+try {
+  renderReport(
+    <report title="Mixed">
+      <item label="Work" amountMinor="100" currency="USD" />
+      <summary totalMinor="100" currency="EUR" />
+    </report>,
+  );
+} catch (error) {
+  errors.push((error as Error).message);
+}
+try {
+  void (<item label="Negative" amountMinor="-1" currency="EUR" />);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+console.log(JSON.stringify({ text: renderReport(invoice), errors }));

@@ -1,0 +1,54 @@
+/** Plugins extend this registry with module augmentation. Runtime registration remains explicit. */
+export interface BusinessEvents {
+  'quote.opened': { readonly quoteId: string; readonly totalMinor: string };
+}
+export type EventName = keyof BusinessEvents;
+export type EventValidator<K extends EventName> = (
+  payload: unknown,
+) => payload is BusinessEvents[K];
+
+export class EventBus {
+  #validators = new Map<EventName, (payload: unknown) => boolean>();
+  #handlers = new Map<EventName, Set<(payload: unknown) => void>>();
+
+  register<K extends EventName>(name: K, validator: EventValidator<K>): void {
+    if (this.#validators.has(name))
+      throw new Error(`Already registered: ${name}`);
+    this.#validators.set(name, validator);
+  }
+
+  on<K extends EventName>(
+    name: K,
+    listener: (payload: BusinessEvents[K]) => void,
+  ): () => void {
+    const handlers = this.#handlers.get(name) ?? new Set();
+    // emitUnknown validates the payload before crossing this erased generic boundary.
+    const wrapped = (payload: unknown) =>
+      listener(payload as BusinessEvents[K]);
+    handlers.add(wrapped);
+    this.#handlers.set(name, handlers);
+    return () => {
+      handlers.delete(wrapped);
+    };
+  }
+
+  emit<K extends EventName>(
+    name: K,
+    payload: NoInfer<BusinessEvents[K]>,
+  ): number {
+    return this.emitUnknown(name, payload);
+  }
+
+  emitUnknown(name: string, payload: unknown): number {
+    const validator = this.#validators.get(name as EventName);
+    if (!validator) throw new Error(`Unregistered event: ${name}`);
+    if (!validator(payload))
+      throw new TypeError(`Invalid event payload: ${name}`);
+    const handlers = [...(this.#handlers.get(name as EventName) ?? [])];
+    for (const handler of handlers) handler(payload);
+    return handlers.length;
+  }
+}
+
+export const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);

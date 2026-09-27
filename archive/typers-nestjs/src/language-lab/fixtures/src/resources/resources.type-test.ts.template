@@ -1,0 +1,11 @@
+import { ExportLock, ExportSession } from './export-session.js';
+export async function resourceContracts(parent: string): Promise<void> {
+  using lock = new ExportLock('type-only', []);
+  await using session = await ExportSession.open(parent, []);
+  await session.write('Type-only fixture is never called');
+  // @ts-expect-error A method named close does not implement Symbol.dispose.
+  using missingDispose = { close() {} };
+  // @ts-expect-error await using needs Symbol.asyncDispose or Symbol.dispose.
+  await using missingAsyncDispose = { release: async () => undefined };
+  void [lock, missingDispose, missingAsyncDispose];
+}

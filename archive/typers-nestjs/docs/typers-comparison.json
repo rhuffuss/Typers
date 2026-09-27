@@ -1,0 +1,1609 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-15T17:56:05.828Z",
+  "environment": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "runDirectory": "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb",
+  "isolation": "Real copied sources/configuration/tarballs. Existing locked application dependencies linked per package; root TypeScript and node_modules are unchanged. No network/install or compiler fallback.",
+  "artifacts": [
+    {
+      "filename": "typers-compiler-7.0.2-typers.0.tgz",
+      "name": "@typers/compiler",
+      "version": "7.0.2-typers.0",
+      "sha256": "ef37a6350d19cab6b113077d1c460e7ef22d5da9dd2364b7c6b97d9d4c849b15",
+      "installedManifestSha256": "ca9b510087953acdb987925aa67cc21734ec91337651314411ed0b4580e41a08"
+    },
+    {
+      "filename": "typers-core-0.1.0-alpha.0.tgz",
+      "name": "@typers/core",
+      "version": "0.1.0-alpha.0",
+      "sha256": "9c1571d8c4d7f64afc5b1841a92a2a6c27835a7472ef4bf3f270753070e25a45",
+      "installedManifestSha256": "650d359cf35146848f70d67d097b65aab2bf0bc089988d2f41770ae3636f6e99"
+    },
+    {
+      "filename": "typers-nest-0.1.0-alpha.0.tgz",
+      "name": "@typers/nest",
+      "version": "0.1.0-alpha.0",
+      "sha256": "38c6b942bc9fefa75a1f0d514e8969220e68d1dfeaec5593518b727d0ce6fe72",
+      "installedManifestSha256": "b058d76dbf6f3d7d2fd15e5b6195b4fc67112bf7f00f6789efc78d3a3ac9e67b"
+    }
+  ],
+  "sourceSnapshot": {
+    "fileCount": 267,
+    "sha256": "8a900ef4bf2fcf62f3da0dc5778e81daf78abc31aa3b48e5063e78e2736efa9e",
+    "manifest": "source-manifest.json",
+    "generatedPrismaIncluded": true
+  },
+  "dependencies": {
+    "packageManager": "pnpm@12.4.1",
+    "lockfileSha256": "f59aa36a3e724a8ef5b6aa415a324652890d3b749b7cd4cfb2317fbc23612fcd",
+    "linkedPackages": 124,
+    "manifest": "dependency-manifest.json",
+    "manifestSha256": "241a729a1f9cb8be53242f1fc90a7111045c95f007a2a6edc0364a874cc31677",
+    "baselineTypeScript": "6.0.3"
+  },
+  "profiles": [
+    {
+      "id": "baseline-ts6-build",
+      "configurationOverrides": {},
+      "build": {
+        "id": "baseline-ts6-build",
+        "command": [
+          "node",
+          "node_modules/typescript/bin/tsc",
+          "-p",
+          "tsconfig.build.json",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 4082,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/baseline-ts6-build.stdout.log",
+          "stderr": "logs/baseline-ts6-build.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assets": {
+        "mechanism": "Explicit copy of unchanged Nest asset string patterns after native CLI emission",
+        "files": [
+          "graphql-lab/editorial.schema.graphql",
+          "messaging/calculator.proto",
+          "public/demo.txt",
+          "views/index.hbs"
+        ]
+      },
+      "output": {
+        "fileCount": 469,
+        "sha256": "5612eb4b8794c59565c0992769e8c24aef07a445a5c00d574225f161a5528e65"
+      },
+      "runtime": [
+        {
+          "id": "baseline-ts6-build-check-emitted",
+          "command": [
+            "node",
+            "scripts/check-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1725,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-build-check-emitted.stdout.log",
+            "stderr": "logs/baseline-ts6-build-check-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "056241fba2a8ea80019503dd7d9490f119edbae3bf122df4ee9fc3d01a65eb65",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "baseline-ts6-build-check-business-emitted",
+          "command": [
+            "node",
+            "scripts/check-business-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1170,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-build-check-business-emitted.stdout.log",
+            "stderr": "logs/baseline-ts6-build-check-business-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "9fbc92a1762b8f0617eb6acf63ce196e394bfb06c887555ecf652d1b6a6f214f",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "baseline-ts6-build-check-advanced-emitted",
+          "command": [
+            "node",
+            "scripts/check-advanced-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1269,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-build-check-advanced-emitted.stdout.log",
+            "stderr": "logs/baseline-ts6-build-check-advanced-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "6f17a59fec3198b9687986260dd5b03454dbfcaeadef202e78d9f35532d7d9c9",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ]
+    },
+    {
+      "id": "baseline-ts6-typecheck",
+      "configurationOverrides": {},
+      "build": {
+        "id": "baseline-ts6-typecheck",
+        "command": [
+          "node",
+          "node_modules/typescript/bin/tsc",
+          "-p",
+          "tsconfig.json",
+          "--noEmit",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 4017,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/baseline-ts6-typecheck.stdout.log",
+          "stderr": "logs/baseline-ts6-typecheck.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "typers-native-build",
+      "configurationOverrides": {},
+      "build": {
+        "id": "typers-native-build",
+        "command": [
+          "node",
+          "node_modules/@typers/compiler/bin/typers.cjs",
+          "-p",
+          "tsconfig.build.json",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 1221,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/typers-native-build.stdout.log",
+          "stderr": "logs/typers-native-build.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assets": {
+        "mechanism": "Explicit copy of unchanged Nest asset string patterns after native CLI emission",
+        "files": [
+          "graphql-lab/editorial.schema.graphql",
+          "messaging/calculator.proto",
+          "public/demo.txt",
+          "views/index.hbs"
+        ]
+      },
+      "output": {
+        "fileCount": 469,
+        "sha256": "390d932b3890b7fd354504e282e6ce0c9f70d73d822ca6012c0a5f0bf414acae"
+      },
+      "runtime": [
+        {
+          "id": "typers-native-build-check-emitted",
+          "command": [
+            "node",
+            "scripts/check-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1114,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-build-check-emitted.stdout.log",
+            "stderr": "logs/typers-native-build-check-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "af3d61b8881bbbe7c0911e7537d6400f00332020107ff049f9a39fcc232bee4d",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-native-build-check-business-emitted",
+          "command": [
+            "node",
+            "scripts/check-business-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1060,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-build-check-business-emitted.stdout.log",
+            "stderr": "logs/typers-native-build-check-business-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e5d07823279d3a8e249a04f2787ac57922d01c4c646f572d4cc374257140026f",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-native-build-check-advanced-emitted",
+          "command": [
+            "node",
+            "scripts/check-advanced-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1314,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-build-check-advanced-emitted.stdout.log",
+            "stderr": "logs/typers-native-build-check-advanced-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "c1c8284a8302440a0a68f50b09a871a260ae87f5bd03f5e69c837bc3e786dde3",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ]
+    },
+    {
+      "id": "typers-native-typecheck",
+      "configurationOverrides": {},
+      "build": {
+        "id": "typers-native-typecheck",
+        "command": [
+          "node",
+          "node_modules/@typers/compiler/bin/typers.cjs",
+          "-p",
+          "tsconfig.json",
+          "--noEmit",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 1338,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/typers-native-typecheck.stdout.log",
+          "stderr": "logs/typers-native-typecheck.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "typers-adapter-original",
+      "configurationOverrides": {},
+      "expectedOutcome": "unsupported watchAssets: true (still recorded as a failed build)",
+      "build": {
+        "id": "typers-adapter-original",
+        "command": [
+          "node",
+          "node_modules/@typers/nest/bin/typers-nest.mjs",
+          "build",
+          "--compiler",
+          "@typers/compiler",
+          "--json"
+        ],
+        "exitCode": 1,
+        "signal": null,
+        "status": "failed",
+        "durationMs": 43,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/typers-adapter-original.stdout.log",
+          "stderr": "logs/typers-adapter-original.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "4583a60c72b4e0371bf6682a3bde9fc18cc05336ab051b33164a84e549c9989a"
+        },
+        "stderrExcerpt": "Typers Nest: compilerOptions.watchAssets is not supported by typers-nest build"
+      },
+      "expectedRejection": {
+        "diagnostic": "compilerOptions.watchAssets is not supported by typers-nest build",
+        "matched": true
+      },
+      "runtime": {
+        "status": "not-run",
+        "reason": "Rejected original/diagnostic configuration profile"
+      }
+    },
+    {
+      "id": "typers-adapter-no-watch",
+      "configurationOverrides": {
+        "nest-cli.json": {
+          "$schema": "https://json.schemastore.org/nest-cli",
+          "collection": "@nestjs/schematics",
+          "sourceRoot": "src",
+          "compilerOptions": {
+            "deleteOutDir": true,
+            "assets": [
+              "views/**/*",
+              "public/**/*",
+              "**/*.proto",
+              "**/*.graphql"
+            ],
+            "watchAssets": false
+          }
+        }
+      },
+      "expectedOutcome": "unsupported incremental: true (still recorded as a failed build)",
+      "build": {
+        "id": "typers-adapter-no-watch",
+        "command": [
+          "node",
+          "node_modules/@typers/nest/bin/typers-nest.mjs",
+          "build",
+          "--compiler",
+          "@typers/compiler",
+          "--json"
+        ],
+        "exitCode": 1,
+        "signal": null,
+        "status": "failed",
+        "durationMs": 301,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/typers-adapter-no-watch.stdout.log",
+          "stderr": "logs/typers-adapter-no-watch.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e9cc99b23b0ee00cdf382f619a0e884550046b19c65a2bf825511d03649cc483"
+        },
+        "stderrExcerpt": "Typers Nest: api: client error: typersEmitProject does not support incremental, composite, or project references; use the Typers CLI for build graphs and build information"
+      },
+      "expectedRejection": {
+        "diagnostic": "typersEmitProject does not support incremental, composite, or project references",
+        "matched": true
+      },
+      "runtime": {
+        "status": "not-run",
+        "reason": "Rejected original/diagnostic configuration profile"
+      }
+    },
+    {
+      "id": "typers-adapter-supported",
+      "configurationOverrides": {
+        "nest-cli.json": {
+          "$schema": "https://json.schemastore.org/nest-cli",
+          "collection": "@nestjs/schematics",
+          "sourceRoot": "src",
+          "compilerOptions": {
+            "deleteOutDir": true,
+            "assets": [
+              "views/**/*",
+              "public/**/*",
+              "**/*.proto",
+              "**/*.graphql"
+            ],
+            "watchAssets": false
+          }
+        },
+        "tsconfig.json": {
+          "compilerOptions": {
+            "module": "nodenext",
+            "moduleResolution": "nodenext",
+            "resolvePackageJsonExports": true,
+            "esModuleInterop": true,
+            "isolatedModules": true,
+            "declaration": true,
+            "removeComments": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "allowSyntheticDefaultImports": true,
+            "target": "ES2023",
+            "sourceMap": true,
+            "outDir": "./dist",
+            "rootDir": ".",
+            "incremental": false,
+            "skipLibCheck": true,
+            "strict": true,
+            "strictPropertyInitialization": false,
+            "types": [
+              "vitest/globals",
+              "node",
+              "multer",
+              "express-session"
+            ]
+          },
+          "exclude": [
+            "node_modules",
+            "bower_components",
+            "jspm_packages",
+            "dist",
+            "fixtures/typers"
+          ]
+        }
+      },
+      "build": {
+        "id": "typers-adapter-supported",
+        "command": [
+          "node",
+          "node_modules/@typers/nest/bin/typers-nest.mjs",
+          "build",
+          "--compiler",
+          "@typers/compiler",
+          "--json"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 1873,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/typers-adapter-supported.stdout.log",
+          "stderr": "logs/typers-adapter-supported.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "6ba6db7236619b001fa80b5aa8cb06d9c8e7c17a677d6e542e83a283249dd481",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assets": {
+        "mechanism": "typers-nest native adapter asset handling"
+      },
+      "output": {
+        "fileCount": 469,
+        "sha256": "390d932b3890b7fd354504e282e6ce0c9f70d73d822ca6012c0a5f0bf414acae"
+      },
+      "runtime": [
+        {
+          "id": "typers-adapter-supported-check-emitted",
+          "command": [
+            "node",
+            "scripts/check-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1139,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-adapter-supported-check-emitted.stdout.log",
+            "stderr": "logs/typers-adapter-supported-check-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "810710a161d2cecb023449da8265a3fb6390b8f8698da7404675693b91ecd7f6",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-adapter-supported-check-business-emitted",
+          "command": [
+            "node",
+            "scripts/check-business-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1080,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-adapter-supported-check-business-emitted.stdout.log",
+            "stderr": "logs/typers-adapter-supported-check-business-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e5be6e6b7936427abdfeca516f8b1ec55accc89417cffd1612eb4b49b7c94208",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-adapter-supported-check-advanced-emitted",
+          "command": [
+            "node",
+            "scripts/check-advanced-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 816,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-adapter-supported-check-advanced-emitted.stdout.log",
+            "stderr": "logs/typers-adapter-supported-check-advanced-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "eccb919a42e44a17bb5dce86d07f21d3c14cd9cc7fedf241a999d6fcb0aa94ee",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ]
+    },
+    {
+      "id": "upstream-ts7-build",
+      "configurationOverrides": {},
+      "build": {
+        "id": "upstream-ts7-build",
+        "command": [
+          "node",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+          "-p",
+          "tsconfig.build.json",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 1232,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/upstream-ts7-build.stdout.log",
+          "stderr": "logs/upstream-ts7-build.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assets": {
+        "mechanism": "Explicit copy of unchanged Nest asset string patterns after native CLI emission",
+        "files": [
+          "graphql-lab/editorial.schema.graphql",
+          "messaging/calculator.proto",
+          "public/demo.txt",
+          "views/index.hbs"
+        ]
+      },
+      "output": {
+        "fileCount": 469,
+        "sha256": "390d932b3890b7fd354504e282e6ce0c9f70d73d822ca6012c0a5f0bf414acae"
+      },
+      "runtime": [
+        {
+          "id": "upstream-ts7-build-check-emitted",
+          "command": [
+            "node",
+            "scripts/check-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1201,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-build-check-emitted.stdout.log",
+            "stderr": "logs/upstream-ts7-build-check-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "f636fc2839f9d765b7d86bc13e27d709eee944872bbe1a0ec6dcfb2eed179b90",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "upstream-ts7-build-check-business-emitted",
+          "command": [
+            "node",
+            "scripts/check-business-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1099,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-build-check-business-emitted.stdout.log",
+            "stderr": "logs/upstream-ts7-build-check-business-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "4e85ed2b937b2640d746ae9563a2e73f4a4492eb3744a747c670855ca29670bc",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "upstream-ts7-build-check-advanced-emitted",
+          "command": [
+            "node",
+            "scripts/check-advanced-emitted.mjs",
+            "dist"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 1318,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-build-check-advanced-emitted.stdout.log",
+            "stderr": "logs/upstream-ts7-build-check-advanced-emitted.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "5e0592fb84fe75cbe9db080f11aa962d232f78346ef528c9626127d8a45f2009",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ]
+    },
+    {
+      "id": "upstream-ts7-typecheck",
+      "configurationOverrides": {},
+      "build": {
+        "id": "upstream-ts7-typecheck",
+        "command": [
+          "node",
+          "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+          "-p",
+          "tsconfig.json",
+          "--noEmit",
+          "--pretty",
+          "false"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "status": "passed",
+        "durationMs": 1297,
+        "diagnosticCodes": {},
+        "logs": {
+          "stdout": "logs/upstream-ts7-typecheck.stdout.log",
+          "stderr": "logs/upstream-ts7-typecheck.stderr.log"
+        },
+        "outputSha256": {
+          "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "reference": "typers-native-build",
+      "target": "upstream-ts7-build",
+      "referenceFiles": 469,
+      "targetFiles": 469,
+      "differingFiles": 0,
+      "examples": [],
+      "note": "Byte comparison for this copied corpus only, including declarations/maps/assets; not an API or compiler compatibility proof."
+    },
+    {
+      "reference": "typers-native-build",
+      "target": "typers-adapter-supported",
+      "referenceFiles": 469,
+      "targetFiles": 469,
+      "differingFiles": 0,
+      "examples": [],
+      "note": "Byte comparison for this copied corpus only, including declarations/maps/assets; not an API or compiler compatibility proof."
+    }
+  ],
+  "limitations": [
+    "This is the standard TypeScript corpus, not experimental Result/Option or if-let syntax.",
+    "Passing native CLI or typers-nest does not establish compatibility with the original Nest CLI, its compiler plugins, watch, aliases or every Nest API.",
+    "Runtime checks exercise emitted local/memory applications; they do not rerun brokers, databases, SaaS or every Vitest test under Typers.",
+    "Dependency contents are shared through links to the installed pnpm tree; this run does not independently reinstall or snapshot every dependency file.",
+    "Failed compiler steps remain failures even when they emitted JavaScript that passes some runtime checks."
+  ],
+  "configurations": {
+    "originalTsconfig": {
+      "compilerOptions": {
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "resolvePackageJsonExports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2023",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "rootDir": ".",
+        "incremental": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "types": [
+          "vitest/globals",
+          "node",
+          "multer",
+          "express-session"
+        ]
+      },
+      "exclude": [
+        "node_modules",
+        "bower_components",
+        "jspm_packages",
+        "dist",
+        "fixtures/typers"
+      ]
+    },
+    "originalBuild": {
+      "extends": "./tsconfig.json",
+      "compilerOptions": {
+        "rootDir": "./src"
+      },
+      "include": [
+        "src"
+      ],
+      "exclude": [
+        "node_modules",
+        "test",
+        "dist",
+        "**/*spec.ts",
+        "**/*.type-test.ts"
+      ]
+    },
+    "originalNest": {
+      "$schema": "https://json.schemastore.org/nest-cli",
+      "collection": "@nestjs/schematics",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "deleteOutDir": true,
+        "assets": [
+          "views/**/*",
+          "public/**/*",
+          "**/*.proto",
+          "**/*.graphql"
+        ],
+        "watchAssets": true
+      }
+    }
+  },
+  "compilerBuild": {
+    "name": "@typers/compiler",
+    "version": "7.0.2-typers.0",
+    "upstreamVersion": "7.0.2",
+    "upstreamCommit": "1e4744d68260a7cb91b62b12edc3f6a2187faaf1",
+    "sourceCommit": "efe9894778169f53a3a6a0d3d42e0efa4bae3d7f",
+    "compilerWorktreeDirty": false,
+    "platform": "darwin",
+    "arch": "arm64",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "goVersion": "go version go1.27.1 darwin/arm64",
+    "nativeApi": {
+      "source": "tsc/_packages/native-preview",
+      "compiler": "native Typers",
+      "exports": [
+        "./unstable/sync",
+        "./unstable/async",
+        "./unstable/fs",
+        "./unstable/proto",
+        "./unstable/ast",
+        "./unstable/ast/is",
+        "./unstable/ast/factory",
+        "./unstable/ast/utils",
+        "./unstable/ast/scanner",
+        "./unstable/ast/visitor",
+        "./unstable/ast/clone"
+      ]
+    },
+    "nativeExecutableSha256": "5057f05cdcadd8ff8c0dce28ae737ae9758b7300822886b71bcc8af3f1e83651"
+  },
+  "adapterDependency": {
+    "name": "minimatch",
+    "version": "10.2.6",
+    "packageJsonSha256": "bb847ba240909c9a36d4eaeb4e0efdc3e31182aeef208c1611259a48f282ea75",
+    "linkTarget": "/Users/rhuffus/CodeHome/rhuffus/typers-nestjs/node_modules/.pnpm/minimatch@10.2.6/node_modules/minimatch"
+  },
+  "upstream": {
+    "name": "typescript",
+    "version": "7.0.2",
+    "platformPackage": "@typescript/typescript-darwin-arm64",
+    "sha256": "a3fde00050a56e7e0ac5898ca57aba407a243c87798a36be0ac36ce8505a3f85",
+    "files": 529,
+    "manifest": "upstream-manifest.json",
+    "gitHead": "2bd066d87f5bafd315be9f40889d0a60b9e58e0b"
+  },
+  "launcherVersions": [
+    {
+      "id": "typers",
+      "status": "passed",
+      "output": "Version 7.0.2-typers.0",
+      "launcherSha256": "19c0736d1a5a6bf17efecb13d416dd2343dd681d737aa8987c58053b10588ef0"
+    },
+    {
+      "id": "baseline",
+      "status": "passed",
+      "output": "Version 6.0.3",
+      "launcherSha256": "8d5fa5bd883fec0979fc2004f1fe1d99aef40570155d550eadc0b03b55513bf0"
+    },
+    {
+      "id": "upstream",
+      "status": "passed",
+      "output": "Version 7.0.2",
+      "launcherSha256": "2219f428a7e55aaf1f7ad85b9b0f0cf5078aeb76ccc9a7c6036c92d48f492ffd"
+    }
+  ],
+  "language": [
+    {
+      "compiler": "baseline-ts6",
+      "sourceFiles": 17,
+      "sourceSha256": "a9f752f30db89566a9344c48a309f80e2d910a7754843bbb3da22a191505742d",
+      "builds": [
+        {
+          "id": "baseline-ts6-language-core",
+          "command": [
+            "node",
+            "node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.core.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 392,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-core.stdout.log",
+            "stderr": "logs/baseline-ts6-language-core.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "baseline-ts6-language-decorators",
+          "command": [
+            "node",
+            "node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.decorators.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 351,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-decorators.stdout.log",
+            "stderr": "logs/baseline-ts6-language-decorators.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "baseline-ts6-language-report",
+          "command": [
+            "node",
+            "node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.report.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 350,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-report.stdout.log",
+            "stderr": "logs/baseline-ts6-language-report.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "baseline-ts6-language-contracts",
+          "command": [
+            "node",
+            "node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.contracts.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 387,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-contracts.stdout.log",
+            "stderr": "logs/baseline-ts6-language-contracts.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "scenarios": [
+        {
+          "entry": "core/events.main",
+          "id": "baseline-ts6-language-run-core-events.main",
+          "command": [
+            "node",
+            "dist/core/events.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 37,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-core-events.main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-core-events.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "9b085fd43911c01d3288fad3409a1a349697d9181b2836459d85efe481d17631",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "3d352c6bdbfceec11dc43145184e4c69646d046dc0b39440de25b949426795fe"
+        },
+        {
+          "entry": "core/mixins.main",
+          "id": "baseline-ts6-language-run-core-mixins.main",
+          "command": [
+            "node",
+            "dist/core/mixins.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 35,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-core-mixins.main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-core-mixins.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "859c6bc5f6a2b2d22bb949cf18b83e2645a02716c40c5df8f3f45f30e3968ddb",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "f56c28b1c1abce96057a3a3079ff5e8b39f8e192c7f7ad3e0f534827d4541c33"
+        },
+        {
+          "entry": "core/imports.main",
+          "id": "baseline-ts6-language-run-core-imports.main",
+          "command": [
+            "node",
+            "dist/core/imports.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-core-imports.main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-core-imports.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "baefb6b35958a43a5eabbabd5cdb9c695f5bb8ecf2bf39c1a9da31d814889006",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "d2bda85fe7f048f215e21c33f3737d949572efdff546ff89276ca5218786de57"
+        },
+        {
+          "entry": "decorators/main",
+          "id": "baseline-ts6-language-run-decorators-main",
+          "command": [
+            "node",
+            "dist/decorators/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-decorators-main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-decorators-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "ffb7341b4341387ee11e00aab3f01b7f1a786a58eea9b8d169c8b3b5618dfc32",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "50ffb3e90e905df6b070e529e0507776d92235ebfe69b33d44dc14993788f980"
+        },
+        {
+          "entry": "report/main",
+          "id": "baseline-ts6-language-run-report-main",
+          "command": [
+            "node",
+            "dist/report/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 35,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-report-main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-report-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "029a9bf2696c8ee7cf4245193179bffd07ed81211f5c812e9dc0883c0071f037",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "a6aa73d16fc4f337e07638a9080c2580e49f3174fc6e8f5b330d965bf8573675"
+        },
+        {
+          "entry": "resources/main",
+          "id": "baseline-ts6-language-run-resources-main",
+          "command": [
+            "node",
+            "dist/resources/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 60,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/baseline-ts6-language-run-resources-main.stdout.log",
+            "stderr": "logs/baseline-ts6-language-run-resources-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "17d8aeff283c0f64fa8b9068e7ec9cb8d10effa3071da70277110aab8f3389b7",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "081f38437dd769fb3a3eee35715bf120dc8a6ee10b6c67c522ef622856cbb781"
+        }
+      ]
+    },
+    {
+      "compiler": "typers-native",
+      "sourceFiles": 17,
+      "sourceSha256": "a9f752f30db89566a9344c48a309f80e2d910a7754843bbb3da22a191505742d",
+      "builds": [
+        {
+          "id": "typers-native-language-core",
+          "command": [
+            "node",
+            "node_modules/@typers/compiler/bin/typers.cjs",
+            "-p",
+            "tsconfig.core.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 66,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-core.stdout.log",
+            "stderr": "logs/typers-native-language-core.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-native-language-decorators",
+          "command": [
+            "node",
+            "node_modules/@typers/compiler/bin/typers.cjs",
+            "-p",
+            "tsconfig.decorators.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 63,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-decorators.stdout.log",
+            "stderr": "logs/typers-native-language-decorators.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-native-language-report",
+          "command": [
+            "node",
+            "node_modules/@typers/compiler/bin/typers.cjs",
+            "-p",
+            "tsconfig.report.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 67,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-report.stdout.log",
+            "stderr": "logs/typers-native-language-report.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "typers-native-language-contracts",
+          "command": [
+            "node",
+            "node_modules/@typers/compiler/bin/typers.cjs",
+            "-p",
+            "tsconfig.contracts.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 71,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-contracts.stdout.log",
+            "stderr": "logs/typers-native-language-contracts.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "scenarios": [
+        {
+          "entry": "core/events.main",
+          "id": "typers-native-language-run-core-events.main",
+          "command": [
+            "node",
+            "dist/core/events.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 35,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-core-events.main.stdout.log",
+            "stderr": "logs/typers-native-language-run-core-events.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "9b085fd43911c01d3288fad3409a1a349697d9181b2836459d85efe481d17631",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "3d352c6bdbfceec11dc43145184e4c69646d046dc0b39440de25b949426795fe",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "core/mixins.main",
+          "id": "typers-native-language-run-core-mixins.main",
+          "command": [
+            "node",
+            "dist/core/mixins.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 34,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-core-mixins.main.stdout.log",
+            "stderr": "logs/typers-native-language-run-core-mixins.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "859c6bc5f6a2b2d22bb949cf18b83e2645a02716c40c5df8f3f45f30e3968ddb",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "f56c28b1c1abce96057a3a3079ff5e8b39f8e192c7f7ad3e0f534827d4541c33",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "core/imports.main",
+          "id": "typers-native-language-run-core-imports.main",
+          "command": [
+            "node",
+            "dist/core/imports.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 38,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-core-imports.main.stdout.log",
+            "stderr": "logs/typers-native-language-run-core-imports.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "baefb6b35958a43a5eabbabd5cdb9c695f5bb8ecf2bf39c1a9da31d814889006",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "d2bda85fe7f048f215e21c33f3737d949572efdff546ff89276ca5218786de57",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "decorators/main",
+          "id": "typers-native-language-run-decorators-main",
+          "command": [
+            "node",
+            "dist/decorators/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 37,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-decorators-main.stdout.log",
+            "stderr": "logs/typers-native-language-run-decorators-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "ffb7341b4341387ee11e00aab3f01b7f1a786a58eea9b8d169c8b3b5618dfc32",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "50ffb3e90e905df6b070e529e0507776d92235ebfe69b33d44dc14993788f980",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "report/main",
+          "id": "typers-native-language-run-report-main",
+          "command": [
+            "node",
+            "dist/report/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-report-main.stdout.log",
+            "stderr": "logs/typers-native-language-run-report-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "029a9bf2696c8ee7cf4245193179bffd07ed81211f5c812e9dc0883c0071f037",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "a6aa73d16fc4f337e07638a9080c2580e49f3174fc6e8f5b330d965bf8573675",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "resources/main",
+          "id": "typers-native-language-run-resources-main",
+          "command": [
+            "node",
+            "dist/resources/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 47,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/typers-native-language-run-resources-main.stdout.log",
+            "stderr": "logs/typers-native-language-run-resources-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "17d8aeff283c0f64fa8b9068e7ec9cb8d10effa3071da70277110aab8f3389b7",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "081f38437dd769fb3a3eee35715bf120dc8a6ee10b6c67c522ef622856cbb781",
+          "matchesBaseline": true
+        }
+      ]
+    },
+    {
+      "compiler": "upstream-ts7",
+      "sourceFiles": 17,
+      "sourceSha256": "a9f752f30db89566a9344c48a309f80e2d910a7754843bbb3da22a191505742d",
+      "builds": [
+        {
+          "id": "upstream-ts7-language-core",
+          "command": [
+            "node",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.core.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 74,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-core.stdout.log",
+            "stderr": "logs/upstream-ts7-language-core.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "upstream-ts7-language-decorators",
+          "command": [
+            "node",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.decorators.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 68,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-decorators.stdout.log",
+            "stderr": "logs/upstream-ts7-language-decorators.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "upstream-ts7-language-report",
+          "command": [
+            "node",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.report.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 67,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-report.stdout.log",
+            "stderr": "logs/upstream-ts7-language-report.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "id": "upstream-ts7-language-contracts",
+          "command": [
+            "node",
+            "/private/var/folders/55/d9dwn7fn67xgdgk6vczx055c0000gn/T/typers-corpus-3pOtGb/toolchain/upstream/node_modules/typescript/bin/tsc",
+            "-p",
+            "tsconfig.contracts.json",
+            "--pretty",
+            "false"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 76,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-contracts.stdout.log",
+            "stderr": "logs/upstream-ts7-language-contracts.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "scenarios": [
+        {
+          "entry": "core/events.main",
+          "id": "upstream-ts7-language-run-core-events.main",
+          "command": [
+            "node",
+            "dist/core/events.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-core-events.main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-core-events.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "9b085fd43911c01d3288fad3409a1a349697d9181b2836459d85efe481d17631",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "3d352c6bdbfceec11dc43145184e4c69646d046dc0b39440de25b949426795fe",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "core/mixins.main",
+          "id": "upstream-ts7-language-run-core-mixins.main",
+          "command": [
+            "node",
+            "dist/core/mixins.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 35,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-core-mixins.main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-core-mixins.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "859c6bc5f6a2b2d22bb949cf18b83e2645a02716c40c5df8f3f45f30e3968ddb",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "f56c28b1c1abce96057a3a3079ff5e8b39f8e192c7f7ad3e0f534827d4541c33",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "core/imports.main",
+          "id": "upstream-ts7-language-run-core-imports.main",
+          "command": [
+            "node",
+            "dist/core/imports.main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-core-imports.main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-core-imports.main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "baefb6b35958a43a5eabbabd5cdb9c695f5bb8ecf2bf39c1a9da31d814889006",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "d2bda85fe7f048f215e21c33f3737d949572efdff546ff89276ca5218786de57",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "decorators/main",
+          "id": "upstream-ts7-language-run-decorators-main",
+          "command": [
+            "node",
+            "dist/decorators/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-decorators-main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-decorators-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "ffb7341b4341387ee11e00aab3f01b7f1a786a58eea9b8d169c8b3b5618dfc32",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "50ffb3e90e905df6b070e529e0507776d92235ebfe69b33d44dc14993788f980",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "report/main",
+          "id": "upstream-ts7-language-run-report-main",
+          "command": [
+            "node",
+            "dist/report/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 36,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-report-main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-report-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "029a9bf2696c8ee7cf4245193179bffd07ed81211f5c812e9dc0883c0071f037",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "a6aa73d16fc4f337e07638a9080c2580e49f3174fc6e8f5b330d965bf8573675",
+          "matchesBaseline": true
+        },
+        {
+          "entry": "resources/main",
+          "id": "upstream-ts7-language-run-resources-main",
+          "command": [
+            "node",
+            "dist/resources/main.js"
+          ],
+          "exitCode": 0,
+          "signal": null,
+          "status": "passed",
+          "durationMs": 55,
+          "diagnosticCodes": {},
+          "logs": {
+            "stdout": "logs/upstream-ts7-language-run-resources-main.stdout.log",
+            "stderr": "logs/upstream-ts7-language-run-resources-main.stderr.log"
+          },
+          "outputSha256": {
+            "stdout": "17d8aeff283c0f64fa8b9068e7ec9cb8d10effa3071da70277110aab8f3389b7",
+            "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "resultSha256": "081f38437dd769fb3a3eee35715bf120dc8a6ee10b6c67c522ef622856cbb781",
+          "matchesBaseline": true
+        }
+      ]
+    }
+  ],
+  "completed": true,
+  "referenceIntegrity": {
+    "baselineTypeScriptPackageUnchanged": true,
+    "lockfileUnchanged": true
+  },
+  "summary": {
+    "builds": {
+      "passed": 7,
+      "failed": 2
+    },
+    "runtimeHarnesses": {
+      "passed": 12,
+      "not-run": 2
+    },
+    "languageBuilds": {
+      "passed": 12
+    },
+    "languageScenarios": {
+      "passed": 18
+    },
+    "matchedExpectedRejections": 2,
+    "unexpectedOutcomes": [],
+    "gatePassed": true,
+    "meaning": "Exit 0 requires successful measured build/runtime/language profiles and both exact expected adapter rejections. Rejected builds remain failed. This is a corpus gate, not universal compatibility; byte comparisons are informational."
+  }
+}

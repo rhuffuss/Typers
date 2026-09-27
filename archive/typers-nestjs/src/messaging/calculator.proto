@@ -1,0 +1,13 @@
+syntax = "proto3";
+package typers.demo;
+
+service Calculator {
+  rpc Sum (SumRequest) returns (Calculation);
+  rpc Numbers (SumRequest) returns (stream Calculation);
+  rpc Accumulate (stream NumberRequest) returns (Calculation);
+  rpc Double (stream NumberRequest) returns (stream Calculation);
+}
+
+message SumRequest { repeated int32 values = 1; }
+message NumberRequest { int32 value = 1; }
+message Calculation { int32 result = 1; }

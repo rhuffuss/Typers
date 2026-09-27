@@ -1,0 +1,11 @@
+{
+  "name": "@language/report",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./jsx-runtime": {
+      "types": "./src/report/jsx-runtime.ts",
+      "default": "./dist/report/jsx-runtime.js"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../../dist-observe",
+    "incremental": false,
+    "declaration": false
+  },
+  "include": ["./*.ts"],
+  "exclude": ["./*.spec.ts"]
+}

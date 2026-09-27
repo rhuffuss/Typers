@@ -1,0 +1,55 @@
+import { randomUUID } from 'node:crypto';
+import { Controller, Get, Injectable, Module } from '@nestjs/common';
+import type {
+  OnModuleInit,
+  OnModuleDestroy,
+  OnApplicationShutdown,
+} from '@nestjs/common';
+import { HMR_MESSAGE } from './message.js';
+import { runtimeState } from './runtime-state.js';
+
+@Injectable()
+class LifecycleProbe
+  implements OnModuleInit, OnModuleDestroy, OnApplicationShutdown
+{
+  readonly instanceId = randomUUID();
+  private timer?: ReturnType<typeof setInterval>;
+  ticks = 0;
+
+  onModuleInit() {
+    runtimeState.active.add(this.instanceId);
+    this.timer = setInterval(() => {
+      this.ticks += 1;
+    }, 100);
+  }
+
+  onModuleDestroy() {
+    if (this.timer) clearInterval(this.timer);
+    runtimeState.active.delete(this.instanceId);
+    runtimeState.destroyed.push(this.instanceId);
+  }
+
+  onApplicationShutdown() {
+    runtimeState.shutdown.push(this.instanceId);
+  }
+}
+
+@Controller('hmr')
+class HmrController {
+  constructor(private readonly lifecycle: LifecycleProbe) {}
+
+  @Get()
+  inspect() {
+    return {
+      message: HMR_MESSAGE,
+      pid: process.pid,
+      instanceId: this.lifecycle.instanceId,
+      activeInstances: [...runtimeState.active],
+      destroyedInstances: [...runtimeState.destroyed],
+      shutdownInstances: [...runtimeState.shutdown],
+    };
+  }
+}
+
+@Module({ controllers: [HmrController], providers: [LifecycleProbe] })
+export class HmrAppModule {}

@@ -1,0 +1,33 @@
+import { PurchaseOrder } from './mixins.js';
+const order = new PurchaseOrder('po-1');
+const errors: string[] = [];
+order.addLine(2, 6000n, 1);
+try {
+  order.addLine(1, 500n, 1);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+try {
+  order.addLine(-1, 500n, 2);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+order.submit(2);
+try {
+  order.addLine(1, 500n, 3);
+} catch (error) {
+  errors.push((error as Error).message);
+}
+const other = new PurchaseOrder('po-2');
+console.log(
+  JSON.stringify({
+    id: order.id,
+    state: order.state,
+    totalMinor: order.totalMinor,
+    revision: order.revision,
+    audit: order.audit(),
+    otherRevision: other.revision,
+    otherAudit: other.audit(),
+    errors,
+  }),
+);

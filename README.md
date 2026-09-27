@@ -4,7 +4,11 @@
 
 Typers es un fork experimental de TypeScript para explorar resultados y valores opcionales, patrones y propagación explícita de errores en proyectos TypeScript y NestJS, especialmente en zhenix-ai.
 
-**Estado:** prototipo experimental con runtime Result/Option, if-let opt-in, API nativa y adaptador de build para NestJS. La API clásica requerida por Nest CLI y la integración Oxc/editor siguen pendientes. Consulta la [hoja de ruta](docs/typers/roadmap.md) y el [registro de implementación](docs/typers/status.md) para el alcance comprobado.
+**Estado: en pausa desde el 27 de septiembre de 2026 por decisión del titular.** Orion es la línea activa de librería para TypeScript + NestJS; Typers queda como proyecto futuro, sin nuevos desarrollos autorizados.
+
+Se conserva el prototipo experimental con runtime Result/Option, if-let opt-in, API nativa y adaptador de build para NestJS. La API clásica requerida por Nest CLI y la integración Oxc/editor siguen pendientes. Consulta la [hoja de ruta](docs/typers/roadmap.md) y el [registro de implementación](docs/typers/status.md) para el alcance comprobado.
+
+El laboratorio completo se conserva en [archive/](archive/README.md). La consolidación no publica paquetes npm ni amplía las garantías del prototipo.
 
 ## Documentación
 
@@ -24,7 +28,7 @@ Typers es un fork experimental de TypeScript para explorar resultados y valores 
 | Elemento | Ubicación / valor |
 | --- | --- |
 | Repositorio | [rhuffus/Typers](https://github.com/rhuffus/Typers) |
-| Rama principal | `typers-main` |
+| Rama principal | `main` |
 | Base inicial | TypeScript `v7.0.2` — `1e4744d68260a7cb91b62b12edc3f6a2187faaf1` |
 | Compilador nativo Go | [`tsc/`](tsc/) |
 | Infraestructura heredada del compilador JS | `src/`, `tests/` y scripts de raíz |

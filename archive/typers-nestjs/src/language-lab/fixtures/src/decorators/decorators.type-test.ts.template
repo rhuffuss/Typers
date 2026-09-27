@@ -1,0 +1,17 @@
+import { ApprovalDecision, Bound, PositiveLimit } from './approval.js';
+export function decoratorContracts(decision: ApprovalDecision): void {
+  decision.limitMinor = 10;
+  // @ts-expect-error Decorated accessors retain their original numeric type.
+  decision.limitMinor = '10';
+  class InvalidAccessor {
+    // @ts-expect-error The numeric decorator cannot decorate a string accessor.
+    @PositiveLimit accessor name = 'not-money';
+  }
+  class InvalidParameter {
+    approve(
+      // @ts-expect-error Standard decorators do not support parameter decorators.
+      @Bound _amount: number,
+    ): void {}
+  }
+  void [InvalidAccessor, InvalidParameter];
+}

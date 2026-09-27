@@ -1,0 +1,8 @@
+{
+  "currency": "EUR",
+  "coupons": { "SAVE10": 10, "ZERO": 0 },
+  "storage": "in-memory",
+  "payments": false,
+  "stock": "Reservations decrease available stock; quotes do not reserve it.",
+  "restart": "Restarting resets products and reservations."
+}

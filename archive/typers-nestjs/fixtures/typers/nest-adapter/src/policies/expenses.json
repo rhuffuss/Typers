@@ -1,0 +1,5 @@
+{
+  "currency": "EUR",
+  "approvalThresholdMinor": 500000,
+  "reviewers": ["approver", "finance"]
+}

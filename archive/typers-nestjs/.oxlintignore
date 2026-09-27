@@ -1,0 +1,3 @@
+node_modules/
+dist*/
+src/persistence-labs/prisma/generated/

@@ -1,0 +1,9 @@
+{
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "builder": "typers",
+    "tsConfigPath": "tsconfig.json",
+    "deleteOutDir": true,
+    "assets": ["assets/**/*"]
+  }
+}

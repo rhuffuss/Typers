@@ -1,0 +1,6 @@
+// Webpack keeps this unchanged module cached across updates in the same process.
+export const runtimeState = {
+  active: new Set<string>(),
+  destroyed: [] as string[],
+  shutdown: [] as string[],
+};

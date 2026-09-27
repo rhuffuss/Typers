@@ -1,5 +1,7 @@
 # Documentación de Typers
 
+**Proyecto en pausa desde el 27-09-2026.** Empieza por [estado](status.md), [consolidación](consolidation.md) y [archivo del laboratorio](../../archive/README.md).
+
 Esta base registra la conversación de diseño y las decisiones iniciales. Permite que personas y agentes continúen con contexto suficiente, sin confundir intención, garantía y funcionalidad disponible.
 
 ## Guía de lectura

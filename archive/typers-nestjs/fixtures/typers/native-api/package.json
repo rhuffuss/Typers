@@ -1,0 +1,5 @@
+{
+  "name": "@typers-nestjs/native-api-fixture",
+  "private": true,
+  "type": "module"
+}
